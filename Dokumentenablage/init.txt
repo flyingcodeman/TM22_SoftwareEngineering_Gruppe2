@@ -1,0 +1,3 @@
+/*
+ * Directory fuer Dokumente und Zwischenergebnisse waehrend der Sprints
+ */
