@@ -52,27 +52,27 @@ Optional kann die Funktion die Schiffe Zufällig auf dem Feld zu verteilen etabl
   
     - Es müssen alle Schiffe verwendet werden. 
     
- 3. Spielzug
-    - Bei einem Spielzug giebt der Spieler eine Koordinate (z.B. A7) an. 
-    - Darauf hin erfolgt die Meldung "Treffen", wenn ein Schiff getroffen worden ist oder "Daneben" wenn kein Treffer erzielt worden ist. 
-    - Falls das letzte Feld eines Schiffes getroffen wird erfolgt die Meldung "Treffer, Versenkt". 
-    - Die Verwendeten Koordinatne werden auf einem Spielfeld angezeigt, inkl hervorhebung der Treffer und versenkten Schiffe. 
+   1. Spielzug
+      - Bei einem Spielzug giebt der Spieler eine Koordinate (z.B. A7) an. 
+      - Darauf hin erfolgt die Meldung "Treffen", wenn ein Schiff getroffen worden ist oder "Daneben" wenn kein Treffer erzielt worden ist. 
+      - Falls das letzte Feld eines Schiffes getroffen wird erfolgt die Meldung "Treffer, Versenkt". 
+      - Die Verwendeten Koordinatne werden auf einem Spielfeld angezeigt, inkl hervorhebung der Treffer und versenkten Schiffe. 
 
-    
-     
-          A B C D E F G H I J 
-	    * * * * * * * * * * * * 
-	1   *                   # *	
-	2   *                   # * 		
-	3   *                   # *
-	4   *                   # *
-	5   *                     *
-	6   *	-                 *
-	7   *	X                 *
-	8   *	X                 *
-	9   *                     *
-   	10  *                     *
-	    * * * * * * * * * * * *
+
+
+            A B C D E F G H I J 
+          * * * * * * * * * * * * 
+      1   *                     *
+      2   *                     * 		
+      3   *                     *
+      4   *                     *
+      5   *                     *
+      6   *                     *
+      7   *                     *
+      8   *                     *
+      9   *                     *
+      10  *                     *
+          * * * * * * * * * * * *
 	
 
 Legende:
