@@ -11,16 +11,16 @@ TM22 Software Engineering Team #2
 	
 	      A B C D E F G H I J 
 	    * * * * * * * * * * * * 
-	1   *			  *	
-	2   *			  * 		
-	3   *			  *
-	4   *			  *
-	5   *		 	  *
-	6   *		  	  *
-	7   *			  *
-	8   *			  *
-	9   *			  *
-   	10  *			  *
+	1   *                     *	
+	2   *                     * 		
+	3   *                     *
+	4   *                     *
+	5   *                     *
+	6   *                     *
+	7   *                     *
+	8   *                     *
+	9   *                     *
+   	10  *                     *
 	    * * * * * * * * * * * *
 
 -Visualisierung
@@ -60,18 +60,18 @@ Optional kann die Funktion die Schiffe Zufällig auf dem Feld zu verteilen etabl
 
     
      
-     	      A B C D E F G H I J 
+          A B C D E F G H I J 
 	    * * * * * * * * * * * * 
-	1   *			# *	
-	2   *			# * 		
-	3   *			# *
-	4   *			# *
-	5   *		 	  *
-	6   *	-	  	  *
-	7   *	X		  *
-	8   *	X		  *
-	9   *			  *
-   	10  *			  *
+	1   *                   # *	
+	2   *                   # * 		
+	3   *                   # *
+	4   *                   # *
+	5   *                     *
+	6   *	-                 *
+	7   *	X                 *
+	8   *	X                 *
+	9   *                     *
+   	10  *                     *
 	    * * * * * * * * * * * *
 	
 	Legende:
