@@ -10,18 +10,18 @@ TM22 Software Engineering Team #2
 	-Horizontal mit Buchstaben  
 	
 	      A B C D E F G H I J 
+	    * * * * * * * * * * * * 
+	1   *			  *	
+	2   *			  * 		
+	3   *			  *
+	4   *			  *
+	5   *		 	  *
+	6   *		  	  *
+	7   *			  *
+	8   *			  *
+	9   *			  *
+   	10  *			  *
 	    * * * * * * * * * * * *
-	1   *					   *	
-	2   *				 	   *		
-	3   *				 	   *
-	4   *				  	   *
-	5   *		 		  	   *
-	6   *		  		   	   *
-	7   *				   	   *
-	8   *				  	   *
-	9   *				   	   *
-    10  *					   *
-        * * * * * * * * * * * *
 
 -Visualisierung
 
@@ -57,22 +57,23 @@ Optional kann die Funktion die Schiffe Zufällig auf dem Feld zu verteilen etabl
     - Darauf hin erfolgt die Meldung "Treffen", wenn ein Schiff getroffen worden ist oder "Daneben" wenn kein Treffer erzielt worden ist. 
     - Falls das letzte Feld eines Schiffes getroffen wird erfolgt die Meldung "Treffer, Versenkt". 
     - Die Verwendeten Koordinatne werden auf einem Spielfeld angezeigt, inkl hervorhebung der Treffer und versenkten Schiffe. 
+
+    
      
-
-          A B C D E F G H I J 
+     	      A B C D E F G H I J 
+	    * * * * * * * * * * * * 
+	1   *			# *	
+	2   *			# * 		
+	3   *			# *
+	4   *			# *
+	5   *		 	  *
+	6   *	-	  	  *
+	7   *	X		  *
+	8   *	X		  *
+	9   *			  *
+   	10  *			  *
 	    * * * * * * * * * * * *
-	1   *				#	   *	
-	2   *				# 	   *		
-	3   *				# 	   *
-	4   *				#  	   *
-	5   *		 		  	   *
-	6   *		-  		   	   *
-	7   *		X		   	   *
-	8   *		X		  	   *
-	9   *				   	   *
-    10  *					   *
-        * * * * * * * * * * * *
-
+	
 	Legende:
 	- -kein Treffer 
 	- X Treffer 
@@ -80,3 +81,19 @@ Optional kann die Funktion die Schiffe Zufällig auf dem Feld zu verteilen etabl
 	
 	- Nach jedem Spielzug wird der Spieler gewechselt. 
 	- Eine Mehrfachnennung eines Feldes ist nicht möglich. 
+
+
+4. Spielende 
+   - Das Spiel beendet automatisch, wenn ein Spieler alle gegnerischen Schiffe vollständig getroffen hat 
+   - Optional ist eine Implemetierung eines Auswertefensters (Spielzeit, Treffer, Fehlschüsse, Trefferserie,... ) anzudenken. 
+   - Eine Liste der besten Spieler inkl. der Spielzeit kann ebenfalls implementiert werden. 
+
+
+## Mindestanforderungen
+1. Spieloberfläche und Eingabe der Koordinaten via Konsole 
+2. Manuelle positionierung aller Schiffe (inkl. Kontrolle das alle verwendet worden sind) 
+3. Ausgabe der Oberfläche mit 2 Spielfeldern (Gegnerisches und eigenes Feld) inkl. eigener Schiffe, Treffer und Versuchen
+4. Automatische beendigung des Spiels, sobald alle Schiffe eines Spielers getroffen worden sind. 
+
+# Autoren
+- **[Christopher Moser](https://www.linkedin.com/in/christopher-moser-826658141/)** - *Creator* -
