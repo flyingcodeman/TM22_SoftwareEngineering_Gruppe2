@@ -74,19 +74,21 @@ Optional kann die Funktion die Schiffe Zufällig auf dem Feld zu verteilen etabl
    	10  *                     *
 	    * * * * * * * * * * * *
 	
-	Legende:
-	- -kein Treffer 
-	- X Treffer 
-	- [#] Wenn Schiff versenkt ist
-	
-	- Nach jedem Spielzug wird der Spieler gewechselt. 
-	- Eine Mehrfachnennung eines Feldes ist nicht möglich. 
+
+Legende:
+
+    - kein Treffer 
+    - X Treffer 
+    - [#] Wenn Schiff versenkt ist
+    - Nach jedem Spielzug wird der Spieler gewechselt. 
+    - Eine Mehrfachnennung eines Feldes ist nicht möglich. 
 
 
 4. Spielende 
    - Das Spiel beendet automatisch, wenn ein Spieler alle gegnerischen Schiffe vollständig getroffen hat 
    - Optional ist eine Implemetierung eines Auswertefensters (Spielzeit, Treffer, Fehlschüsse, Trefferserie,... ) anzudenken. 
    - Eine Liste der besten Spieler inkl. der Spielzeit kann ebenfalls implementiert werden. 
+   
 
 
 ## Mindestanforderungen
