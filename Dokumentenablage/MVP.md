@@ -6,7 +6,7 @@ Dies dient dazu, erste Feedbacks von NutzerInnen zu erhalten bzw. das erste Grun
 1. Die beiden Spieloberflächen müssen via Konsole ausgegeben werden. 
 2. Eine Grundpositionierung der Schiffe ist im Programmcode verankert.
 3. Die Eingabe der Koordinaten muss möglich sein.
-4. Eine Überprüfung der Eingaben hat zu erfolgen. (Treffer, Koordinate schon verwendet)
+4. Eine Überprüfung der Eingaben hat zu erfolgen. (Treffer, Koordinate schon verwendet, Nur Zahlen u einzelne Buchstaben, keine Zeichen, etc)
 5. Es muss erkannt werden, wenn ein Schiff versenkt wird. (Alle Felder des Schiffes getroffen)
 6. Sofern alle Schiffe eines Spielers getroffen sind, bricht das Spiel ab.  
 
