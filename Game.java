@@ -10,11 +10,19 @@ class Game {
     public void showOnConsole(){}
 
     public static void main(String []args) {
-        Pitch pitch = new Pitch();
+        Pitch p = new Pitch();
         Ships ships = new Ships();
-        int[][] pitch1 = pitch.createPitch(10);
-        pitch.printPitch(pitch1);
-        ships.setShipsRandom(pitch1);
-        pitch.printPitch(pitch1);
+
+        System.out.println("Pitch Player 1: ");
+        int[][] pitch3 = p.createPitch(10);
+        ships.setShipsRandom(pitch3);
+        p.printPitch(pitch3);
+
+        System.out.println("Pitch Player 2: ");
+        int[][] pitch2 = p.createPitch(10);
+        ships.setShipsRandom(pitch2);
+        p.printPitch(pitch2);
+
+
     }
 }
