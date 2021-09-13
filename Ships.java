@@ -16,7 +16,7 @@ public class Ships {
                 positionX = rand.nextInt(pitchSize);
             }
             // Position ok, check if there is another ship
-            System.out.println("xPos: " + positionX + " yPos: " + positionY + " shipSize: " + shipSize);
+            //System.out.println("xPos: " + positionX + " yPos: " + positionY + " shipSize: " + shipSize);
             for (int j = positionX; j < (positionX + shipSize); j++) {
                 if (pitch[j][positionY] == 0) {
                     posCleanCounter++;
@@ -36,7 +36,7 @@ public class Ships {
                 positionY = rand.nextInt(pitchSize);
             }
             // Position ok, check if there is another ship
-            System.out.println("xPos: " + positionX + " yPos: " + positionY + " shipSize: " + shipSize);
+            //System.out.println("xPos: " + positionX + " yPos: " + positionY + " shipSize: " + shipSize);
             for (int j = positionY; j < (positionY + shipSize); j++) {
                 if (pitch[positionX][j] == 0) {
                     posCleanCounter++;
@@ -53,12 +53,12 @@ public class Ships {
         }
     }
 
-    public void setShip(int shipSize, int[][] pitch, int direction){
+    public void setShip(int shipSize, int shipLabel, int[][] pitch, int direction){
         if(direction == 0) {
             checkCleanPosition(pitch, shipSize, direction);
             for (int i = 0; i < shipSize; i++) {
                 //Vertical alignment
-                pitch[positionX][positionY] = 1;
+                pitch[positionX][positionY] = shipLabel;
                 positionX++;
             }
         }
@@ -66,7 +66,7 @@ public class Ships {
             checkCleanPosition(pitch, shipSize, direction);
             for (int i = 0; i < shipSize; i++) {
                 //Vertical alignment
-                pitch[positionX][positionY] = 1;
+                pitch[positionX][positionY] = shipLabel;
                 positionY++;
             }
         }
@@ -86,31 +86,31 @@ public class Ships {
 
         // Place 1 Schlachtschiff (5 Kästchen)
         setRandomVars();
-        setShip(5, pitch, direction);
+        setShip(5, 5, pitch, direction);
 
         // Place 2 Kreuzer (je 4 Kästchen)
         setRandomVars();
-        setShip(4, pitch, direction);
+        setShip(4, 4, pitch, direction);
         setRandomVars();
-        setShip(4, pitch, direction);
+        setShip(4, 4, pitch, direction);
 
         // Place 3 Zerstörer (je 3 Kästchen)
         setRandomVars();
-        setShip(3, pitch, direction);
+        setShip(3, 3, pitch, direction);
         setRandomVars();
-        setShip(3, pitch, direction);
+        setShip(3, 3, pitch, direction);
         setRandomVars();
-        setShip(3, pitch, direction);
+        setShip(3, 3, pitch, direction);
 
         // Place 4 U-Boote (je 2 Kästchen)
         setRandomVars();
-        setShip(2, pitch, direction);
+        setShip(2, 2, pitch, direction);
         setRandomVars();
-        setShip(2, pitch, direction);
+        setShip(2, 2, pitch, direction);
         setRandomVars();
-        setShip(2, pitch, direction);
+        setShip(2, 2, pitch, direction);
         setRandomVars();
-        setShip(2, pitch, direction);
+        setShip(2, 2, pitch, direction);
 
 
     }
