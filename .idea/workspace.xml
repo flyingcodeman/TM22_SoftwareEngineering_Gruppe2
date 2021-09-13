@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444b221c-d072-4b84-a020-baf8f8721094" name="Changes" comment="AW Proof reading Regelwerk.md" />
+    <list default="true" id="444b221c-d072-4b84-a020-baf8f8721094" name="Changes" comment="AW Proof reading Regelwerk.md">
+      <change beforePath="$PROJECT_DIR$/Dokumentenablage/MVP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dokumentenablage/Regelwerk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstFile.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
