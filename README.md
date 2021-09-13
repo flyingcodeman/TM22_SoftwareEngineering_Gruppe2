@@ -27,7 +27,7 @@ for notes on deploying the project and the ongoing status.
 ### Branching 
 
 1. Checkout your own branch only from "development" or "organisational", not from main
-2. Use following name convention: [Sirname][First char of lastname]_TSV[Task-ID from Jira]
+2. Use following name convention: [firstname][First char of lastname]_TSV[Task-ID from Jira]
 3. Push small changes only to your own branch
 4. If the Jira-task is done: Create a Pull-request to "development"/"organisational"
 
