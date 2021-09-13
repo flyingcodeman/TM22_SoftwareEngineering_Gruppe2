@@ -1,11 +1,15 @@
-public class Pitch {
-    int[][] array;
+public class Field {
 
-    public int[][] createPitch(int size){
-        return new int[size][size];
+    private int[][] field;
+
+    public int[][] getField(){
+        return field;
+    }
+    public void createField(int size){
+        field = new int[size][size];
     }
 
-    public void printPitch(int[][] array){
+    public void printField(){
         System.out.println("     A B C D E F G H I J ");
         System.out.println("   * * * * * * * * * * * *");
         int x = 1;
@@ -16,7 +20,7 @@ public class Pitch {
                 System.out.print(x + " " + "* ");
             }
             for (int j = 0; j < 10; j++) {
-                System.out.print(array[i][j]);
+                System.out.print(field[i][j]);
                 System.out.print(" ");
             }
             System.out.print("*");
