@@ -1,28 +1,24 @@
 class Game {
 
     /*
-     * Initial commit
+        Game modes to be defined
      */
-    public void createPitch(){}
-    public void placeShip(){}
-    public void sankShip(){}
-    public void shoot(){}
-    public void showOnConsole(){}
+
 
     public static void main(String []args) {
-        Pitch p = new Pitch();
+        Field field1 = new Field();
+        Field field2 = new Field();
         Ships ships = new Ships();
 
-        System.out.println("Pitch Player 1: ");
-        int[][] pitch3 = p.createPitch(10);
-        ships.setShipsRandom(pitch3);
-        p.printPitch(pitch3);
+        System.out.println("Field Player 1: ");
+        field1.createField(10);
+        ships.setShipsRandom(field1.getField());
+        field1.printField();
 
-        System.out.println("Pitch Player 2: ");
-        int[][] pitch2 = p.createPitch(10);
-        ships.setShipsRandom(pitch2);
-        p.printPitch(pitch2);
-
+        System.out.println("Field Player 2: ");
+        field2.createField(10);
+        ships.setShipsRandom(field2.getField());
+        field2.printField();
 
     }
 }
