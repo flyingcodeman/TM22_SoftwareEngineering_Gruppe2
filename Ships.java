@@ -61,7 +61,7 @@ public class Ships {
         }
     }
 
-    // Place ship with given parameters
+    // Place one ship with given parameters
     private void setShip(int shipSize, int amount, int shipLabel, int[][] field, int direction, int playMode){
 
         // Random mode
@@ -103,6 +103,7 @@ public class Ships {
         posCleanCounter = 0;
     }
 
+    //Place all available ships randomly on the board
     public void setShipsRandom(int[][] field){
         fieldSize = field.length;
 
