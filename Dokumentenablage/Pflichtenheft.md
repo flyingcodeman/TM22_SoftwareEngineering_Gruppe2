@@ -11,7 +11,7 @@ Jeder Spieler verfügt über folgende Schiffe:
 - drei Zerstörer (je 3 Kästchen)
 - vier U-Boote (je 2 Kästchen)
 
-Alle Schiffe sind 
+Alle Schiffe sind [wurde nicht ausformuliert?]
 
 Es müssen alle Schiffe am Spielfeld verteilt werden. 
 Das Spielfeld ist 10x10 Felder groß und horizontal mit Buchstaben, vertikal mit Zahlen nummeriert. 
@@ -25,7 +25,7 @@ Das Spielfeld ist 10x10 Felder groß und horizontal mit Buchstaben, vertikal mit
          2. Manuelle Eingabe
       4. Abfrage ob das Spiel jetzt gestartet werden soll. 
 2. Spielablauf 
-   1. 
+   1. [wurde nicht ausformuliert?]
               
 ## Must have 
 - Ausgabe via Konsole (Spielfeld, eigene Schiffe, Treffer und Versuche)
@@ -33,12 +33,12 @@ Das Spielfeld ist 10x10 Felder groß und horizontal mit Buchstaben, vertikal mit
 - Ablauf gemäß des unten beschriebenen Spielablaufes. 
 ## Nice to have 
 - GUI 
-- Eigene Positionierung der Schiffe 
+- Eigene Positionierung der Schiffe [eigene dh der/die SpielerIn kann die Position(en) selbst wählen?]
 - Single Player Modus (Schießen mit Zufallsalgorithmus)
 ## if some time 
 - Dispatcher, welcher die 
 - Automatische Verteilung der Schiffe
-- Advanced Single Player (Logische folgetreffer)
+- Advanced Single Player (Logische Folgetreffer)
 - Bestenliste 
 - .exe Installations File 
 - Multiplayer Modi via Netzwerk 
