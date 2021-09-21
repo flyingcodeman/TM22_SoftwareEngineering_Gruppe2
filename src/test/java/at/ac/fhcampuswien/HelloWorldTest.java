@@ -1,10 +1,23 @@
 package at.ac.fhcampuswien;
+import org.junit.jupiter.api.Test;
 
-class HelloWorldTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    void setUp() {
+public class HelloWorldTest {
+
+
+    @Test
+    void testGetTen_GoodCase(){
+        int actual = HelloWorld.get10();
+        int expected = 10;
+        assertEquals(expected, actual);
+
     }
 
-    void get10() {
+    @Test
+    void testGetTen_BadCase(){
+        int actual = HelloWorld.get10();
+        int expected = 11;
+        assertNotEquals(expected, actual);
     }
 }
