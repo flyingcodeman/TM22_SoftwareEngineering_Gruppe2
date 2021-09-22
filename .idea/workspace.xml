@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444b221c-d072-4b84-a020-baf8f8721094" name="Changes" comment="AW Proof reading Regelwerk.md">
-      <change beforePath="$PROJECT_DIR$/Dokumentenablage/MVP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dokumentenablage/Regelwerk.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstFile.java" beforeDir="false" />
+    <list default="true" id="a6fdc827-6a60-4feb-a233-d520e6c35f2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +13,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="organisational" />
+        <entry key="$PROJECT_DIR$" value="SimonK_TSV16" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1xohYfkFGcMA5X9riGNTCRmjv41" />
   <component name="ProjectViewState">
@@ -25,13 +27,29 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="TM22_SoftwareEngineering_Gruppe2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="TM22_SoftwareEngineering_Gruppe2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="444b221c-d072-4b84-a020-baf8f8721094" name="Changes" comment="" />
+      <changelist id="a6fdc827-6a60-4feb-a233-d520e6c35f2d" name="Changes" comment="" />
       <created>1631027404114</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
