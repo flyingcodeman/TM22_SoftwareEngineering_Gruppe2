@@ -22,3 +22,16 @@
 - [DoD-36.020] Die horizontale Beschriftung ist alphabetisch fortlaufend und beginne bei der ersten Spalte mit A
 - [DoD-36.030] Die vertikale Beschriftung ist numerisch fortlaufend und beginnt in der ersten Zeile mit 1  
 
+## DoD-40 Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
+- [DoD-40.010] Der User erhält das Spielfeld in der gewählten Größe 
+- [DoD-40.020] Das Spielfeld verfügt über eine Beschriftung 
+- [DoD-40.030] Die getroffenen Schiffe werden mit einem X angezeigt.
+- [DoD-40.040] Die versenkten Schiffe werden mit einem # angezeigt.
+- Die nicht-getroffenen Schiffe werden mit O angezeigt. 
+
+
+gegnerisch
+- x getroffen, # versenkt, hingeschossen nicht vgetroffen -, (wasser ~)
+
+nicht gegnerisch
+- x getroffen, # versenkt, 0 nicht getroffene eigene schiffe, - schüsse des gegners
