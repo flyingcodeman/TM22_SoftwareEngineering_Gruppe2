@@ -17,3 +17,8 @@
 - [DoD-36.050] Die Felder der Schfiffe haben zwei Zustände (Getroffen, nicht getroffen)
 - [DoD-36.060] Das Schiff überprüft ob es gesunken ist (alle Felder getroffen) 
 
+## DoD-39 Der User sieht bei der Ausgabe des Spielfeldes die Achsenbeschriftung
+- [DoD-36.010] Es muss über eine Variable die Größe des Spielfeldes eingalesen werden
+- [DoD-36.020] Die horizontale Beschriftung ist alphabetisch fortlaufend und beginne bei der ersten Spalte mit A
+- [DoD-36.030] Die vertikale Beschriftung ist numerisch fortlaufend und beginnt in der ersten Zeile mit 1  
+
