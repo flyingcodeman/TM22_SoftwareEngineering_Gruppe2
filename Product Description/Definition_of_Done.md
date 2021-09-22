@@ -23,15 +23,14 @@
 - [DoD-36.030] Die vertikale Beschriftung ist numerisch fortlaufend und beginnt in der ersten Zeile mit 1  
 
 ## DoD-40 Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
-- [DoD-40.010] Der User erhält das Spielfeld in der gewählten Größe 
-- [DoD-40.020] Das Spielfeld verfügt über eine Beschriftung 
-- [DoD-40.030] Die getroffenen Schiffe werden mit einem X angezeigt.
-- [DoD-40.040] Die versenkten Schiffe werden mit einem # angezeigt.
-- Die nicht-getroffenen Schiffe werden mit O angezeigt. 
+- [DoD-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole ausgegeben.
+- [DoD-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem X angezeigt. 
+- [DoD-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem # angezeigt.
+- [DoD-40.040] Auf dem gegnerischen Feld werden nicht getroffene Schüsse (Felder auf die bereits geschossen wurde aber kein Schiff steht) mit - gekennzeichnet.
+- [DoD-40.050] Auf dem gegnerischen Feld werden noch nicht beschossene Felder mit ~ gekennzeichnet. 
+- [DoD-40.060] Auf dem eigenen Feld werden getroffene Schiffe mit einem X angezeigt. 
+- [DoD-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem # angezeigt.
+- [DoD-40.080] Auf dem eigenen Feld werden Schüsse des Gegners, die nicht getroffenen mit - gekennzeichnet.
+- [DoD-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
+- [DoD-40.100] Auf dem eigenen Feld werden nicht getroffene Schiffe mit 0 gekennzeichnet.
 
-
-gegnerisch
-- x getroffen, # versenkt, hingeschossen nicht vgetroffen -, (wasser ~)
-
-nicht gegnerisch
-- x getroffen, # versenkt, 0 nicht getroffene eigene schiffe, - schüsse des gegners
