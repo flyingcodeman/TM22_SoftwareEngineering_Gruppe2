@@ -34,3 +34,10 @@
 - [DoD-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
 - [DoD-40.100] Auf dem eigenen Feld werden nicht getroffene Schiffe mit 0 gekennzeichnet.
 
+## DoD-60 Dem User wird angezeigt welches Zeichen am Feld was bedeutet
+- [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
+- [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
+- [DoD-60.030] Dem User wird der Text "- ==> Schuss ins Wasser" angezeigt
+- [DoD-60.040] Dem User wird der Text "0 ==> Eigenes Schiff" angezeigt
+- [DoD-60.050] Dem User wird der Text "~ ==> Leeres Feld (eigenes Spielfeld)" angezeigt
+- [DoD-60.060] Dem User wird der Text "~ ==> Feld noch unbekannt (gegnerisches Spielfeld)" angezeigt
