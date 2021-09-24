@@ -34,6 +34,13 @@
 - [DoD-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
 - [DoD-40.100] Auf dem eigenen Feld werden nicht getroffene Schiffe mit 0 gekennzeichnet.
 
+## DoD-44 Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
+- [DoD-44.010] Es muss ein Boolean (z.B. "aktiveSchiffeAmFeld") eingelesen werden
+- [DoD-44.020] Wenn die Variable "true" ist, darf keine Reaktion erfolgen
+- [DoD-44.030] Wenn die Variable "false" ist, wird eine Textmeldung ausgegeben
+- [DoD-44.040] Die Textmeldung muss bestätigt werden
+- [DoD-44.050] Nach bestätigung terminiert das Spiel automatisch und man gelang zum Hauptmenü 
+
 ## DoD-60 Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
