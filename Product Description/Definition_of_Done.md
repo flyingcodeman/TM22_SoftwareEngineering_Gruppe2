@@ -38,6 +38,14 @@
 - [DoD-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
 - [DoD-40.100] Auf dem eigenen Feld werden nicht getroffene Schiffe mit 0 gekennzeichnet.
 
+## [DoD-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
+### Wird das benötigt? ist das nicht schon anderweitig definiert siehe DoD 40??? 
+
+## [DoD-45] Der User erhält die Information, dass das Spiel beendet ist
+- [DoD-45.010] Es wird die Sprachauswahl erkennt
+- [DoD-45.020] Die default Sprache ist Englisch
+- [DoD-45.030] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. Einen schönen Tag noch." ausgegeben.
+
 ## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [DoD-44.010] Es muss ein Boolean (z.B. "aktiveSchiffeAmFeld") eingelesen werden
 - [DoD-44.020] Wenn die Variable "true" ist, darf keine Reaktion erfolgen
