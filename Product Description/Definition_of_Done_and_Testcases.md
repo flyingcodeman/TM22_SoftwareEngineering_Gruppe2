@@ -4,9 +4,9 @@
 - [DoD-32.030] Kein Schiff ragt über das Spielfeld 
 - [DoD-32.040] Kein Schiff kreuzt ein anderes
 - [DoD-32.050] Kein Schiff ist diagonal platziert 
-- [DoD-32.060] Alle Schiffe (siehe DoD-36) sind am Spielfled verteilt. 
-- [DoD-32.070] Die Verteilung ändert sich bei mehrmahligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
-- [DoD-32.080] Die Verteileung erfolgt gemäß den Vorgaben (Regeln) 
+- [DoD-32.060] Alle Schiffe (siehe DoD-36) sind am Spielfeld verteilt. 
+- [DoD-32.070] Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
+- [DoD-32.080] Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
 ### [TC-32] 
 - [TC-32.010]
@@ -17,7 +17,7 @@
 - [DoD-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
 
 ### [TC-34] 
-- [TC-34.010]
+- [TC-34.010] 
 
 ## [DoD-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 - [DoD-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
