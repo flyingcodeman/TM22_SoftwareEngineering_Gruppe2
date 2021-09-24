@@ -65,7 +65,10 @@
 - [DoD-49.010] Es wird überprüft, ob der Schuss ein Schiff getroffen hat
 - [DoD-49.020] Wenn ein Schiff nicht getroffen wurde erfolgt die Meldung "Kein Treffer"
 - [DoD-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
-- [DoD-49.040] Wenn ein Schiff getroffen und versenkt wurde erfolgt die Meldung "Treffer und Versenkt"
+
+## [DoD-50] Der User erhält Rückmeldung ob er mit dem Schuss ein Schiff versenkt hat
+- [DoD-50.010] Es wird überprüft, ob ein Schiff noch intakte Felder besitzt
+- [DoD-50.020] Wenn ein Schiff getroffen und versenkt wurde erfolgt die Meldung "Treffer und Versenkt"
 
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
