@@ -70,6 +70,12 @@
 - [DoD-50.010] Es wird überprüft, ob ein Schiff noch intakte Felder besitzt
 - [DoD-50.020] Wenn ein Schiff getroffen und versenkt wurde erfolgt die Meldung "Treffer und Versenkt"
 
+## [DoD-51] Der User erhält Rückmeldung ob seine Eingaben über den Schuss valide sind
+- [DoD-51.010] Die Eingabe der Koordinaten wird eingelesen
+- [DoD-51.020] Die Koordinaten müssen sich am Spielfeld befinden
+- [DoD-51.030] Die Koordinate darf nur einmal verwendet werden
+- [DoD-51.040] Bei einer falschen Eingabe erfolgt eine Fehlermeldung
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
