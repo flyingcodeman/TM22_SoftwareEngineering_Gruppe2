@@ -46,6 +46,12 @@
 - [DoD-45.020] Die default Sprache ist Englisch
 - [DoD-45.030] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. Einen schönen Tag noch." ausgegeben.
 
+## [DoD-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
+- [DoD-47.010] Das Spiel befindet sich im Beendigungsmodus 
+- [DoD-47.020] Es kann zwischen Spiel beenden und Hauptmenü gewählt werden
+- [DoD-47.030] Wenn beenden gewählt wird schließt sich die Anwendung eigenständig
+- [DoD-47.040] Wenn Hauptmenü gewählt wird, wird der user auf dieses Weitergeleitet
+
 ## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [DoD-44.010] Es muss ein Boolean (z.B. "aktiveSchiffeAmFeld") eingelesen werden
 - [DoD-44.020] Wenn die Variable "true" ist, darf keine Reaktion erfolgen
