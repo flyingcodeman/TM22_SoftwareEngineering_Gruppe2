@@ -52,6 +52,8 @@
 - [DoD-47.030] Wenn beenden gewählt wird schließt sich die Anwendung eigenständig
 - [DoD-47.040] Wenn Hauptmenü gewählt wird, wird der user auf dieses Weitergeleitet
 
+## [DoD-48] ??? Zusammenlegen mit 47?? 
+
 ## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [DoD-44.010] Es muss ein Boolean (z.B. "aktiveSchiffeAmFeld") eingelesen werden
 - [DoD-44.020] Wenn die Variable "true" ist, darf keine Reaktion erfolgen
