@@ -41,6 +41,13 @@
 ## [DoD-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
 ### Wird das benötigt? ist das nicht schon anderweitig definiert siehe DoD 40??? 
 
+## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
+- [DoD-44.010] Es muss ein Boolean (z.B. "aktiveSchiffeAmFeld") eingelesen werden
+- [DoD-44.020] Wenn die Variable "true" ist, darf keine Reaktion erfolgen
+- [DoD-44.030] Wenn die Variable "false" ist, wird eine Textmeldung ausgegeben
+- [DoD-44.040] Die Textmeldung muss bestätigt werden
+- [DoD-44.050] Nach bestätigung terminiert das Spiel automatisch und man gelang zum Hauptmenü
+
 ## [DoD-45] Der User erhält die Information, dass das Spiel beendet ist
 - [DoD-45.010] Es wird die Sprachauswahl erkennt
 - [DoD-45.020] Die default Sprache ist Englisch
@@ -54,12 +61,11 @@
 
 ## [DoD-48] ??? Zusammenlegen mit 47?? 
 
-## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
-- [DoD-44.010] Es muss ein Boolean (z.B. "aktiveSchiffeAmFeld") eingelesen werden
-- [DoD-44.020] Wenn die Variable "true" ist, darf keine Reaktion erfolgen
-- [DoD-44.030] Wenn die Variable "false" ist, wird eine Textmeldung ausgegeben
-- [DoD-44.040] Die Textmeldung muss bestätigt werden
-- [DoD-44.050] Nach bestätigung terminiert das Spiel automatisch und man gelang zum Hauptmenü 
+## [DoD-49] Der User erhält Rückmeldung über das Ergebnis seines Schusses
+- [DoD-49.010] Es wird überprüft, ob der Schuss ein Schiff getroffen hat
+- [DoD-49.020] Wenn ein Schiff nicht getroffen wurde erfolgt die Meldung "Kein Treffer"
+- [DoD-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
+- [DoD-49.040] Wenn ein Schiff getroffen und versenkt wurde erfolgt die Meldung "Treffer und Versenkt"
 
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
