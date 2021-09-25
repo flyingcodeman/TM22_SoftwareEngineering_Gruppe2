@@ -1,13 +1,17 @@
 # Testcases
 
-| Number	  | Task | Precondition  | Kennzahl	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 
 ## [TC-32] Der User kann Schiffe zufällig vom Programm platzieren lassen
-| Number	  | Task | Precondition  | Kennzahl	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
-| [TC-32.020] | Es werden alle Schiffe plaziert 
-| [TC-32.030] | Kein Schiff ragt über das Spielfeld 
-| [TC-32.040] | Kein Schiff kreuzt ein anderes
+| Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+x| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
+| TC-32.010   | 1 Suche die Funktion bool manShipPlacement 2 Funktion bool manShipPlacment aufrufen | Funktion bool manShipPlacement ist implementiert | Keine | 1 Funktion manShipPlacement im Programm-Code gefunden 2 Funktion manShipPlacement konnte aufgerufen werden und gibt den Wet TRUE aus | |  |  |
+x| [TC-32.020] | Es werden alle Schiffe plaziert 
+| TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen | Funktion setFleet() ist implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
+x| [TC-32.030] | Kein Schiff ragt über das Spielfeld
+| TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen 3 Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | Funktion setFleet(), createField(size) sind implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen 3 Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds | | | |
+WIP| [TC-32.040] | Kein Schiff kreuzt ein anderes
+| TC-32.040 | | 1P 
 | [TC-32.050] | Kein Schiff ist diagonal platziert 
 | [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
 | [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
