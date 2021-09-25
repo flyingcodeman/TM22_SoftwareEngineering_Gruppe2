@@ -8,16 +8,10 @@
 - [DoD-32.070] Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
 - [DoD-32.080] Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
-### [TC-32] 
-- [TC-32.010]
-
 ## [DoD-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [DoD-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [DoD-40]
 - [DoD-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [DoD-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
-
-### [TC-34] 
-- [TC-34.010] 
 
 ## [DoD-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 - [DoD-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
@@ -28,16 +22,10 @@
 - [DoD-36.060] Das Schiff wird darauf überprüft , ob es gesunken ist (alle Felder getroffen).
 - [DoD-36.070] Das Schiff hat zwei Zustände (floating, sunken)
 
-### [TC-36] 
-- [TC-36.010]
-
 ## [DoD-39] Der User sieht bei der Ausgabe des Spielfeldes die Achsenbeschriftung
 - [DoD-36.010] Es muss über eine Variable die Größe des Spielfeldes bekannt sein 
 - [DoD-36.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
 - [DoD-36.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht. 
-
-### [TC-39] 
-- [TC-39.010]
 
 ## [DoD-40] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
 - [DoD-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole untereinander ausgegeben.
@@ -51,14 +39,8 @@
 - [DoD-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
 - [DoD-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit 0 gekennzeichnet.
 
-### [TC-40] 
-- [TC-40.010]
-
 ## [DoD-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
 - [DoD-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
-
-### [TC-42] 
-- [TC-42.010]
 
 ## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [DoD-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
@@ -66,43 +48,25 @@
 - [DoD-44.030] Gibt es keine aktive Schiffe mehr, erfolgt kein weiterer Spielzug.
 - [DoD-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siege [DoD-45.010]
 
-### [TC-44] 
-- [TC-44.010]
-
 ## [DoD-45] Der User erhält die Information, dass das Spiel beendet ist
 - [DoD-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
-
-### [TC-45] 
-- [TC-45.010]
 
 ## [DoD-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
 - [DoD-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // DoD-45.030) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen" 
 - [DoD-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet. 
 
-### [TC-47] 
-- [TC-47.010]
-
 ## [DoD-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
 - [DoD-48.010] Nach Spielbeendigungsmeldung (siehe US-45 // DoD-45.030) erhält der User eine Taste/Eingabemöglichkeit "Programm beenden"
 - [DoD-48.010] Bei Wahl dieser Möglichkeit wird das Programm beendet & geschlossen.
-
-### [TC-48] 
-- [TC-48.010]
 
 ## [DoD-49] Der User erhält Rückmeldung über das Ergebnis seines Schusses
 - [DoD-49.010] Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat
 - [DoD-49.020] Wenn der User kein Schiff getroffen hat erfolgt die Meldung "Kein Treffer"
 - [DoD-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
 
-### [TC-49] 
-- [TC-49.010]
-
 ## [DoD-50] Der User erhält Rückmeldung ob er mit dem Schuss ein Schiff versenkt hat
 - [DoD-50.010] Es wird nach einem erfolgreichen Schuss (Schuss hat ein Schiff getroffen) überprüft, ob ein Schiff noch intakte Felder besitzt
 - [DoD-50.020] Wenn ein Schiff keine intakten Felder besitzt erfolgt die Meldung "Versenkt!!"
-
-### [TC-50] 
-- [TC-50.010]
 
 ## [DoD-51] Der User erhält Rückmeldung ob seine Eingaben über den Schuss valide sind
 - [DoD-51.010] Die Eingabe der Koordinaten wird eingelesen
@@ -111,9 +75,6 @@
 - [DoD-51.040] Bei einer falschen Eingabe erfolgt eine Fehlermeldung "Dieser Schuss war nicht gültig" & der User darf erneut schießen.
 - [DoD-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
 
-### [TC-51] 
-- [TC-51.010]
-
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
@@ -121,6 +82,3 @@
 - [DoD-60.040] Dem User wird der Text "0 ==> Eigenes, ungetroffenes Schiff" angezeigt
 - [DoD-60.050] Dem User wird der Text "~ ==> Leeres Feld (eigenes Spielfeld)" angezeigt
 - [DoD-60.060] Dem User wird der Text "~ ==> Feld noch unbekannt (gegnerisches Spielfeld)" angezeigt
-
-### [TC-60] 
-- [TC-60.010]
