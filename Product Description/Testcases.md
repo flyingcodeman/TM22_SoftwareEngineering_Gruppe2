@@ -10,9 +10,10 @@ x| [TC-32.020] | Es werden alle Schiffe plaziert
 | TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen | Funktion setFleet() ist implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
 x| [TC-32.030] | Kein Schiff ragt über das Spielfeld
 | TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen 3 Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | Funktion setFleet(), createField(size) sind implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen 3 Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds | | | |
-WIP| [TC-32.040] | Kein Schiff kreuzt ein anderes
-| TC-32.040 | | 1P 
-| [TC-32.050] | Kein Schiff ist diagonal platziert 
+X| [TC-32.040] | Kein Schiff kreuzt ein anderes
+| TC-32.040 | 1 Funktion printfleet aufrufen 2Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind | 1P Funktion printFleet ist implementiert und funktionsfähig | 1E Funktion printFleet liefert Daten 2E keine Doppelten Werte vorhanden | | | |
+X| [TC-32.050] | Kein Schiff ist diagonal platziert 
+| TC-32.050 | 1 Funktion testNotDiagonalShip aufrufen 2 Ergebnis aus Funktion testNotDiagonalShip ablesen | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig | 1E Funktion testNotDiagonalShip  wurde ausgeführt 2E Die Funktion testNotDiagonalShip gibt TRUE aus | | | |     
 | [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
 | [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
 | [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
