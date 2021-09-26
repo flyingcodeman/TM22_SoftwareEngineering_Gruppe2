@@ -142,6 +142,9 @@
 ##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln währens des Spiels anzeigen zu lassen 
 - [DoD-57.010] TBC 
 
+## [DoD-58] Der User hat die möglichkeit das Spiel zu pausieren
+- [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten 
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
