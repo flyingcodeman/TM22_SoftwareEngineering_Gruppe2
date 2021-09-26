@@ -131,6 +131,10 @@
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen 
 - [DoD-54.030] Der User kann die Sprache D² wählen 
 
+## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
+- [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
+- [DoD-55.020] Wenn Wasser geroffen wird, erfolgt eine akustische Ausgabe, die Wasserplatschen imitiert 
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
