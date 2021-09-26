@@ -76,6 +76,13 @@
 ## [DoD-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
 - [DoD-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
 
+## [DoD-43] Der User kann die Schwierigkeit durch die Anzahl der Schiffe und die Spielfeldgröße variieren 
+- [DoD-43.010] Die Eingabe der Spielfeldgröße ist möglich 
+- [DoD-43.020] Die Eingabe der Anzahl der Flugzeugträger ist möglich (1-3)
+- [DoD-43.030] Die Eingabe der Anzahl der Schlachtschiffe ist möglich (2-6)
+- [DoD-43.040] Die Eingabe der Anzahl der Zerstörer ist möglich (3-9)
+- [DoD-43.050] Die Eingabe der Anzahl der U-Boote ist möglich (4-12)
+
 ## [DoD-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [DoD-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
 - [DoD-44.020] Wenn es noch aktive Schiffe gibt, wird das Spiel fortgesetzt
