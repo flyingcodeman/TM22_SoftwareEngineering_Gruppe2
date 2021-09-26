@@ -1,4 +1,4 @@
-## [DoD-32]Der User kann Schiffe zufällig vom Programm platzieren lassen
+## [DoD-32] Der User kann Schiffe zufällig vom Programm platzieren lassen
 - [DoD-32.010] Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
 - [DoD-32.020] Es werden alle Schiffe plaziert 
 - [DoD-32.030] Kein Schiff ragt über das Spielfeld 
@@ -8,10 +8,16 @@
 - [DoD-32.070] Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
 - [DoD-32.080] Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
+## [DoD-33] Der User bekommt eine Fehlermeldung angezeigt, wenn er die Schiffe falsch platziert 
+- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das sChiff muss sich inerhalb des Spielfelds befinden!"
+- [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
+
 ## [DoD-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [DoD-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [DoD-40]
 - [DoD-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [DoD-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
+
+
 
 ## [DoD-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 - [DoD-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
