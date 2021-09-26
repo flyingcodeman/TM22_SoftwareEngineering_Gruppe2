@@ -123,6 +123,14 @@
 - [DoD-51.040] Bei einer falschen Eingabe erfolgt eine Fehlermeldung "Dieser Schuss war nicht gültig" & der User darf erneut schießen.
 - [DoD-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
 
+## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
+- [DoD-53.010] TBC 
+
+## [DoD-54] Der User kann die Sprache des Spiels auswählen
+- [DoD-54.010] Die Standardsprache für das Spiel ist Englisch 
+- [DoD-54.020] Der User kann die Sprache Deutsch wählen 
+- [DoD-54.030] Der User kann die Sprache D² wählen 
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
