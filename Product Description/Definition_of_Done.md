@@ -145,6 +145,9 @@
 ## [DoD-58] Der User hat die möglichkeit das Spiel zu pausieren
 - [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten 
 
+## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
+- [DoD-59.010] TBC 
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
@@ -152,3 +155,8 @@
 - [DoD-60.040] Dem User wird der Text "0 ==> Eigenes, ungetroffenes Schiff" angezeigt
 - [DoD-60.050] Dem User wird der Text "~ ==> Leeres Feld (eigenes Spielfeld)" angezeigt
 - [DoD-60.060] Dem User wird der Text "~ ==> Feld noch unbekannt (gegnerisches Spielfeld)" angezeigt
+
+## [DoD-61] Der User hat die Möglichkeit, die Audioeffekte an- bzw. abzuschalten
+- [DoD-61.010] Es wird abgefragt, ob Audioeffekte erwünscht sind
+- [DoD-61.020] Falls erwünscht wird die Methode für Audioeffekte angeschaltet 
+- [DoD-61.030] Falls nicht erwünscht wird die Methode für Audioeffekte abgeschaltet
