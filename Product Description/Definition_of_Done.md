@@ -34,6 +34,15 @@
 - [DoD-36.060] Das Schiff wird darauf überprüft , ob es gesunken ist (alle Felder getroffen).
 - [DoD-36.070] Das Schiff hat zwei Zustände (floating, sunken)
 
+## [DoD-37] Der User kann Schiffe manuell platzieren
+- [DoD-37.010] Es wird überprüft, ob der User die manuelle Schiffsplatzierung gewählt hat
+- [DoD-37.020] Dem User wird angezeigt, wieviele Schiffe er platzieren kann
+- [DoD-37.030] Die Anzeige passt sich an, wenn der User ein Schiff platziert hat
+- [DoD-37.040] Der User gibt die Koordinate für das Startfeld des Schiffs an (Zuerst hotizontal, dann vertikal)
+- [DoD-37.050] Der User wählt zwischen H = Horizontale ausrichtung und V = vertikale Ausrichtung
+- [DoD-37.060] Es wird überprüft, ob das Schiff an der angegebenen Position platziert werden darf
+- [DoD-37.070] Wenn alle Schiffe platziert worden sind, erfolgt die Meldung "Alle Schiffe platziert, die Schlacht kann beginnen"
+
 ## [DoD-39] Der User sieht bei der Ausgabe des Spielfeldes die Achsenbeschriftung
 - [DoD-36.010] Es muss über eine Variable die Größe des Spielfeldes bekannt sein 
 - [DoD-36.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
