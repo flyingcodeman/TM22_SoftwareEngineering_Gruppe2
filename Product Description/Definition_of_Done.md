@@ -65,6 +65,14 @@
 - [DoD-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
 - [DoD-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit 0 gekennzeichnet.
 
+## [DoD-41] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der GUI ausgegeben
+- [DoD-41.010] Das Spielfeld wird an grafisch Wiedergegeben
+- [DoD-41.020] Die Schiffe sind der Größe entsprechend modelliert und werden am Spielfeld wiedergegeben
+- [DoD-41.030] Die Textmeldungen werden an der GUI mit einem Pop-up-Fenster angezeigt
+- [DoD-41.040] Die Kommandoeingabe wird durch die Pop-up-Fenster eingelesen
+- [DoD-41.050] Die Visualisierung der Schiffe ist so aufgebaut, dass ein klarer Unterschied zwischen intakt, getroffen und versenkt angezeigt wird 
+- [DoD-41.060] Die Eingabe via Maus (Koordinaten für einen Schussversuch, Schiffe platzieren, ...) ist möglich 
+
 ## [DoD-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
 - [DoD-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
 
