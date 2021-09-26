@@ -43,6 +43,11 @@
 - [DoD-37.060] Es wird überprüft, ob das Schiff an der angegebenen Position platziert werden darf
 - [DoD-37.070] Wenn alle Schiffe platziert worden sind, erfolgt die Meldung "Alle Schiffe platziert, die Schlacht kann beginnen"
 
+## [DoD-38] Der User kann die Größe des quadratischen Spielfeldes einstellen
+- [DoD-38.010] Es wird überprüft, ob eine variable Spielfeldgröße gewählt worden ist
+- [DoD-38.020] Der User gibt die Größe des Spielfeldes an
+- [DoD-38.030] Die Größe muss zwischen 10 und 50 Einheiten sein 
+
 ## [DoD-39] Der User sieht bei der Ausgabe des Spielfeldes die Achsenbeschriftung
 - [DoD-36.010] Es muss über eine Variable die Größe des Spielfeldes bekannt sein 
 - [DoD-36.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
