@@ -92,6 +92,13 @@
 ## [DoD-45] Der User erhält die Information, dass das Spiel beendet ist
 - [DoD-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
 
+## [DoD-46] Der User erhält nach beendigung des Spiels die Möglichkeit detaillierte Informationen über das Spielergebnis angezeigt zu bekommen
+- [DoD-46.010] Es wird die meiste Treffequote (Treffer die nacheinander erzielt worden sind) angezeigt
+- [DoD-46.020] Es wird die Anzahl der Spielzüge angezeigt 
+- [DoD-46.030] Es wird die Dauer des Spiels angezeigt 
+- [DoD-46.040] Es wird die Fehltrefferquote angezeigt 
+- [DoD-46.050] Es wird das Verhältnis zwischen den zwei Gegnern angezeigt (Treffer, Fehltreffer, Versenkte Schiffe)
+
 ## [DoD-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
 - [DoD-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // DoD-45.030) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen" 
 - [DoD-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet. 
