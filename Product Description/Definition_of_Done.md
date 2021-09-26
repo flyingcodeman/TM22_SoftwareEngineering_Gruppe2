@@ -12,12 +12,18 @@
 - [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das sChiff muss sich inerhalb des Spielfelds befinden!"
 - [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
 
-## [DoD-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
+## [DoD-34] Dem User wird angezeigt, wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [DoD-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [DoD-40]
 - [DoD-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [DoD-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
 
-
+## [DoD-35] Dem User wird angezeigt, wieviele eigene Schiffe gertoffen/versenkt wurden
+- [DoD-35.010] Es wird überprüft, wieviele eigene Schiffe getroffen wurden
+- [DoD-35.020] Es wird überprüft, wieviele eigene Schiffe versenkt wurden
+- [DoD-35.030] Es wird überprüft, wieviele eigene Schiffe noch intakt sind
+- [DoD-35.040] Es wir die Meldung " %d Schiffe versenkt"
+- [DoD-35.050] Es wir die Meldung " %d Schiffe getroffen"
+- [DoD-35.060] Es wir die Meldung " %d Schiffe intakt"
 
 ## [DoD-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 - [DoD-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
