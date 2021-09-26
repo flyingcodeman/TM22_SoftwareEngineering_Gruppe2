@@ -139,6 +139,9 @@
 - [DoD-56.010] Es wird abgefragt, ob der User die Spielregeln sehen will 
 - [DoD-56.020] Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld auszugeben 
 
+##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln währens des Spiels anzeigen zu lassen 
+- [DoD-57.010] TBC 
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
