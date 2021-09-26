@@ -135,6 +135,10 @@
 - [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
 - [DoD-55.020] Wenn Wasser geroffen wird, erfolgt eine akustische Ausgabe, die Wasserplatschen imitiert 
 
+## [DoD-56] Der User hat die Möglichkeit sich die Spielregeln vor dem Spiel anzeigen zu lassen
+- [DoD-56.010] Es wird abgefragt, ob der User die Spielregeln sehen will 
+- [DoD-56.020] Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld auszugeben 
+
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - [DoD-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
