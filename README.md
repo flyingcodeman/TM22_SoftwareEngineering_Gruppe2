@@ -22,7 +22,14 @@ for notes on deploying the project and the ongoing status.
    1. Fill in the "URL" with: https://github.com/flyingcodeman/TM22_SoftwareEngineering_Gruppe2.git
    2. In "Directory" choose where to save this repository locally
 
+## Guidelines
 
+### Branching 
+
+1. Checkout your own branch only from "development" or "organisational", not from main
+2. Use following name convention: [Sirname][First char of lastname]_TSV[Task-ID from Jira]
+3. Push small changes only to your own branch
+4. If the Jira-task is done: Create a Pull-request to "development"/"organisational"
 
 ## Useful information / Documentation
 
