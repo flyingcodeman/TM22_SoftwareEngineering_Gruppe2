@@ -48,14 +48,23 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 
 ## [TC-40] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
 - [TC-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole untereinander ausgegeben.
+| TC-40.010   | PC: Funktion printOwnField() und printOpponentField() müssen vorhanden und funktionsfähig sein | Task: Funktion printOwnField() und printOpponentField() aufrufen | Eingabedaten : - | Ergebnis :  Funktion printOwnField() und printOpponentField() geben die Felder aus | State : - | Note : - | BugID: - |
 - [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem X angezeigt. 
+
 - [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem # angezeigt.
+
 - [TC-40.040] Auf dem gegnerischen Feld werden nicht getroffene Schüsse (Felder auf die bereits geschossen wurde, aber kein Schiff steht) mit - gekennzeichnet.
+
 - [TC-40.050] Auf dem gegnerischen Feld werden noch nicht beschossene Felder mit ~ gekennzeichnet. 
+
 - [TC-40.060] Auf dem eigenen Feld werden getroffene Schiffe mit einem X angezeigt. 
+
 - [TC-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem # angezeigt.
+
 - [TC-40.080] Auf dem eigenen Feld werden Schüsse des Gegners, die nicht getroffenen mit - gekennzeichnet.
+
 - [TC-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
+
 - [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit 0 gekennzeichnet.
 
 ## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
@@ -64,35 +73,63 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
 - [TC-44.020] Wenn es noch aktive Schiffe gibt, wird das Spiel fortgesetzt
+| TC-44.020   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt True zurück | State : - | Note : - | BugID: - |
 - [TC-44.030] Gibt es keine aktive Schiffe mehr, erfolgt kein weiterer Spielzug.
-- [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siege [TC-45.010]
+| TC-44.030   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt True zurück | State : - | Note : - | BugID: - |
+- [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010]
+
 
 ## [TC-45] Der User erhält die Information, dass das Spiel beendet ist
 - [TC-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
+| TC-45.010   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt FALSE zurück --> Es wird die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." in der Konsole ausgegeben | State : - | Note : - | BugID: - |
 
 ## [TC-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
-- [TC-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.030) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen" 
+- [TC-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen"
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-47.010   | PC:  Funktion für [weiterspielen] oder [beenden] oder [highscore] ist implementiert und funktionsfähig | Task : Funktion aufrufen | Eingabedaten : ?! | Ergebnis : je nach Eingabe die Möglichkeit erhalten | State  | Notes |  Bug-ID |  
 - [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet. 
 
+
 ## [TC-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
-- [TC-48.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.030) erhält der User eine Taste/Eingabemöglichkeit "Programm beenden"
+- [TC-48.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Programm beenden"
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-48.010   | PC:  Funktion für [weiterspielen] oder [beenden] oder [highscore] ist implementiert und funktionsfähig | Task : Funktion aufrufen | Eingabedaten : ?! | Ergebnis : je nach Eingabe die Möglichkeit erhalten | State  | Notes |  Bug-ID |
 - [TC-48.010] Bei Wahl dieser Möglichkeit wird das Programm beendet & geschlossen.
 
 ## [TC-49] Der User erhält Rückmeldung über das Ergebnis seines Schusses
 - [TC-49.010] Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-49.010   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : gibt zurück ob das Schiff durch den Schuss gehitet wurde | State  | Notes |  Bug-ID |
 - [TC-49.020] Wenn der User kein Schiff getroffen hat erfolgt die Meldung "Kein Treffer"
+| TC-49.020   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben | State  | Notes |  Bug-ID |
 - [TC-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
+| TC-49.030   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion TRUE ergibt, die Meldung "Treffer!!" ausgeben | State  | Notes |  Bug-ID |
 
 ## [TC-50] Der User erhält Rückmeldung ob er mit dem Schuss ein Schiff versenkt hat
 - [TC-50.010] Es wird nach einem erfolgreichen Schuss (Schuss hat ein Schiff getroffen) überprüft, ob ein Schiff noch intakte Felder besitzt
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-50.010   | PC: Funktion checkIfShotHit()=TRUE | Task : Funktion checkWhichShipWasShot(Shot<der getroffen hat>)  | Eingabedaten : ?! | Ergebnis : Ship als Ergebnis ,   | State  | Notes |  Bug-ID |
+| TC-50.011   | PC: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)=<SHIP> | Task: checkIfSunk(Ship) aufrufen | Eingabedaten : <Ship> | Ergebnis : TRUE oder FALSE 
 - [TC-50.020] Wenn ein Schiff keine intakten Felder besitzt erfolgt die Meldung "Versenkt!!"
+| TC-50.020   | PC: Funktion checkIfSunk()=TRUE | Task: checkIfSunk(Ship) aufrufen | Eingabedaten : ?! | Ergebnis : wenn <TRUE> , die Meldung "Versenkt!!" ausgeben | State  | Notes |  Bug-ID |
+
 
 ## [TC-51] Der User erhält Rückmeldung ob seine Eingaben über den Schuss valide sind
 - [TC-51.010] Die Eingabe der Koordinaten wird eingelesen
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-51.010   | PC: Funktion shootsAt(Coodinate, Player) ist implementiert und funktionsfähig | Task: Funktion shootsAt(Coodinate, Player) mit den Eingabedaten | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 - [TC-51.020] Die Koordinaten müssen sich am Spielfeld befinden, dh innerhalb der Spielgröße liegen.
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-51.020   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 - [TC-51.030] Die Koordinate darf in einem früheren Zug noch nicht beschossen worden sein.
+ | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-51.030   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 - [TC-51.040] Bei einer falschen Eingabe erfolgt eine Fehlermeldung "Dieser Schuss war nicht gültig" & der User darf erneut schießen.
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-51.040   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 - [TC-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
