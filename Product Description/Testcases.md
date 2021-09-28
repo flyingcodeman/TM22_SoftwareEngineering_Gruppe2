@@ -3,48 +3,63 @@
 | Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 
 ## [TC-32] Der User kann Schiffe zufällig vom Programm platzieren lassen
-| Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-x| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
-| TC-32.010   | 1 Suche die Funktion bool manShipPlacement 2 Funktion bool manShipPlacment aufrufen | Funktion bool manShipPlacement ist implementiert | Keine | 1 Funktion manShipPlacement im Programm-Code gefunden 2 Funktion manShipPlacement konnte aufgerufen werden und gibt den Wet TRUE aus | |  |  |
-x| [TC-32.020] | Es werden alle Schiffe plaziert 
-| TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen | Funktion setFleet() ist implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
-x| [TC-32.030] | Kein Schiff ragt über das Spielfeld
-| TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen 3 Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | Funktion setFleet(), createField(size) sind implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen 3 Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds | | | |
-X| [TC-32.040] | Kein Schiff kreuzt ein anderes
-| TC-32.040 | 1 Funktion printfleet aufrufen 2Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind | 1P Funktion printFleet ist implementiert und funktionsfähig | 1E Funktion printFleet liefert Daten 2E keine Doppelten Werte vorhanden | | | |
-X| [TC-32.050] | Kein Schiff ist diagonal platziert 
-| TC-32.050 | 1 Funktion testNotDiagonalShip aufrufen 2 Ergebnis aus Funktion testNotDiagonalShip ablesen | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig | 1E Funktion testNotDiagonalShip  wurde ausgeführt 2E Die Funktion testNotDiagonalShip gibt TRUE aus | | | |     
-X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
+| Number	  | Precondition [PC] | Task [T] | Eingabedaten [ED] | Ergebnis [EG] | State  | Notes |  Bug-ID |
+| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
+| TC-32.010   | PC: Funktion bool manShipPlacement ist implementiert  | 1.T: Suche die Funktion bool manShipPlacement 2.T: Funktion bool manShipPlacment aufrufen| ED:  | 1.EG: Funktion manShipPlacement im Programm-Code gefunden 2.EG: Funktion manShipPlacement konnte aufgerufen werden und gibt den Wet TRUE aus | State : - | Note : - | BugID: - |
+| [TC-32.020] | Es werden alle Schiffe plaziert 
+| TC-32.0.20  | PC: Funktion setFleet() ist implementiert und funktionsfähig | 1.T: Funktion setFleet aufrufen  2.T: Koordinaten der gesetzten Schiffe auslesen | ED:  | 1.EG: Funktion setFleet konnte aufgerufen werden 2.EG: Die Koordinaten der gesetzten Schiffe wurden ausgelesen | State : - | Note : - | BugID: - |
+| [TC-32.030] | Kein Schiff ragt über das Spielfeld
+| TC-32.0.20  | PC: Funktion setFleet(), createField(size) sind implementiert und funktionsfähig |  1.T: Funktion setFleet aufrufen  2.T: Koordinaten der gesetzten Schiffe auslesen 3.T: Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | ED: | 1.EG: Funktion setFleet konnte aufgerufen werden 2.EG: Die Koordinaten der gesetzten Schiffe wurden ausgelesen 3.EG: Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds | State : - | Note : - | BugID: - |
+| [TC-32.040] | Kein Schiff kreuzt ein anderes
+| TC-32.040   | PC: Funktion printFleet ist implementiert und funktionsfähig | 1.T: Funktion printfleet aufrufen 2.T: Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind | ED: | 1.EG: Funktion printFleet liefert Daten 2.EG keine Doppelten Werte vorhanden | State : - | Note : - | BugID: - |
+| [TC-32.050] | Kein Schiff ist diagonal platziert 
+| TC-32.050   | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig | 1.T: Funktion testNotDiagonalShip aufrufen 2.T: Ergebnis aus Funktion testNotDiagonalShip ablesen | ED: | 1.EG: Funktion testNotDiagonalShip  wurde ausgeführt 2.EG: Die Funktion testNotDiagonalShip gibt TRUE aus | State : - | Note : - | BugID: - |  
+tbd| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
 | TC-32.060 | 1  [welches Schiffe in der Flotte , Field AUsgabe , Prüfen ob Schiffe auch am SPielfeld vorhanden ]
-| [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
-| [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
+tbd| [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
+tbd| [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
 ## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [TC-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [TC-40]
+tbd[TC-34.010] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
 - [TC-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
+tbd [TC-34.020] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
 - [TC-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
+tbd[TC-34.030] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
 
 ## [TC-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
-| TC-36       | PC: Funktion printTestFleetComplete() wird benötigt | 1Task Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
-- [TC-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
-- [TC-36.020] Der User verfügt über 2 Schlachtschiffe, welche 4 Einheiten lang sind
-- [TC-36.030] Der User verfügt über 3 Zerstörer, welche 3 Einheiten lang sind
-- [TC-36.040] Der User verfügt über 4 U-Boote, welche 2 Einheiten lang sind
-- [TC-36.050] Die Felder der Schiffe haben zwei Zustände (Getroffen, nicht getroffen)
+| TC-36       | PC: Funktion printTestFleetComplete() wird benötigt | 1Task Funktion printTestFleetComplete() aufrufen | ED:  | EG: Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
 
-- 
+- [TC-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
+- tbd[TC-36.010] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
+- [TC-36.020] Der User verfügt über 2 Schlachtschiffe, welche 4 Einheiten lang sind
+tbd[TC-36.020] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
+- [TC-36.030] Der User verfügt über 3 Zerstörer, welche 3 Einheiten lang sind
+tbd[TC-36.030] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
+- [TC-36.040] Der User verfügt über 4 U-Boote, welche 2 Einheiten lang sind
+tbd[TC-36.040] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
+- [TC-36.050] Die Felder der Schiffe haben zwei Zustände (Getroffen, nicht getroffen)
+tbd[TC-36.050] | PC: | T: | ED: | EG: | State: - | Notes: - | Bug-ID: - |
+
 - [TC-36.060] Das Schiff wird darauf überprüft , ob es gesunken ist (alle Felder getroffen).
-| TC-36.060   | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - | 
+| TC-36.060   | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | T: Funktion printCheckIfSunk() aufrufen | ED: keine  | EG: printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - | 
+
 - [TC-36.070] Das Schiff hat zwei Zustände (floating, sunken)
-| TC-36.070   | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - |
+| TC-36.070   | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | T: Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | EG: printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - |
 
 ## [TC-39] Der User sieht bei der Ausgabe des Spielfeldes die Achsenbeschriftung
 X- [TC-39.010] Es muss über eine Variable die Größe des Spielfeldes bekannt sein
-| TC-39.010   | PC: Field.size muss gesetzt sein | Task: mit Funktion printSizeOfField(Field) die Field.size ausgeben lassen | Eingabedaten : Field | Ergebnis : die Funktion printSizeOfField(Field) gibt die Feldgröße von Field aus | State : - | Note : - | BugID: - |
+| TC-39.010   | PC: Field.size muss gesetzt sein | T: mit Funktion printSizeOfField(Field) die Field.size ausgeben lassen | ED: Field | EG: die Funktion printSizeOfField(Field) gibt die Feldgröße von Field aus | State : - | Note : - | BugID: - |
 X- [TC-39.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
-| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - | 
+| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | ED: - | EG: die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - | 
 X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht.
-| TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
+| TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | T: mit Funktion printTestField() das Field ausgeben lassen | ED: - | EG: die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 
 ## [TC-40] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
 - [TC-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole untereinander ausgegeben.
