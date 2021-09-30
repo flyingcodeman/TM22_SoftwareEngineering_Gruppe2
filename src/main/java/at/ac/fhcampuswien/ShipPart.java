@@ -22,6 +22,14 @@ public class ShipPart {
         position.setCoordinates(x,y);
     }*/
 
+    public void setHit(){
+        hit = true;
+    }
+
+    public boolean getHit(){
+        return hit;
+    }
+
     public void isPartOf(Ship ship) {
         //stellt die Verbindung zw
     }
