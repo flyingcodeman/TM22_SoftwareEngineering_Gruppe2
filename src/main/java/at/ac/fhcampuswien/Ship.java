@@ -23,11 +23,27 @@ public class Ship {
         setShip(ship, shipSize, 1, shipLabel, ownField, 0);
     }
 
-    private boolean checkIfSunk() {
-    //überprüft alle Shipfield.hit ob true o false
-    // -> wenn alle true
-    // -> set sunk=true
-    return this.sunk;
+    public void setSunk(){
+        sunk = true;
+    }
+
+    public boolean checkIfSunk() {
+        //überprüft alle Shipfield.hit ob true o false
+        // -> wenn alle true
+        // -> set sunk=true
+        int hitCounter = 0;
+        for(int i = 0; i < this.ship.length; i++) {
+            if(this.ship[0].getHit()){
+                hitCounter ++;
+            }
+        }
+        if(hitCounter == this.ship.length){
+            this.sunk = true;
+        }
+        else{
+            this.sunk = false;
+        }
+        return this.sunk;
     }
 
     private void consistsOf (ShipPart shippart) {
