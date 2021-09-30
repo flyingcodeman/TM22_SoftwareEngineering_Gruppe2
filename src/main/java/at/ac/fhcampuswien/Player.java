@@ -19,6 +19,12 @@ public class Player {
 
     public char[][] getOpponentField(){return opponentField.getField();}
 
+    public char getCharAtPosition(Coordinate cord){
+        char character;
+        character = ownField.field[cord.positionY][cord.positionX];
+        return character;
+    }
+
     public void getFleet(){}
 
     public void setPlayerName(String name) {playerName = name;}
@@ -38,7 +44,9 @@ public class Player {
 
     //}
 
-
+    public void hit(Coordinate coordinate){
+        ownField.field[coordinate.positionY][coordinate.positionX] = 'X';
+    }
 
     public void printFieldset(){
         System.out.println("");
