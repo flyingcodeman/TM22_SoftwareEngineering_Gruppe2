@@ -47,7 +47,7 @@ public class Field {
     //if yes -> returns false
     //}
 
-    public void printOwnField(char[][] field) {
+    public void printField() {
         //prints player.field
         //with characters defined in the DoD
         System.out.println("     A B C D E F G H I J ");
@@ -70,8 +70,9 @@ public class Field {
         System.out.println("   * * * * * * * * * * * *");
     }
 
-    public void printOpponentField() {
+    /*public void printOpponentField() {
         //has to map the ships of the oponent that weren't hit so far to ~
         // with the characters defined in the DoDs
-    }
+
+    }*/
 }

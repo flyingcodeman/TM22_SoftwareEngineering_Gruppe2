@@ -1,34 +1,29 @@
 package at.ac.fhcampuswien;
 
 public class GameLogic {
-
     /*
-        GameLogic modes to be defined
-     */
+    GameLogic modes to be defined
+    */
 
 
     public static void main(String []args) {
-        Field field = new Field();
-        field.createField();
-        field.printOwnField(field.getField());
-        /*Field field1 = new Field();
+        Player player1 = new Player("Simon");
+        System.out.println("Hello Player " + player1.getPlayerName());
+        player1.printFieldset();
+        player1.setStandardFleet();
+        player1.printFieldset();
+        System.out.println(player1.fleet.fleet[3].ship[0].position[0].positionY);
+        System.out.println(player1.fleet.fleet[3].ship[0].position[0].shotAt);
+        System.out.println(player1.fleet.fleet[3].ship[1].position[0].positionY);
+        System.out.println(player1.fleet.fleet[3].ship[1].position[0].shotAt);
+        System.out.println(player1.fleet.fleet[3].ship[2].position[0].positionY);
+        System.out.println(player1.fleet.fleet[3].ship[2].position[0].shotAt);
+
+        /*
+        Field field1 = new Field();
         Field field2 = new Field();
         Ships ships = new Ships();
-
-        //creates Field for Player 1
-        System.out.println("Field Player 1: ");
-        field1.createField(10);
-        //sets ships for Player 1 randomly
-        ships.setShipsRandom(field1.getField());
-        field1.printField();
-
-        //creates Field for Player 2
-        System.out.println("Field Player 2: ");
-        field2.createField(10);
-        //sets ships for Player 2 randomly
-        ships.setShipsRandom(field2.getField());
-        field2.printField();
-    */
+        */
 
 
     }

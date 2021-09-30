@@ -1,37 +1,62 @@
 package at.ac.fhcampuswien;
 
 public class Player {
-    private String name;
-    private Field ownField;
-    private Player opponent;
+    private String playerName;
+    private Field ownField = new Field();
+    private Field opponentField = new Field();
+    public Fleet fleet = new Fleet();
 
-    public void makesShot(Shot shot) {
-
+    //Constructor
+    public Player(String name){
+        setPlayerName(name);
+        setOwnField();
+        setOpponentField();
     }
 
-    public void hasOpponent(Player player) {
-        //
+    public String getPlayerName(){return playerName;}
+
+    public char[][] getOwnField(){return ownField.getField();}
+
+    public char[][] getOpponentField(){return opponentField.getField();}
+
+    public void getFleet(){}
+
+    public void setPlayerName(String name) {playerName = name;}
+
+    public void setOwnField(){ownField.createField();}
+
+    public void setOpponentField(){opponentField.createField();}
+
+    public void setStandardFleet(){
+        fleet.createStandardFleet(10, ownField.getField());
+        //return fleet array filled with ship-objects
     }
 
-    public void hasField(Field field) {
-        //
-    }
-
-    public void hasFleet(Fleet fleet) {
-        //
-    }
-
-    public void createsFleet() {
+    //public Fleet createFleet() {
         //erstellt eine Standardflotte laut DoD
         //erstellt schiffe nacheinander, platziert diese am Feld (siehe setFleet(Fleet))
+
+    //}
+
+
+
+    public void printFieldset(){
+        System.out.println("");
+        System.out.println("Own Field with ships: ");
+        System.out.println("");
+        ownField.printField();
+        System.out.println("");
+        System.out.println("Info field about opponent ships and shots: ");
+        System.out.println("");
+        opponentField.printField();
     }
 
-    public void createsFleet(int shipcount) {
-        //
-    }
+    public void makesShot(Shot shot) {}
 
-    public void createPlayer(String name) {
-        //gibt dem Spieler einen Namen
-        //etc
-    }
+    public void hasOpponent(Player player) {}
+
+    public void hasField(Field field) {}
+
+    public void hasFleet(Fleet fleet) {}
+
 }

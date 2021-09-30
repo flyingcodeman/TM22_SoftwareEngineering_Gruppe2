@@ -95,6 +95,8 @@ public class Ships {
         //if(playMode == 1) {}
     }
 
+
+
     // Create random coordinates and direction
     private void setRandomPosition(){
         Random rand = new Random();
