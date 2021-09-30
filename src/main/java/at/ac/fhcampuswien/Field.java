@@ -12,6 +12,10 @@ public class Field {
         return field;
     }
 
+    public void setCharAtPosition(Coordinate coordinate, char character){
+        this.field[coordinate.positionX][coordinate.positionX] = character;
+    }
+
     public void createField() {
         //creates Field with size 10
         field = new char[10][10];
@@ -32,20 +36,21 @@ public class Field {
         }
     }
 
-    //public void belongsTo(Player player) {
+    public void belongsTo(Player player) {
     //assigns Field to player
     //sets Field as player.ownField
-    //}
+    }
 
     public void printShipStats() {
         //prints how many ships on the field are hit and how many are sunk
         // Achtung!: sunk shouldn't be included in the hit count!
     }
 
-    //public boolean existActiveShips() {
+    public boolean existActiveShips() {
     //checks if all ships have the value ship.sunk == true
     //if yes -> returns false
-    //}
+        return false;
+    }
 
     public void printField() {
         //prints player.field
@@ -70,9 +75,9 @@ public class Field {
         System.out.println("   * * * * * * * * * * * *");
     }
 
-    /*public void printOpponentField() {
-        //has to map the ships of the oponent that weren't hit so far to ~
+    public void printOpponentField() {
+        //has to map the ships of the opponent that weren't hit so far to ~
         // with the characters defined in the DoDs
 
-    }*/
+    }
 }

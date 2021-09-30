@@ -3,11 +3,12 @@ package at.ac.fhcampuswien;
 import java.util.Random;
 
 public class Ship {
-    ShipPart[] ship;
 
+    ShipPart[] ship;
     private int size;
-    //private ShipfieldArray parts;
     private boolean sunk = false;
+    //private ShipfieldArray parts;
+
     private int positionX = 0; // current x-coordinate of the choosen ship
     private int positionY = 0; // current y-coordinate of the choosen ship
     private int direction = 0; // direction to set the ship - Vertical = 0, Horizontal = 1
@@ -22,11 +23,12 @@ public class Ship {
         setShip(ship, shipSize, 1, shipLabel, ownField, 0);
     }
 
-    //private boolean checkIfSunk() {
+    private boolean checkIfSunk() {
     //überprüft alle Shipfield.hit ob true o false
     // -> wenn alle true
     // -> set sunk=true
-    //}
+    return this.sunk;
+    }
 
     private void consistsOf (ShipPart shippart) {
         // adds Shipfields to ship
@@ -39,9 +41,6 @@ public class Ship {
         // fügt Schiff zur Flotte hinzu
 
     }
-
-
-
 
     // Checks if the position for the ship to be set is free - horizontal or vertical
     // In case of no: New random position

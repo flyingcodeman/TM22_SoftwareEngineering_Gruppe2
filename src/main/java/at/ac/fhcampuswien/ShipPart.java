@@ -13,13 +13,13 @@ public class ShipPart {
 
     /*public int[] getCoordinates(){
         int[] coordinates = new int[2];
-        coordinates[0] = postion.getPositionX();
-        coordinates[1] = postion.getPositionY();
+        coordinates[0] = position.getPositionX();
+        coordinates[1] = position.getPositionY();
         return coordinates;
     }*/
 
     /*public void setCoordinates(int x, int y){
-        postion.setCoordinates(x,y);
+        position.setCoordinates(x,y);
     }*/
 
     public void isPartOf(Ship ship) {
@@ -27,7 +27,7 @@ public class ShipPart {
     }
 
     public void has(Coordinate coordinate) {
-        //defines on which coordinate the shipfield is placed
+        //defines on which coordinate the ship part is placed
         //writes the coordinate into this.position
     }
 }
