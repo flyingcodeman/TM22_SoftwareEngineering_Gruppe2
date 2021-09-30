@@ -6,7 +6,7 @@ public class Field {
 
     //private Player player;
     private int size;
-    private char[][] field;
+    public char[][] field;
 
     public char[][] getField(){
         return field;
