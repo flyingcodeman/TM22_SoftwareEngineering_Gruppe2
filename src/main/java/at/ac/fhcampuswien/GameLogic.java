@@ -25,6 +25,12 @@ public class GameLogic {
         Ships ships = new Ships();
         */
 
+        Shot shoot = new Shot();
+        Coordinate givenShootCoordinate = new Coordinate(player1.fleet.fleet[3].ship[2].position[0].positionX, player1.fleet.fleet[3].ship[2].position[0].positionY);
+        shoot.shootsAt(givenShootCoordinate, player1);
+        player1.printFieldset();
+        System.out.println(player1.getCharAtPosition(givenShootCoordinate));
+
 
     }
 }
