@@ -142,7 +142,7 @@
 ##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln währens des Spiels anzeigen zu lassen 
 - [DoD-57.010] TBC 
 
-## [DoD-58] Der User hat die möglichkeit das Spiel zu pausieren
+## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
 - [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten 
 
 ## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
