@@ -5,47 +5,54 @@ public class GameLogic {
     /*
     GameLogic modes to be defined
     */
-    Scanner scanner = new Scanner(System.in);
-    Player player1;
-    Player player2;
+    private Scanner scanner; //Object zum Einlesen der User-Inputs über die Console
+    public Player player1;
+    public Player player2;
     boolean gameOver = false;
 
+    //Begrüßung und Festlegen der Sprache
     private void flowWelcome(){
+        scanner = new Scanner(System.in);
         //ToDo:
         //Sprache festlegen
-        //Ausgabe der Begruessung der Spielregeln
+        //Ausgabe der Begruessung gemäß den Spielregeln
         System.out.println("Sprache auswaehlen: ");
         //Input einlesen und Sprachwahl durchführen
         System.out.println("Das Spiel wird geladen");
     }
 
+    //Initialisierung aller Spieler und Grundeinstellungen
     private void flowInit(){
-        //Initialisierung aller Spieler und Grundeinstellungen
+        scanner = new Scanner(System.in);
+
+        //ToDo: Check input strings
         System.out.println("Spieler 1: Geben Sie Ihren Namen ein");
         String name1 = scanner.nextLine();
+        //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
         player1 = new Player(name1);
         System.out.println("Bitte wählen Sie Ihren Gegner: ");
         System.out.println("Computer oder Spieler");
         String chosenPlayer = scanner.nextLine();
-        //ToDo: Check String
         System.out.println("Spieler 2: Geben Sie Ihren Namen ein");
         String name2 = scanner.nextLine();
+        //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
         player2 = new Player(name2);
 
-        //-----
         //Platzierung der Schiffe
         player1.setStandardFleet();
         player2.setStandardFleet();
         System.out.println("Schiffe wurden platziert!");
     }
 
-
-
+    //Hauptsequenz des Spiels
     private void flowMainSequence(Player currentPlayer, Player currentOpponent){
+        scanner = new Scanner(System.in);
+
+        // Ausgabe beider Felder des jeweiligen Spielers
         System.out.println("Hello Player " + currentPlayer.getPlayerName());
         currentPlayer.printFieldset();
 
-        //---
+        //Schießen
         Shot shoot = new Shot();
         Coordinate givenShootCoordinate = new Coordinate(0,0);
         Shot.State result = Shot.State.reload;
@@ -57,9 +64,12 @@ public class GameLogic {
             System.out.println("y-Koordinate:");
             int shootY = scanner.nextInt();
             givenShootCoordinate.setNewCoordinates(shootX, shootY);
+            //Check, ob und was der Schuss getroffen hat
             result = shoot.shootsAt(givenShootCoordinate, currentPlayer, currentOpponent);
+            //Ausgabe des getroffenen characters im gegnerischen Feld
             System.out.println(currentOpponent.getCharAtPosition(givenShootCoordinate));
 
+            // Consolenausgabe gemäß des Schussergebnisses
             switch (result){
                 case reload:
                     System.out.println("You already shot there. Please try again!");
@@ -76,23 +86,28 @@ public class GameLogic {
             }
         }
 
-        if(currentOpponent.gameOver == true){
+        //Checken der player.gameOver-Variable, ob Spiel vorbei & Flotte versenkt
+        //ToDo: Andere Positionierung des Checks und Erweiterung der Methode
+        if(currentOpponent.gameOver){
             gameOver = true;
         }
     }
 
+    //Flow zum Wechseln der Spieler
     public void flowChangePlayer(Player currentPlayer, Player currenOpponent){
+        scanner = new Scanner(System.in);
         System.out.println(currentPlayer.getPlayerName() + " - Ihr Zug ist beendet. " + currenOpponent.getPlayerName() + " ist am Zug.");
         System.out.println(currenOpponent.getPlayerName() + " ready? J/N");
         String name2 = scanner.nextLine();
     }
 
-
+    //MAIN
     public static void main(String []args) {
         GameLogic game = new GameLogic();
 
         game.flowWelcome();
         game.flowInit();
+        // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
         while(game.gameOver == false) {
             game.flowMainSequence(game.player1, game.player2);
             game.flowChangePlayer(game.player1, game.player2);
@@ -100,43 +115,8 @@ public class GameLogic {
             game.flowChangePlayer(game.player2, game.player1);
         }
 
+        //ToDo: Stats ausgeben
+        //ToDo: flowGameOver erstellen, Consolenausgabe ausformulieren und Möglichkeiten zum Beenden / Neustart implementieren
         System.out.println("GAME OVER");
-
-
-
-        /*
-        Player player1 = new Player("Simon");
-        Player player2 = new Player("Adriane");
-        player1.setOpponent(player2);
-        player2.setOpponent(player1);
-        System.out.println("Hello Player " + player1.getPlayerName());
-        player1.printFieldset();
-        System.out.println("\nNow  give "+ player1.getPlayerName() +"'s field gets some ships!");
-        player1.setStandardFleet();
-        System.out.println("\nNow lets print "+ player1.getPlayerName() +"'s fields again.");
-        player1.printFieldset();
-
-        Coordinate cord = new Coordinate(2,3);
-
-
-        player1.getCharFromOpponentFieldAtCoordinate(cord, (player1.getOpponent()).getOwnField());
-        System.out.println("Chosen Coordinate: "+ cord.positionX + "/" + cord.positionY + "\nCharacter at Coordinate: "+ player1.getCharFromOpponentFieldAtCoordinate(cord, (player1.getOpponent()).getOwnField()));
-
-        System.out.println(player1.fleet.fleet[3].ship[0].position[0].positionY);
-        System.out.println(player1.fleet.fleet[3].ship[0].position[0].shotAt);
-        System.out.println(player1.fleet.fleet[3].ship[1].position[0].positionY);
-        System.out.println(player1.fleet.fleet[3].ship[1].position[0].shotAt);
-        System.out.println(player1.fleet.fleet[3].ship[2].position[0].positionY);
-        System.out.println(player1.fleet.fleet[3].ship[2].position[0].shotAt);
-
-
-        Shot shoot = new Shot();
-        Coordinate givenShootCoordinate = new Coordinate(player1.fleet.fleet[3].ship[2].position[0].positionX, player1.fleet.fleet[3].ship[2].position[0].positionY);
-        shoot.shootsAt(givenShootCoordinate, player1);
-        player1.printFieldset();
-        System.out.println(givenShootCoordinate.positionY + " " + givenShootCoordinate.positionX);
-        System.out.println(player1.getCharAtPosition(givenShootCoordinate));
-        */
-
     }
 }

@@ -2,85 +2,66 @@ package at.ac.fhcampuswien;
 
 public class Player {
     private String playerName;
-    public Field ownField = new Field();
-    private Field opponentField = new Field();
-    //private Player opponent;
-    public Fleet fleet = new Fleet();
+    private Field ownField = new Field(); // EIgenes Spielfeld mit gesetzten Schiffen
+    private Field opponentField = new Field(); // Eigenes opponent Info Feld zur Markierung der Schüsse auf den Gegner
+    public Fleet fleet = new Fleet(); // Eigene Flotte mit Schiffen
     public boolean gameOver = false;
 
-    //Constructor
+    //Constructor zum Setzen initalier Dinge
     public Player(String name){
         setPlayerName(name);
         setOwnField();
         setOpponentField();
     }
 
-    //gives back the name of the current player
+    //Rückgabe des Spielernamens
     public String getPlayerName() {
         return playerName;
     }
 
-    //sets the name of a player
+    //Setzen des Spielernamens
     public void setPlayerName(String name) {
         playerName = name;
     }
 
-    //public Player getOpponent() {return opponent;}
+    //Erstellung des eigenen, mit Schiffen gefüllten, Spielfelds
+    public void setOwnField(){ownField.createField();}
 
-    //sets the name of a player
-    //public void setOpponent(Player opponent) {this.opponent = opponent;}
-
+    //Rückgabe des eigenen, mit Schiffen gefüllten, Spielfelds
     public char[][] getOwnField(){return ownField.getField();}
 
-    public void setOwnField(){ownField.createField();
+    //Erstellung des eigenen, mit Information über Treffer beim Gegner gefüllten, Spielfelds
+    public void setOpponentField(){opponentField.createField();}
+
+    //Rückgabe des eigenen opponentInfoFIelds
+    public char[][] getOpponentField(){return opponentField.getField();}
+
+    // Setzen des übergebenen Characters character an der Position cord im ownField
+    public void setCharAtPositionOwnField(char character, Coordinate cord){
+        ownField.field[cord.positionY][cord.positionX] = character;
     }
 
-    //gives back the opponents own field
-    public char[][] getOpponentField(){
-        return opponentField.getField();
-    }
+    // Rückgabe des aktuell gesetzten Characters an der Position cord im ownField
     public char getCharAtPosition(Coordinate cord){
         char character;
         character = ownField.field[cord.positionY][cord.positionX];
         return character;
     }
 
-    public void setCharAtPositionOwnField(char character, Coordinate cord){
-        ownField.field[cord.positionY][cord.positionX] = character;
-    }
-
+    // Setzen des übergebenen Characters character an der Position cord im opponentInfoField
     public void setCharAtPositionOpponentInfoField(char character, Coordinate cord){
         opponentField.field[cord.positionY][cord.positionX] = character;
     }
 
-    public char getCharFromOpponentFieldAtCoordinate(Coordinate cord, char [][] OpponentField) {
-        //field.getCharAtPosition(cord);
-        char character = OpponentField[cord.positionX][cord.positionX];
-        return character;
-    }
-
-    public void setOpponentField(){
-        opponentField.createField();
-    }
-
-    //gives back the fleet
-    public void getFleet(){}
-
+    //Erstellt eine Standardflotte laut DoD
+    //Erstellt schiffe nacheinander, platziert diese am Feld (siehe setFleet(Fleet))
     public void setStandardFleet(){
         fleet.createStandardFleet(10, ownField.getField());
         //return fleet array filled with ship-objects
     }
 
-    public Fleet createFleet() {
-        //erstellt eine Standardflotte laut DoD
-        //erstellt schiffe nacheinander, platziert diese am Feld (siehe setFleet(Fleet))
-        return fleet;
-    }
-
-
-    public void hit(Coordinate coordinate){
-        ownField.field[coordinate.positionY][coordinate.positionX] = 'X';
-    }
+    // Rückgabe der erstellten Standard-Flotte
+    public Fleet getStandardFleet(){return this.fleet;}
 
     //prints both your own and the opponent field
     public void printFieldset(){
@@ -116,11 +97,4 @@ public class Player {
         }
         System.out.println("   * * * * * * * * * * * *  |   * * * * * * * * * * * *");
     }
-
-    public void makesShot(Shot shot) {}
-
-    public void hasField(Field field) {}
-
-    public void hasFleet(Fleet fleet) {}
-
 }

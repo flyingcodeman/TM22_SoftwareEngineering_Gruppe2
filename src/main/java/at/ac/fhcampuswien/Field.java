@@ -4,21 +4,15 @@ import java.util.Random;
 
 public class Field {
 
-    //private Player player;
-    private int size;
+    //VARIABLES
     public char[][] field;
 
-    public char[][] getField(){
-        return field;
-    }
+    //METHODS
 
-    public void setCharAtPosition(Coordinate coordinate, char character){
-        this.field[coordinate.positionX][coordinate.positionX] = character;
-    }
-
+    //Erstellt ein quadratisches Standard-Feld in 10x10 mit char
     public void createField() {
-        //creates Field with size 10
         field = new char[10][10];
+        //Füllen aller 100 Felder mit Wasser/~
         for(int x = 0; x<10; x++){
             for(int y = 0; y<10; y++){
                 field[x][y] = '~';
@@ -26,19 +20,20 @@ public class Field {
         }
     }
 
+    //Erstellt ein quadratisches Feld in variabler Größe
     public void createField(int size) {
-        //creates Field with this.size
         field = new char[size][size];
-        for(int x = 1; x<(size+1); x++){
-            for(int y = 1; y<(size+1); y++){
+        //Füllen aller Felder mit Wasser/~
+        for(int x = 0; x<(size); x++){
+            for(int y = 0; y<size; y++){
                 field[x][y] = '~';
             }
         }
     }
 
-    public void belongsTo(Player player) {
-    //assigns Field to player
-    //sets Field as player.ownField
+    // Rückgabe des zuvor erstellten Felds field
+    public char[][] getField(){
+        return field;
     }
 
     public void printShipStats() {
@@ -53,8 +48,7 @@ public class Field {
     }
 
     public void printField() {
-        //prints player.field
-        //with characters defined in the DoD
+        // Gibt das aktuelle Feld auf der Console aus
         System.out.println("     A B C D E F G H I J ");
         System.out.println("   * * * * * * * * * * * *");
         int x = 1;
@@ -73,11 +67,5 @@ public class Field {
             System.out.println();
         }
         System.out.println("   * * * * * * * * * * * *");
-    }
-
-    public void printOpponentField() {
-        //has to map the ships of the opponent that weren't hit so far to ~
-        // with the characters defined in the DoDs
-
     }
 }

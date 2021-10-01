@@ -4,17 +4,15 @@ import java.util.Random;
 
 public class Ship {
 
-    ShipPart[] ship;
-    private int size;
+    ShipPart[] ship; // Schiffsarray, bestehend aus Schiffsteile-Objekten
     private boolean sunk = false;
-    //private ShipfieldArray parts;
 
-    private int positionX = 0; // current x-coordinate of the choosen ship
-    private int positionY = 0; // current y-coordinate of the choosen ship
-    private int direction = 0; // direction to set the ship - Vertical = 0, Horizontal = 1
-    private boolean posClean = false;
+    private int positionX = 0; // Aktuelle x-Koordinate des ausgewählten Schiffs
+    private int positionY = 0; // Aktuelle y-Koordinate des ausgewählten Schiffs
+    private int direction = 0; // Setz-Richtung des Schiffs - Vertikal = 0, Horizontal = 1
+    private boolean posClean = false; // Variable zum Speichern, ob die gewählte Stelle zum Setzen des Schiffs frei ist
     private int posCleanCounter = 0;
-    private int fieldSize = 0; // User given field size - Set in setShips
+    private int fieldSize = 0; // Speichert die zuvor festgelegte Größe des Spielfelds
 
 
     public Ship(int shipSize, char shipLabel, char[][] ownField){
@@ -23,20 +21,19 @@ public class Ship {
         setShip(ship, shipSize, 1, shipLabel, ownField, 0);
     }
 
-    public void setSunk(){
-        sunk = true;
-    }
+    // ToDo: Erweiterung und Implementierung dieser Methode
+    public void setSunk(){sunk = true;}
 
     public boolean checkIfSunk() {
-        //überprüft alle Shipfield.hit ob true o false
-        // -> wenn alle true
-        // -> set sunk=true
+        //überprüft alle Schiffsteile des Schiffs, ob hit = true or false
+        //Wenn alle Teile true: Schiff gesunken
         int hitCounter = 0;
         for(int i = 0; i < this.ship.length; i++) {
             if(this.ship[0].getHit()){
                 hitCounter ++;
             }
         }
+        // Wenn hitCounter-variable gleich der Länge des Schiffs: Schiff gesunken
         if(hitCounter == this.ship.length){
             this.sunk = true;
         }
@@ -44,18 +41,6 @@ public class Ship {
             this.sunk = false;
         }
         return this.sunk;
-    }
-
-    private void consistsOf (ShipPart shippart) {
-        // adds Shipfields to ship
-        // ruft isPartof(Ship) auf
-    }
-
-    private void isPartOf (Fleet fleet) {
-        // ruft addShipToFleet auf
-        // Hier muss überprüft werden ob ship mit flotte kompatibel ist (ob nicht andere schiffe im Weg stehen)
-        // fügt Schiff zur Flotte hinzu
-
     }
 
     // Checks if the position for the ship to be set is free - horizontal or vertical
@@ -110,7 +95,7 @@ public class Ship {
         }
     }
 
-    // Place one ship with given parameters
+    // Plazierung des Schiffs mit entsprechenden Übergabeparamtern im Feld
     private void setShip(ShipPart[] ship, int shipSize, int amount, char shipLabel, char[][] field, int playMode){
 
         // Random mode
@@ -144,11 +129,10 @@ public class Ship {
         //if(playMode == 1) {}
     }
 
-    public void placeShips(){}
-
-    // Create random coordinates and direction
+    //Erstellung zufälliger Varibalen wie Position, direction, etc
+    // Wenn zu setztende Position des Schiffs nicht frei ist: Neue zufällige Position und Rücksetzen aller Counter
     private void setRandomPosition(){
-        Random rand = new Random();
+        Random rand = new Random(); // Zufallsfunktion
         positionX = rand.nextInt(fieldSize);
         positionY = rand.nextInt(fieldSize);
         direction = rand.nextInt(2);
