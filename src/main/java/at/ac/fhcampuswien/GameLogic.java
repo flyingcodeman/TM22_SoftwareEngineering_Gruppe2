@@ -33,7 +33,7 @@ public class GameLogic {
         System.out.println("Please select your opponent:");
         System.out.println("Computer or player");
         String chosenPlayer = scanner.nextLine();
-        System.out.println("Player 1: Insert your name");
+        System.out.println("Player 2: Insert your name");
         String name2 = scanner.nextLine();
         //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
         player2 = new Player(name2);
