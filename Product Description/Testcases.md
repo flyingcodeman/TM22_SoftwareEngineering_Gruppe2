@@ -69,6 +69,9 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 
 ## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
 - [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
+- |Task: mit Funktion printSizeOfField(Field) die Field.size ausgeben lassen | Eingabedaten : 
+- Field | Ergebnis : die Funktion printSizeOfField(Field) gibt die Feldgröße von Field (als Größe 
+- des Spielfeldes =10x10 definiert) aus | State : - | Note : - | BugID: - |
 
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
