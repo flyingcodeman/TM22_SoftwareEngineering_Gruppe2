@@ -14,11 +14,35 @@ public class GameLogic {
 
     //Begrüßung und Festlegen der Sprache
     private void flowWelcome(){
-        scanner = new Scanner(System.in);
-        //ToDo:
+
+        String language = "";
+        boolean validLanguage = false;
         //Sprache festlegen
         //Ausgabe der Begruessung gemäß den Spielregeln
-        System.out.println("Select language: ");
+        System.out.println("Select language: (E)nglish (G)erman (D)^2");
+        do {
+            try {
+                //Ask user to input 'C', "Computer", 'P' or "Player"
+                scanner = new Scanner(System.in);
+                language = scanner.next();
+
+                if ((language.equals("G")) || (language.equals("German")) ||
+                        (language.equals("E")) || (language.equals("English")) ||
+                        (language.equals("D")) || (language.equals("D^2"))) {
+                    validLanguage = true;
+                    // ToDo: Save input and choose language
+
+                } else {
+                    System.out.println("Error: The input (" + language + ") is not in the expected range - Please retry!");
+                }
+            }
+            catch (Exception e) {
+                System.out.println("Error: The input (" + language + ") is not a valid input - Please retry!");
+            }
+        } //Continue the loop while input is not valid
+        while (!validLanguage);
+
+
         //Input einlesen und Sprachwahl durchführen
         System.out.println("The game is loading...");
     }
@@ -27,13 +51,38 @@ public class GameLogic {
     private void flowInit(){
         scanner = new Scanner(System.in);
 
-        //ToDo: Check input strings
+        //Player 1
         System.out.println("Player 1: Insert your name:");
         String name1 = scanner.nextLine();
-        //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
+        //Initialisierung des Players 1, seiner Spielfelder und Zuweisung des Namens
         player1 = new Player(name1);
+
+        //Player-Mode
+        String playerMode = "";
+        boolean validPlayer = false;
         System.out.println("Please select your opponent:");
-        System.out.println("Computer or player");
+        System.out.println("(C)omputer or (P)layer");
+        do {
+            try {
+                //Ask user to input 'C', "Computer", 'P' or "Player"
+                scanner = new Scanner(System.in);
+                playerMode = scanner.next();
+
+                if ((playerMode.equals("C")) || (playerMode.equals("Computer")) || (playerMode.equals("P")) || (playerMode.equals("Player"))) {
+                    validPlayer = true;
+                    // ToDo: Save input and choose playmode
+
+                } else {
+                    System.out.println("Error: The input (" + playerMode + ") is not in the expected range - Please retry!");
+                }
+            }
+            catch (Exception e) {
+                System.out.println("Error: The input (" + playerMode + ") is not a valid input - Please retry!");
+            }
+        } //Continue the loop while input is not valid
+        while (!validPlayer);
+
+        //Player 2
         String chosenPlayer = scanner.nextLine();
         System.out.println("Player 2: Insert your name");
         String name2 = scanner.nextLine();
@@ -120,7 +169,7 @@ public class GameLogic {
             //Check, ob und was der Schuss getroffen hat
             result = shoot.shootsAt(givenShootCoordinate, currentPlayer, currentOpponent);
             //Ausgabe des getroffenen characters im gegnerischen Feld
-            System.out.println(currentOpponent.getCharAtPosition(givenShootCoordinate));
+            //System.out.println(currentOpponent.getCharAtPosition(givenShootCoordinate));
 
             // Consolenausgabe gemäß des Schussergebnisses
             switch (result){
@@ -149,6 +198,9 @@ public class GameLogic {
     //Flow zum Wechseln der Spieler
     public void flowChangePlayer(Player currentPlayer, Player currenOpponent){
         scanner = new Scanner(System.in);
+        for(int i = 0; i <10; i++){
+            System.out.println(">");
+        }
         System.out.println(currentPlayer.getPlayerName() + " - Your turn is over. It's " + currenOpponent.getPlayerName() + "s turn.");
         System.out.println(currenOpponent.getPlayerName() + " ready? y(es)/n(o)");
         String name2 = scanner.nextLine();
