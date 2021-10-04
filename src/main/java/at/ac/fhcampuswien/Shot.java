@@ -12,7 +12,7 @@ public class Shot {
         char character = currentOpponent.getCharAtPosition(coordinate);
 
         // Schuss trifft bereits beschossenes Feld, Treffer oder versenktes Schiff
-        if (character == '-' || character == 'X' || character == '#') {
+        if (character == '/' || character == 'X' || character == '#') {
             resultState = State.reload; // Nochmaliges Schießen erlaubt
             // ToDo: Nochmaliges Schießen begrenzen
         }
