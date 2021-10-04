@@ -9,4 +9,4 @@ Dies dient dazu, erste Feedbacks von NutzerInnen zu erhalten bzw. das erste Grun
 4. Eine Überprüfung der Eingaben hat zu erfolgen. (Treffer, Koordinate schon verwendet, Nur Zahlen u einzelne Buchstaben, keine Zeichen, etc)
 5. Es muss erkannt werden, wenn ein Schiff versenkt wird. (Alle Felder des Schiffes getroffen)
 6. Sofern alle Schiffe eines Spielers getroffen sind, bricht das Spiel ab.  
-
+7. Ausgaben sind auf Englisch
