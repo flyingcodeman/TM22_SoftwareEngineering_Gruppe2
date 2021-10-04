@@ -1,5 +1,7 @@
 package at.ac.fhcampuswien;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class GameLogic {
     /*
@@ -97,9 +99,9 @@ public class GameLogic {
                     System.out.println("y-coordinate:");
                     shootY = scanner.nextInt();
 
-                    if ((shootY == 1) || (shootY == 1) || (shootY == 3) || (shootY == 4) || (shootY == 5) ||
+                    if ((shootY == 1) || (shootY == 2) || (shootY == 3) || (shootY == 4) || (shootY == 5) ||
                             (shootY == 6) || (shootY == 7) || (shootY == 8) || (shootY == 9) || (shootY == 10)) { //ToDo
-                        System.out.println("Your number is " + shootY);
+                        //System.out.println("Your number is " + shootY);
                         validY = true;
                         shootY -= 1;
                     } else {
@@ -126,10 +128,10 @@ public class GameLogic {
                     System.out.println("You already shot there. Please try again!");
                     break;
                 case hit:
-                    System.out.println("Nice shot - HIT on coordinate " + givenShootCoordinate.positionX + "/" + givenShootCoordinate.positionY);
+                    System.out.println("Nice shot - HIT on coordinate " + tmpshootX + "/" + (shootY+1));
                     break;
                 case miss:
-                    System.out.println("Nice try - Only water! Missed shot on coordinate " + givenShootCoordinate.positionX + "/" + givenShootCoordinate.positionY);
+                    System.out.println("Nice try - Only water! Missed shot on coordinate " + tmpshootX + "/" + (shootY+1));
                     break;
                 case error:
                     System.out.println("Invalid shot!");
@@ -147,7 +149,7 @@ public class GameLogic {
     //Flow zum Wechseln der Spieler
     public void flowChangePlayer(Player currentPlayer, Player currenOpponent){
         scanner = new Scanner(System.in);
-        System.out.println(currentPlayer.getPlayerName() + " - Your turn is over. It's " + currenOpponent.getPlayerName() + "turn.");
+        System.out.println(currentPlayer.getPlayerName() + " - Your turn is over. It's " + currenOpponent.getPlayerName() + "s turn.");
         System.out.println(currenOpponent.getPlayerName() + " ready? y(es)/n(o)");
         String name2 = scanner.nextLine();
     }
@@ -164,7 +166,7 @@ public class GameLogic {
         game.flowWelcome();
         game.flowInit();
         // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
-        while(game.gameOver == false) {
+        while(!game.gameOver) {
             game.flowMainSequence(game.player1, game.player2);
             game.flowChangePlayer(game.player1, game.player2);
             game.flowMainSequence(game.player2, game.player1);
