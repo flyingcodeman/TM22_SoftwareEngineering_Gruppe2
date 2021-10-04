@@ -16,9 +16,9 @@ public class GameLogic {
         //ToDo:
         //Sprache festlegen
         //Ausgabe der Begruessung gemäß den Spielregeln
-        System.out.println("Sprache auswaehlen: ");
+        System.out.println("Select language: ");
         //Input einlesen und Sprachwahl durchführen
-        System.out.println("Das Spiel wird geladen");
+        System.out.println("The game is loading...");
     }
 
     //Initialisierung aller Spieler und Grundeinstellungen
@@ -26,14 +26,14 @@ public class GameLogic {
         scanner = new Scanner(System.in);
 
         //ToDo: Check input strings
-        System.out.println("Spieler 1: Geben Sie Ihren Namen ein");
+        System.out.println("Player 1: Insert your name:");
         String name1 = scanner.nextLine();
         //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
         player1 = new Player(name1);
-        System.out.println("Bitte wählen Sie Ihren Gegner: ");
-        System.out.println("Computer oder Spieler");
+        System.out.println("Please select your opponent:");
+        System.out.println("Computer or player");
         String chosenPlayer = scanner.nextLine();
-        System.out.println("Spieler 2: Geben Sie Ihren Namen ein");
+        System.out.println("Player 2: Insert your name");
         String name2 = scanner.nextLine();
         //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
         player2 = new Player(name2);
@@ -41,7 +41,7 @@ public class GameLogic {
         //Platzierung der Schiffe
         player1.setStandardFleet();
         player2.setStandardFleet();
-        System.out.println("Schiffe wurden platziert!");
+        System.out.println("Ships were placed");
     }
 
     //Hauptsequenz des Spiels
@@ -58,10 +58,10 @@ public class GameLogic {
         Shot.State result = Shot.State.reload;
 
         while(result == Shot.State.reload) {
-            System.out.println("Geben Sie Ihre Schusskoordinaten ein:");
-            System.out.println("x-Koordinate:");
+            System.out.println("Please insert your shot coordinates:");
+            System.out.println("x-coordinate:");
             int shootX = scanner.nextInt();
-            System.out.println("y-Koordinate:");
+            System.out.println("y-coordinate:");
             int shootY = scanner.nextInt();
             givenShootCoordinate.setNewCoordinates(shootX, shootY);
             //Check, ob und was der Schuss getroffen hat
@@ -96,8 +96,8 @@ public class GameLogic {
     //Flow zum Wechseln der Spieler
     public void flowChangePlayer(Player currentPlayer, Player currenOpponent){
         scanner = new Scanner(System.in);
-        System.out.println(currentPlayer.getPlayerName() + " - Ihr Zug ist beendet. " + currenOpponent.getPlayerName() + " ist am Zug.");
-        System.out.println(currenOpponent.getPlayerName() + " ready? J/N");
+        System.out.println(currentPlayer.getPlayerName() + " - Your turn is over. It's " + currenOpponent.getPlayerName() + "turn.");
+        System.out.println(currenOpponent.getPlayerName() + " ready? y(es)/n(o)");
         String name2 = scanner.nextLine();
     }
 
