@@ -18,7 +18,7 @@ public class Shot {
         }
         else if(character == '~'){
             // Schuss ins Wasser = Vergebener Schuss
-            currentPlayer.setCharAtPositionOpponentInfoField('-', coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
+            currentPlayer.setCharAtPositionOpponentInfoField('/', coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
             resultState = State.miss;
         }
         else if (character == '2' || character == '3' || character == '4'|| character == '5') {
@@ -29,7 +29,7 @@ public class Shot {
 
             //Checken, ob durch diesen Treffer das gesamte Schiff versenkt wurde
             if(currentOpponent.fleet.checkIfShipSunk(coordinate)){
-                System.out.println("Treffer und Schiff VERSENKT");
+                System.out.println("Hit and ship sunk!");
                 //ToDo: Im Falle des Versenkens: Zeichen des gesamten Schiffs beim currentPlayer.opponentInfoField und currentOpponent.OwnField auf # setzen
             }
             // Checken, ob durch diesen Treffer die gesamte Flotte versenkt wurde und das Spiel damit endet!
