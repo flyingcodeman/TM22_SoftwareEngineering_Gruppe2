@@ -1,4 +1,5 @@
 package at.ac.fhcampuswien;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GameLogic {
@@ -46,7 +47,8 @@ public class GameLogic {
 
     //Hauptsequenz des Spiels
     private void flowMainSequence(Player currentPlayer, Player currentOpponent){
-        scanner = new Scanner(System.in);
+        int shootX = 0;
+        int shootY = 0;
 
         // Ausgabe beider Felder des jeweiligen Spielers
         System.out.println("Hello Player " + currentPlayer.getPlayerName());
@@ -58,11 +60,61 @@ public class GameLogic {
         Shot.State result = Shot.State.reload;
 
         while(result == Shot.State.reload) {
+            boolean validX = false;
+            boolean validY = false;
+            char tmpshootX = '0';
+
             System.out.println("Geben Sie Ihre Schusskoordinaten ein:");
-            System.out.println("x-Koordinate:");
-            int shootX = scanner.nextInt();
-            System.out.println("y-Koordinate:");
-            int shootY = scanner.nextInt();
+            // Check input from x-coordinate
+            do {
+                try {
+                    //Ask user to input a character between A and J
+                    scanner = new Scanner(System.in);
+                    System.out.println("x-Coordinate:");
+                    tmpshootX = scanner.next().charAt(0);
+
+                    if ((tmpshootX == 'A') || (tmpshootX == 'B') || (tmpshootX == 'C') || (tmpshootX == 'D') || (tmpshootX == 'E') ||
+                            (tmpshootX == 'F') || (tmpshootX == 'G') || (tmpshootX == 'H') || (tmpshootX == 'I') || (tmpshootX == 'J')) {
+                        System.out.println("Your coordinate is " + tmpshootX);
+                        validX = true;
+                        shootX = givenShootCoordinate.translateInput(tmpshootX);
+                    } else {
+                        System.out.println("Error: The (" + tmpshootX + ") is not between A and J, try again");
+                    }
+                } catch (NumberFormatException ne) {
+                    System.out.println("Error: The (" + tmpshootX + ") is not between A and J, try again");
+                }
+                catch (Exception e) {
+                    System.out.println("Error: The (" + tmpshootX + ") is not a valid input - Only characters between A and J");
+                }
+            } //Continue the loop while input is not valid
+            while (!validX);
+
+            // Check input from y-coordinate
+            do {
+                try {
+                    //Ask user to input a number between 1 and 10
+                    scanner = new Scanner(System.in);
+                    System.out.println("y-Coordinate:");
+                    shootY = scanner.nextInt();
+
+                    if ((shootY == 1) || (shootY == 1) || (shootY == 3) || (shootY == 4) || (shootY == 5) ||
+                            (shootY == 6) || (shootY == 7) || (shootY == 8) || (shootY == 9) || (shootY == 10)) { //ToDo
+                        System.out.println("Your number is " + shootY);
+                        validY = true;
+                        shootY -= 1;
+                    } else {
+                        System.out.println("Error: The (" + shootY + ") is not between 1 and 10, try again");
+                    }
+                } catch (NumberFormatException ne) {
+                    System.out.println("Error: The (" + shootY + ") is not between 1 and 10, try again");
+                } catch (InputMismatchException ne) {
+                    System.out.println("Error: The (" + shootY + ") is not a valid input - Only numbers between 1 and 10");
+                }
+            } //Continue the loop while Number is not equal 1 - 10
+            while (!validY);
+
+
             givenShootCoordinate.setNewCoordinates(shootX, shootY);
             //Check, ob und was der Schuss getroffen hat
             result = shoot.shootsAt(givenShootCoordinate, currentPlayer, currentOpponent);
@@ -99,6 +151,11 @@ public class GameLogic {
         System.out.println(currentPlayer.getPlayerName() + " - Ihr Zug ist beendet. " + currenOpponent.getPlayerName() + " ist am Zug.");
         System.out.println(currenOpponent.getPlayerName() + " ready? J/N");
         String name2 = scanner.nextLine();
+    }
+
+
+    public boolean checkGameOver(){
+        return true;
     }
 
     //MAIN
