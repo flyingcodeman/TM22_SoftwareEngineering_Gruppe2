@@ -18,7 +18,7 @@ public class Shot {
         }
         else if(character == '~'){
             // Schuss ins Wasser = Vergebener Schuss
-            currentPlayer.setCharAtPositionOpponentInfoField('-', coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
+            currentPlayer.setCharAtPositionOpponentInfoField('/', coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
             resultState = State.miss;
         }
         else if (character == '2' || character == '3' || character == '4'|| character == '5') {
