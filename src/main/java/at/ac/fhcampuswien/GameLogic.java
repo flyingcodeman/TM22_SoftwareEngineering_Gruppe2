@@ -10,84 +10,141 @@ public class GameLogic {
     private Scanner scanner; //Object zum Einlesen der User-Inputs über die Console
     public Player player1;
     public Player player2;
+    private String language = "";
+    private String playerMode = "";
     boolean gameOver = false;
+
+    //Consolen-Ein- und Ausgaben + Input-Checks
+    private void flowDialog(String sequence){
+        switch(sequence){
+            case "language":
+                boolean validLanguage = false;
+                //Sprache festlegen
+                //Ausgabe der Begruessung gemäß den Spielregeln
+                System.out.println("Select language: (E)nglish (G)erman (D)^2");
+                do {
+                    try {
+                        //Ask user to input 'G', "German", 'E' or "English", 'D' or D^2
+                        scanner = new Scanner(System.in);
+                        language = scanner.next();
+
+                        if ((language.equals("G")) || (language.equals("German")) ||
+                                (language.equals("E")) || (language.equals("English")) ||
+                                (language.equals("D")) || (language.equals("D^2"))) {
+                            validLanguage = true;
+                            // ToDo: Save input and choose language
+
+                        } else {
+                            System.out.println("Error: The input (" + language + ") is not in the expected range - Please retry!");
+                            language = "";
+                        }
+                    }
+                    catch (Exception e) {
+                        System.out.println("Error: The input (" + language + ") is not a valid input - Please retry!");
+                        language = "";
+                    }
+                } //Continue the loop while input is not valid
+                while (!validLanguage);
+                break;
+
+            case "player":
+                scanner = new Scanner(System.in);
+                //Player 1
+                System.out.println("Player 1: Insert your name:");
+                String name1 = scanner.next();
+                //Initialisierung des Players 1, seiner Spielfelder und Zuweisung des Namens
+                player1 = new Player(name1);
+
+                //Player 2
+                scanner = new Scanner(System.in);
+                System.out.println("Player 2: Insert your name");
+                String name2 = scanner.next();
+                //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
+                player2 = new Player(name2);
+                break;
+
+            case "playermode":
+                boolean validPlayer = false;
+                System.out.println("Please select your opponent:");
+                System.out.println("(C)omputer or (P)layer");
+                do {
+                    try {
+                        //Ask user to input 'C', "Computer", 'P' or "Player"
+                        scanner = new Scanner(System.in);
+                        playerMode = scanner.nextLine();
+
+                        if ((playerMode.equals("C")) || (playerMode.equals("Computer")) || (playerMode.equals("P")) || (playerMode.equals("Player"))) {
+                            validPlayer = true;
+                            // ToDo: Save input and choose playmode
+
+                        } else {
+                            System.out.println("Error: The input (" + playerMode + ") is not in the expected range - Please retry!");
+                            playerMode = "";
+                        }
+                    }
+                    catch (Exception e) {
+                        System.out.println("Error: The input (" + playerMode + ") is not a valid input - Please retry!");
+                        playerMode = "";
+                    }
+                } //Continue the loop while input is not valid
+                while (!validPlayer);
+                break;
+
+            case "changePlayer":
+                boolean validSwitch = false;
+                String readyState = "";
+                do {
+                    try {
+                        //Ask user to input 'y', "yes", 'n' or "no", 'q' or "quit", 'r' or "rules"
+                        scanner = new Scanner(System.in);
+                        readyState = scanner.nextLine();
+
+                        if ((readyState.equals("y")) || (readyState.equals("yes")) || (readyState.equals("n")) || (readyState.equals("no"))) {
+                            validSwitch = true;
+                            // ToDo: Save input and choose playmode
+                        } else if((readyState.equals("r")) || (readyState.equals("rules"))){
+                            //ToDo: Show rules of the game / call init function
+                            System.out.println("Placeholder for game rules // ToDo!");
+
+                            //Ongoing game after presentation of the rules
+                            System.out.println("Are you ready? (y)es/(n)o/(q)uit game/(r)ules of the game");
+                            readyState = "";
+                        }else if((readyState.equals("q")) || (readyState.equals("quit"))){
+                            flowGameOver();
+                            System.out.println("Quit game successfully - Missing implementation of GameOver-/GameQuit-Handling!");
+                            //Todo: BREAK!
+                        }
+                        else {
+                            System.out.println("Error: The input (" + readyState + ") is not in the expected range - Please retry!");
+                            readyState = "";
+                        }
+
+                    }
+                    catch (Exception e) {
+                        System.out.println("Error: The input (" + readyState + ") is not a valid input - Please retry!");
+                        readyState = "";
+                    }
+                } //Continue the loop while input is not valid
+                while (!validSwitch);
+                break;
+        }
+    }
+
 
     //Begrüßung und Festlegen der Sprache
     private void flowWelcome(){
-
-        String language = "";
-        boolean validLanguage = false;
-        //Sprache festlegen
-        //Ausgabe der Begruessung gemäß den Spielregeln
-        System.out.println("Select language: (E)nglish (G)erman (D)^2");
-        do {
-            try {
-                //Ask user to input 'C', "Computer", 'P' or "Player"
-                scanner = new Scanner(System.in);
-                language = scanner.next();
-
-                if ((language.equals("G")) || (language.equals("German")) ||
-                        (language.equals("E")) || (language.equals("English")) ||
-                        (language.equals("D")) || (language.equals("D^2"))) {
-                    validLanguage = true;
-                    // ToDo: Save input and choose language
-
-                } else {
-                    System.out.println("Error: The input (" + language + ") is not in the expected range - Please retry!");
-                }
-            }
-            catch (Exception e) {
-                System.out.println("Error: The input (" + language + ") is not a valid input - Please retry!");
-            }
-        } //Continue the loop while input is not valid
-        while (!validLanguage);
-
-
+        //Start sequence language
+        flowDialog("language");
         //Input einlesen und Sprachwahl durchführen
         System.out.println("The game is loading...");
     }
 
     //Initialisierung aller Spieler und Grundeinstellungen
     private void flowInit(){
-        scanner = new Scanner(System.in);
-
-        //Player 1
-        System.out.println("Player 1: Insert your name:");
-        String name1 = scanner.nextLine();
-        //Initialisierung des Players 1, seiner Spielfelder und Zuweisung des Namens
-        player1 = new Player(name1);
-
+        //Read in player names
+        flowDialog("player");
         //Player-Mode
-        String playerMode = "";
-        boolean validPlayer = false;
-        System.out.println("Please select your opponent:");
-        System.out.println("(C)omputer or (P)layer");
-        do {
-            try {
-                //Ask user to input 'C', "Computer", 'P' or "Player"
-                scanner = new Scanner(System.in);
-                playerMode = scanner.next();
-
-                if ((playerMode.equals("C")) || (playerMode.equals("Computer")) || (playerMode.equals("P")) || (playerMode.equals("Player"))) {
-                    validPlayer = true;
-                    // ToDo: Save input and choose playmode
-
-                } else {
-                    System.out.println("Error: The input (" + playerMode + ") is not in the expected range - Please retry!");
-                }
-            }
-            catch (Exception e) {
-                System.out.println("Error: The input (" + playerMode + ") is not a valid input - Please retry!");
-            }
-        } //Continue the loop while input is not valid
-        while (!validPlayer);
-
-        //Player 2
-        String chosenPlayer = scanner.nextLine();
-        System.out.println("Player 2: Insert your name");
-        String name2 = scanner.nextLine();
-        //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
-        player2 = new Player(name2);
+        flowDialog("playermode");
 
         //Platzierung der Schiffe
         player1.setStandardFleet();
@@ -197,15 +254,18 @@ public class GameLogic {
 
     //Flow zum Wechseln der Spieler
     public void flowChangePlayer(Player currentPlayer, Player currenOpponent){
-        scanner = new Scanner(System.in);
         for(int i = 0; i <10; i++){
             System.out.println(">");
         }
         System.out.println(currentPlayer.getPlayerName() + " - Your turn is over. It's " + currenOpponent.getPlayerName() + "s turn.");
-        System.out.println(currenOpponent.getPlayerName() + " ready? y(es)/n(o)");
-        String name2 = scanner.nextLine();
+        System.out.println(currenOpponent.getPlayerName() + " ready? (y)es/(n)o/(q)uit game/(r)ules of the game");
+        flowDialog("changePlayer");
     }
 
+    //Flow Zum GameOver-Handling des Spiels
+    public void flowGameOver(){
+        //ToDo
+    }
 
     public boolean checkGameOver(){
         return true;
