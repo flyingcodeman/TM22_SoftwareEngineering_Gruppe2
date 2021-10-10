@@ -265,6 +265,51 @@ public class GameLogic {
     //Flow Zum GameOver-Handling des Spiels
     public void flowGameOver(){
         //ToDo
+        boolean validGameover = false;
+        char tmpgameover = '0';
+
+        do {
+            try {
+                // ToDo: flowGameOver erstellen, Consolenausgabe ausformulieren und Möglichkeiten zum Beenden / Neustart implementieren
+                // System.out.println("GAME OVER");
+                //Game Over , ask user for input , play again = p , or quit game = q
+                // ToDo: Stats bzw. Highscore anzeigen
+
+                System.out.println("Game Over...");
+                System.out.println("(P)lay Again , or (Q)uit Game ?");
+                tmpgameover = scanner.next().charAt(0);
+
+                if ((tmpgameover == 'P') || (tmpgameover == 'Q') ) {
+                    //System.out.println("Your choice " + tmpgameover);
+                    validGameover = true;
+
+                    if (tmpgameover== 'P') { //wenn 'Play Again' gewählt wurde :
+                        System.out.println("Your choice " + tmpgameover);
+                        gameOver = false;
+
+                        // ToDO: neustart routine implementieren ; Break nicht vorhanden
+                    }
+                    else{ //wenn 'Quit Game' gewählt wurde:
+                        System.out.println("Thanks for playing ... Please come back soon ?! ");
+                        System.out.println("Press any key to quit ");
+                        scanner.nextLine(); // um die Endausgabe überhaupt zu sehen
+                        // ToDO : saubere End Routine implementieren ; break nicht vorhanden
+                        gameOver = true;
+
+                    }
+                } else {
+                    System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
+                }
+            } catch (NumberFormatException ne) {
+                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
+            }
+            catch (Exception e) {
+                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
+            }
+        } //Continue the loop while input is not valid
+        while (!validGameover);
+
+
     }
 
     public boolean checkGameOver(){
@@ -275,18 +320,24 @@ public class GameLogic {
     public static void main(String []args) {
         GameLogic game = new GameLogic();
 
-        game.flowWelcome();
-        game.flowInit();
-        // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
-        while(!game.gameOver) {
-            game.flowMainSequence(game.player1, game.player2);
-            game.flowChangePlayer(game.player1, game.player2);
-            game.flowMainSequence(game.player2, game.player1);
-            game.flowChangePlayer(game.player2, game.player1);
-        }
 
-        //ToDo: Stats ausgeben
-        //ToDo: flowGameOver erstellen, Consolenausgabe ausformulieren und Möglichkeiten zum Beenden / Neustart implementieren
-        System.out.println("GAME OVER");
+        game.flowWelcome();
+
+      do { // Schleife für flowGameOver ... solange GameOver = False
+
+          game.flowInit(); //
+          // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
+          while (!game.gameOver) {
+              game.flowMainSequence(game.player1, game.player2);
+              game.flowChangePlayer(game.player1, game.player2);
+              game.flowMainSequence(game.player2, game.player1);
+              game.flowChangePlayer(game.player2, game.player1);
+          }
+
+          //ToDo: Stats ausgeben
+
+
+      } //Continue the loop while GameOver is not true
+      while (!game.gameOver);
     }
 }
