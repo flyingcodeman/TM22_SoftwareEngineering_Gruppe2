@@ -282,7 +282,7 @@ public class GameLogic {
                 System.out.println("(P)lay Again , or (Q)uit Game ?");
                 tmpgameover = scanner.next().charAt(0);
 
-                if ((tmpgameover == 'P') || (tmpgameover == 'Q') ) {
+                if ((tmpgameover == 'P')) {
                     //System.out.println("Your choice " + tmpgameover);
 
 
@@ -300,6 +300,10 @@ public class GameLogic {
                         return false;
 
                     }
+                } else if ((tmpgameover == 'Q')){
+                    System.out.println("The game will be closed now.");
+                    System.out.println("Thank you for playing the game! <3");
+                    System.exit(0);
                 } else {
                     System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
                 }
