@@ -1,0 +1,59 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"444b221c-d072-4b84-a020-baf8f8721094\" name=\"Changes\" comment=\"AW Proof reading Regelwerk.md\">\r\n      <change beforePath=\"$PROJECT_DIR$/Dokumentenablage/MVP.md\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Dokumentenablage/Regelwerk.txt\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/firstFile.java\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"organisational\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1xohYfkFGcMA5X9riGNTCRmjv41\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"444b221c-d072-4b84-a020-baf8f8721094\" name=\"Changes\" comment=\"\" />\r\n      <created>1631027404114</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1631027404114</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Added Scrum Guide\">\r\n      <created>1631039349937</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1631039349937</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"AW Proof reading Regelwerk.md\">\r\n      <created>1631046250916</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1631046250916</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Added Scrum Guide\" />\r\n    <MESSAGE value=\"AW Proof reading Regelwerk.md\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"AW Proof reading Regelwerk.md\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 27fdae347ab8dda3fa58d4e691a9c99e4ac11abd)
++++ b/.idea/workspace.xml	(date 1632238392894)
+@@ -2,14 +2,16 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="444b221c-d072-4b84-a020-baf8f8721094" name="Changes" comment="AW Proof reading Regelwerk.md">
+-      <change beforePath="$PROJECT_DIR$/Dokumentenablage/MVP.md" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Dokumentenablage/Regelwerk.txt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/firstFile.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Dokumentenablage/Regelwerk.md" beforeDir="false" afterPath="$PROJECT_DIR$/Dokumentenablage/Regelwerk.md" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="CodeStyleSettingsInfer">
++    <option name="done" value="true" />
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+@@ -18,6 +20,9 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="ProjectCodeStyleSettingsMigration">
++    <option name="version" value="1" />
+   </component>
+   <component name="ProjectId" id="1xohYfkFGcMA5X9riGNTCRmjv41" />
+   <component name="ProjectViewState">
+Index: Dokumentenablage/Regelwerk.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Rulebook für Schiffe versenken\r\nTM22 Software Engineering Team #2\r\n- **[Christopher Moser](mailto:christopher.moser@stud.fh-campuswien.ac.at)** - *Product Owner* - *2010536047* -\r\n- **[Daniel Gasser](mailto:daniel.gasser1@stud.fh-campuswien.ac.at)** - *Scrum Master* - *2010536060* -\r\n- **[Adriane Würfl](mailto:adriane.wuerfl@stud.fh-campuswien.ac.at)** - *Jira, Team member* - *2010536065* -\r\n- **[Simon König](mailto:simon.koenig@stud.fh-campuswien.ac.at)** - *Git, Team member* - *2010536059* -\r\n- **[Mario Dangl](mailto:mario.dangl@stud.fh-campuswien.ac.at)** - *Team member* - *2010536036* - \r\n- **[Dino Ganic](mailto:dino.ganic@stud.fh-campuswien.ac.at)** - *Team member* - *2010536011* -\r\n- **[Vera Adler](mailto:vera.adler@stud.fh-campuswien.ac.at)** - *Team member* - *2010536057* -\r\n\r\n## Spielaufbau\r\n- 2 Spieler Modus \r\n- 1 Spieler Modus gegen PC (Optional)\r\n  - Schussabgabe wird mittels Zufallsgenerator \r\n  - Erweitert kann noch eine Logik implementiert werden, welche im Falle eines Treffers in Treffer-bereich weitere Schüsse abgibt.  \r\n- Spielfeld Rechteckig in Koordinaten unterteilt\r\n  - Horizontal in Buchstaben unterteilt \r\n  - Vertikal in Zahlen unterteilt\r\n  - Siehe Musterspielfeld unten\r\n- Vertikal mit Zahlen\r\n- Horizontal mit Buchstaben\r\n\r\n\r\n\r\n          A B C D E F G H I J \r\n        * * * * * * * * * * * * \r\n    1   *                     *\t\r\n    2   *                     * \t\t\r\n    3   *                     *\r\n    4   *                     *\r\n    5   *                     *\r\n    6   *                     *\r\n    7   *                     *\r\n    8   *                     *\r\n    9   *                     *\r\n    10  *                     *\r\n        * * * * * * * * * * * *\r\n\r\n-Visualisierung\r\n- über Konsole (Mindestanforderung)\r\n- GUI erwünscht\r\n- Jedenfalls muss nach jedem Spielzug das gesamte Feld des Spielers (Eigene Schiffe inkl. Treffer des Gegners) und des Gegners (Versuchte Treffen und wirkliche Treffer) ausgegeben/angezeigt werden.\r\n\r\n\r\n### Schiffe \r\nBei jedem Spiel hat der Spieler folgende Schiffe zur Verfügung:\r\n\r\n    - ein Schlachtschiff (5 Kästchen)\r\n    - zwei Kreuzer (je 4 Kästchen)\r\n    - drei Zerstörer (je 3 Kästchen)\r\n    - vier U-Boote (je 2 Kästchen)\r\n    \r\nOptional kann die Funktion \"Schiffe zufällig auf dem Feld verteilen\" etabliert werden. \r\n\r\n\r\n## Spielablauf:\r\n1. Der Spieler wählt 1 oder 2 Spieler Modus.\r\n2. Vorbereitung:\r\n\r\n    - Schiffe platzieren (manuell oder zufällig)\r\n    - Bei \"manuell\" werden die Kriterien für das Platzieren angezeigt. \r\n    - Es müssen alle Schiffe verwendet werden. \r\n    - Die Schiffe dürfen sich nicht kreuzen oder überlappen. \r\n    - Schiffe dürfen nicht diagonal aufgestellt werden. \r\n    - Schiffe dürfen keine Ausbuchtung besitzen.\r\n    \r\n3. Spielzug\r\n    - Bei einem Spielzug gibt der Spieler eine Koordinate (z.B. A7) an. \r\n    - Darauf hin erfolgt die Meldung \"Treffer\", wenn ein Schiff getroffen worden ist oder \"Daneben\" wenn kein Treffer erzielt worden ist. \r\n    - Falls das letzte Feld eines Schiffes getroffen wird, erfolgt die Meldung \"Treffer, Versenkt\". \r\n    - Die Verwendeten Koordinaten werden auf einem Spielfeld angezeigt, inkl. Hervorhebung der Treffer und versenkten Schiffe.\r\n\r\n\r\n\r\n         A B C D E F G H I J \r\n       * * * * * * * * * * * *\r\n    1  *   O O     O O       *\r\n    2  *               X     * \t\t\r\n    3  * O O O O O     X     *\r\n    4  *     O O O     O     *\r\n    5  *     -         O     *\r\n    6  *     #               *\r\n    7  * O   #     O         *\r\n    8  * O   #     O   O O O *\r\n    9  *     #     O         *\r\n    10 *                 O O *\r\n       * * * * * * * * * * * *\r\n\r\n\r\n\r\n  Legende:\r\n\r\n    - O Schiff (Anzeige auf eigenem Spielfeld) \r\n    - kein Treffer \r\n    - X Treffer \r\n    - # Wenn Schiff versenkt ist\r\n    - Nach jedem Spielzug wird der Spieler gewechselt. \r\n    - Eine Mehrfachnennung eines Feldes ist nicht möglich. \r\n\r\n4. Spielende \r\n   - Manuelle Beendigung des Spiels durch Schließen der Konsole / der Spieloberfläche. \r\n   - Das Spiel beendet automatisch, wenn ein Spieler alle gegnerischen Schiffe vollständig getroffen hat. \r\n   - Optional ist eine Implementierung eines Auswertefensters (Spielzeit, Treffer, Fehlschüsse, Trefferserie,... ) anzudenken. \r\n   - Eine Liste der besten Spieler inkl. der Spielzeit kann ebenfalls implementiert werden (Highscore). \r\n   \r\n\r\n## Mindestanforderungen (MVP)\r\n1. Spieloberfläche und Eingabe der Koordinaten via Konsole \r\n2. Manuelle Positionierung aller Schiffe (inkl. Kontrolle, ob alle Schiffe verwendet worden sind) \r\n3. Ausgabe der Oberfläche mit 2 Spielfeldern (eigenes und gegnerisches Feld) inkl. eigener Schiffe, Treffer und Versuchen\r\n4. Automatische Beendigung des Spiels, sobald alle Schiffe eines Spielers getroffen worden sind \r\n\r\n\r\n# Autoren\r\n- **[Christopher Moser](https://www.linkedin.com/in/christopher-moser-826658141/)** - *Creator* -\r\n- **[Adriane Würfl]()** - *Changes* 
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Dokumentenablage/Regelwerk.md b/Dokumentenablage/Regelwerk.md
+--- a/Dokumentenablage/Regelwerk.md	(revision 27fdae347ab8dda3fa58d4e691a9c99e4ac11abd)
++++ b/Dokumentenablage/Regelwerk.md	(date 1632162602487)
+@@ -15,7 +15,7 @@
+   - Erweitert kann noch eine Logik implementiert werden, welche im Falle eines Treffers in Treffer-bereich weitere Schüsse abgibt.  
+ - Spielfeld Rechteckig in Koordinaten unterteilt
+   - Horizontal in Buchstaben unterteilt 
+-  - Vertikal in Zahlen unterteilt
++  - Vertikal in Zahlen unterteiltsi
+   - Siehe Musterspielfeld unten
+ - Vertikal mit Zahlen
+ - Horizontal mit Buchstaben
