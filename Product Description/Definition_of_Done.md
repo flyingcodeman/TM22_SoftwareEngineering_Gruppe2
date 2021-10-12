@@ -9,7 +9,7 @@
 - [DoD-32.080] Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
 ## [DoD-33] Der User bekommt eine Fehlermeldung angezeigt, wenn er die Schiffe falsch platziert 
-- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das sChiff muss sich inerhalb des Spielfelds befinden!"
+- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das Schiff muss sich inerhalb des Spielfelds befinden!"
 - [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
 
 ## [DoD-34] Dem User wird angezeigt, wieviele gegnerische Schiffe er getroffen/versenkt hat
@@ -21,9 +21,9 @@
 - [DoD-35.010] Es wird überprüft, wieviele eigene Schiffe getroffen wurden
 - [DoD-35.020] Es wird überprüft, wieviele eigene Schiffe versenkt wurden
 - [DoD-35.030] Es wird überprüft, wieviele eigene Schiffe noch intakt sind
-- [DoD-35.040] Es wir die Meldung " %d Schiffe versenkt"
-- [DoD-35.050] Es wir die Meldung " %d Schiffe getroffen"
-- [DoD-35.060] Es wir die Meldung " %d Schiffe intakt"
+- [DoD-35.040] Es wird die Meldung " %d Schiffe versenkt" angezeigt
+- [DoD-35.050] Es wird die Meldung " %d Schiffe getroffen" angezeigt
+- [DoD-35.060] Es wird die Meldung " %d Schiffe intakt" angezeigt
 
 ## [DoD-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 - [DoD-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
@@ -124,7 +124,9 @@
 - [DoD-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
 
 ## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
-- [DoD-53.010] TBC 
+- [DoD-53.010] TBC  - Dem User wird angezeigt, dass er seinen Namen eingeben soll
+- [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
+- [DoD-53.030] TBC - Dem User wird angezeigt, dass er ...
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch 
@@ -139,14 +141,17 @@
 - [DoD-56.010] Es wird abgefragt, ob der User die Spielregeln sehen will 
 - [DoD-56.020] Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld auszugeben 
 
-##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln währens des Spiels anzeigen zu lassen 
-- [DoD-57.010] TBC 
+##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen 
+- [DoD-57.010] TBC - Es wird angezeigt, dass der User sich die Spielregeln ansehen kann
+- [DoD-57.020] TBC - Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld angezeigt
+- [DoD-57.030] TBC - Der User kann die Spielregeln wieder ausblenden
 
 ## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
 - [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten 
 
 ## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
-- [DoD-59.010] TBC 
+- [DoD-59.010] TBC - Es wird angezeigt, dass der User das Spiel abbrechen kann
+- [DoD-50.020] TBC - Der User kann über die Tastenkombination "______" das Spiel abbrechen (Tastenkombination auswählen)
 
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
@@ -158,5 +163,5 @@
 
 ## [DoD-61] Der User hat die Möglichkeit, die Audioeffekte an- bzw. abzuschalten
 - [DoD-61.010] Es wird abgefragt, ob Audioeffekte erwünscht sind
-- [DoD-61.020] Falls erwünscht wird die Methode für Audioeffekte angeschaltet 
+- [DoD-61.020] Falls erwünscht wird die Methode für Audioeffekte eingeschaltet 
 - [DoD-61.030] Falls nicht erwünscht wird die Methode für Audioeffekte abgeschaltet
