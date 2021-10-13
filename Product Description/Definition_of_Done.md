@@ -124,9 +124,12 @@
 - [DoD-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
 
 ## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
-- [DoD-53.010] TBC  - Dem User wird angezeigt, dass er seinen Namen eingeben soll
+- [DoD-53.010] TBC - Dem User wird angezeigt, dass er seinen Namen eingeben soll
 - [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
-- [DoD-53.030] TBC - Dem User wird angezeigt, dass er ...
+- [DoD-53.030] TBC - Dem User wird angezeigt, dass er Schusskoordinaten eingeben soll
+- [DoD-53.040] TBC - Dem User wird angezeigt, ob er das Spiel nach einer Unterbrechung fortsetzen möchte
+- [DoD-53.050] TBC - Dem User wird angezeigt, ob er die Spielstatistik angezeigt haben will
+- [DoD-53.060] TBC - Dem User wird angezeigt, ob er noch ein Mal spielen möchte
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch 
@@ -151,7 +154,7 @@
 
 ## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
 - [DoD-59.010] TBC - Es wird angezeigt, dass der User das Spiel abbrechen kann
-- [DoD-50.020] TBC - Der User kann über die Tastenkombination "______" das Spiel abbrechen (Tastenkombination auswählen)
+- [DoD-50.020] TBC - Der User kann über die Eingabe von "(q)uit" das Spiel abbrechen
 
 ## [DoD-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [DoD-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
