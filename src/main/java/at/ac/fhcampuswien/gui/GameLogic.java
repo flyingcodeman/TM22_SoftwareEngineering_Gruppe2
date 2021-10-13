@@ -318,4 +318,33 @@ public class GameLogic {
     public void flowGameQuit(){
 
     }
+
+    //MAIN
+    public static void main(String []args) {
+        GameLogic game = new GameLogic();
+        gameState currentGameState = gameState.gameContinue;
+
+        do { // Schleife für flowGameOver ... solange GameExit = False
+            game.flowWelcome();
+            game.flowInit();
+            // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
+            while (currentGameState == gameState.gameContinue) {
+                currentGameState = game.flowMainSequence(game.player1, game.player2);
+                if(currentGameState == gameState.gameContinue){
+                    currentGameState = game.flowMainSequence(game.player2, game.player1);
+                }
+            }
+            //ToDo: Stats ausgeben
+            var state = game.flowGameOver();
+            if (state == gameState.gameQuit){
+                currentGameState = gameState.gameQuit;
+            }
+            else if (state == gameState.gamePlayAgain){
+                game = new GameLogic();
+                currentGameState = gameState.gameContinue;
+            }
+
+        } //Continue the loop while GameExit is not true
+        while (currentGameState != gameState.gameQuit);
+    }
 }
