@@ -1,22 +1,26 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.gui;
+import at.ac.fhcampuswien.core.Coordinate;
+import at.ac.fhcampuswien.core.Player;
+import at.ac.fhcampuswien.core.Shot;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class GameLogic {
     /*
-    GameLogic modes to be defined
+        GameLogic modes to be defined
     */
     private Scanner scanner; //Object zum Einlesen der User-Inputs über die Console
     public Player player1;
     public Player player2;
     private String language = "";
     private String playerMode = "";
-    boolean gameOver = false;
     boolean continueGame = true;
     public enum gameState { //Zustände des Spiels
         gameOver, gameQuit, gameContinue, gamePlayAgain
     }
+    public boolean gameOver = false;
 
     //Consolen-Ein- und Ausgaben + Input-Checks
     private gameState flowDialog(String sequence){
@@ -141,7 +145,7 @@ public class GameLogic {
 
 
     //Begrüßung und Festlegen der Sprache
-    private void flowWelcome(){
+    public void flowWelcome(){
         //Start sequence language
         flowDialog("language");
         //Input einlesen und Sprachwahl durchführen
@@ -149,7 +153,7 @@ public class GameLogic {
     }
 
     //Initialisierung aller Spieler und Grundeinstellungen
-    private void flowInit(){
+    public void flowInit(){
         //Read in player names
         flowDialog("player");
         //Player-Mode
@@ -162,7 +166,7 @@ public class GameLogic {
     }
 
     //Hauptsequenz des Spiels
-    private gameState flowMainSequence(Player currentPlayer, Player currentOpponent){
+    public gameState flowMainSequence(Player currentPlayer, Player currentOpponent){
         int shootX = 0;
         int shootY = 0;
 
@@ -313,40 +317,5 @@ public class GameLogic {
 
     public void flowGameQuit(){
 
-    }
-
-
-
-    //public boolean checkGameOver(){
-    //    return true;
-    //}
-
-    //MAIN
-    public static void main(String []args) {
-        GameLogic game = new GameLogic();
-        gameState currentGameState = gameState.gameContinue;
-
-        do { // Schleife für flowGameOver ... solange GameExit = False
-            game.flowWelcome();
-            game.flowInit();
-            // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
-            while (currentGameState == gameState.gameContinue) {
-                currentGameState = game.flowMainSequence(game.player1, game.player2);
-                if(currentGameState == gameState.gameContinue){
-                    currentGameState = game.flowMainSequence(game.player2, game.player1);
-                }
-            }
-            //ToDo: Stats ausgeben
-            var state = game.flowGameOver();
-            if (state == gameState.gameQuit){
-                currentGameState = gameState.gameQuit;
-            }
-            else if (state == gameState.gamePlayAgain){
-                game = new GameLogic();
-                currentGameState = gameState.gameContinue;
-            }
-
-        } //Continue the loop while GameExit is not true
-        while (currentGameState != gameState.gameQuit);
     }
 }

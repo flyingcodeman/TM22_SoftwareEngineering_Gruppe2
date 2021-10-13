@@ -1,4 +1,5 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
+
 
 public class Player {
     private String playerName;
