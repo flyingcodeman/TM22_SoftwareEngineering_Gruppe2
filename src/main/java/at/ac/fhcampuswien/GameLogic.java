@@ -14,9 +14,14 @@ public class GameLogic {
     private String playerMode = "";
     boolean gameOver = false;
     boolean continueGame = true;
+    public enum gameState { //Zustände des Spiels
+        gameOver, gameQuit, gameContinue, gamePlayAgain
+    }
 
     //Consolen-Ein- und Ausgaben + Input-Checks
-    private void flowDialog(String sequence){
+    private gameState flowDialog(String sequence){
+        gameState currentGameState = gameState.gameContinue;
+
         switch(sequence){
             case "language":
                 boolean validLanguage = false;
@@ -93,8 +98,8 @@ public class GameLogic {
 
             case "changePlayer":
                 boolean validSwitch = false;
-
                 String readyState = "";
+
                 do {
                     try {
                         //Ask user to input 'y', "yes", 'n' or "no", 'q' or "quit", 'r' or "rules"
@@ -103,6 +108,7 @@ public class GameLogic {
 
                         if ((readyState.equals("y")) || (readyState.equals("yes")) || (readyState.equals("n")) || (readyState.equals("no"))) {
                             validSwitch = true;
+                            currentGameState = gameState.gameContinue;
                             // ToDo: Save input and choose playmode
                         } else if((readyState.equals("r")) || (readyState.equals("rules"))){
                             //ToDo: Show rules of the game / call init function
@@ -112,19 +118,15 @@ public class GameLogic {
                             System.out.println("Are you ready? (y)es/(n)o/(q)uit game/(r)ules of the game");
                             readyState = "";
                         }else if((readyState.equals("q")) || (readyState.equals("quit"))){
-                            continueGame = flowGameOver();
                             System.out.println("Quit game successfully - Missing implementation of GameOver-/GameQuit-Handling!");
-                            System.out.println("Test: ! (" + continueGame + ") !");
-                            if (continueGame==true)
-                            {
-                                flowInit(); // probieren ?
-                            }//Todo: BREAK! kommt nicht in die Main routine zurück !
+                            validSwitch = true;
+                            currentGameState = gameState.gameQuit;
+
                         }
                         else {
                             System.out.println("Error: The input (" + readyState + ") is not in the expected range - Please retry!");
                             readyState = "";
                         }
-
                     }
                     catch (Exception e) {
                         System.out.println("Error: The input (" + readyState + ") is not a valid input - Please retry!");
@@ -134,6 +136,7 @@ public class GameLogic {
                 while (!validSwitch);
                 break;
         }
+        return currentGameState;
     }
 
 
@@ -159,9 +162,11 @@ public class GameLogic {
     }
 
     //Hauptsequenz des Spiels
-    private void flowMainSequence(Player currentPlayer, Player currentOpponent){
+    private gameState flowMainSequence(Player currentPlayer, Player currentOpponent){
         int shootX = 0;
         int shootY = 0;
+
+        gameState currentGameState = gameState.gameContinue;
 
         // Ausgabe beider Felder des jeweiligen Spielers
         System.out.println("Hello Player " + currentPlayer.getPlayerName());
@@ -254,23 +259,27 @@ public class GameLogic {
         //Checken der player.gameOver-Variable, ob Spiel vorbei & Flotte versenkt
         //ToDo: Andere Positionierung des Checks und Erweiterung der Methode
         if(currentOpponent.gameOver){
-            gameOver = true;
+            return gameState.gameOver;
         }
+
+        //Change Player
+        currentGameState = flowChangePlayer(currentPlayer, currentOpponent);
+
+        return currentGameState;
     }
 
     //Flow zum Wechseln der Spieler
-    public void flowChangePlayer(Player currentPlayer, Player currentOpponent){
+    public gameState flowChangePlayer(Player currentPlayer, Player currentOpponent){
         for(int i = 0; i <10; i++){
             System.out.println(">");
         }
         System.out.println(currentPlayer.getPlayerName() + " - Your turn is over. It's " + currentOpponent.getPlayerName() + "s turn.");
         System.out.println(currentOpponent.getPlayerName() + " ready? (y)es/(n)o/(q)uit game/(r)ules of the game");
-        flowDialog("changePlayer");
+        return flowDialog("changePlayer");
     }
 
     //Flow Zum GameOver-Handling des Spiels
-    public boolean flowGameOver(){
-
+    public gameState flowGameOver(){
         char tmpgameover = '0';
 
         do {
@@ -279,72 +288,65 @@ public class GameLogic {
 
                 //Game Over , ask user for input , play again = p , or quit game = q
                 System.out.println("Game Over...");
-                System.out.println("(P)lay Again , or (Q)uit Game ?");
+                System.out.println("(p)lay again , or (q)uit Game ?");
                 tmpgameover = scanner.next().charAt(0);
 
-                if ((tmpgameover == 'P')) {
+                if ((tmpgameover == 'p')) {
                     //System.out.println("Your choice " + tmpgameover);
-
-
-                    if (tmpgameover== 'P') { //wenn 'Play Again' gewählt wurde, Ausgabe auf Konsole
-                        System.out.println("Your choice " + tmpgameover);
-                        return true;
-
-
-                    }
-                    else{ //wenn 'Quit Game' gewählt wurde, Konsolenausgabe und warten auf Bestätigung
-                        System.out.println("Thanks for playing ... Please come back soon ?! ");
-                        System.out.println("Press any key to quit ");
-                        scanner.nextLine(); // um die Endausgabe überhaupt zu sehen
-
-                        return false;
-
-                    }
-                } else if ((tmpgameover == 'Q')){
-                    System.out.println("The game will be closed now.");
-                    System.out.println("Thank you for playing the game! <3");
-                    System.exit(0);
+                    System.out.println("Your choice " + tmpgameover);
+                    return gameState.gamePlayAgain;
+                } else if ((tmpgameover == 'q')){
+                    System.out.println("Thanks for playing ... Please come back soon ?! ");
+                    return gameState.gameQuit;
                 } else {
-                    System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
+                    System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
                 }
             } catch (NumberFormatException ne) {
-                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
+                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
             }
             catch (Exception e) {
-                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (P or Q), try again");
+                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
             }
         } //Continue the loop while input is not valid
         while (true);
+    }
 
+    public void flowGameQuit(){
 
     }
 
-    public boolean checkGameOver(){
-        return true;
-    }
+
+
+    //public boolean checkGameOver(){
+    //    return true;
+    //}
 
     //MAIN
     public static void main(String []args) {
         GameLogic game = new GameLogic();
-        boolean continueGame = true;
+        gameState currentGameState = gameState.gameContinue;
 
-        game.flowWelcome();
+        do { // Schleife für flowGameOver ... solange GameExit = False
+            game.flowWelcome();
+            game.flowInit();
+            // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
+            while (currentGameState == gameState.gameContinue) {
+                currentGameState = game.flowMainSequence(game.player1, game.player2);
+                if(currentGameState == gameState.gameContinue){
+                    currentGameState = game.flowMainSequence(game.player2, game.player1);
+                }
+            }
+            //ToDo: Stats ausgeben
+            var state = game.flowGameOver();
+            if (state == gameState.gameQuit){
+                currentGameState = gameState.gameQuit;
+            }
+            else if (state == gameState.gamePlayAgain){
+                game = new GameLogic();
+                currentGameState = gameState.gameContinue;
+            }
 
-      do { // Schleife für flowGameOver ... solange GameExit = False
-
-          game.flowInit(); //
-          // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
-          while (!game.gameOver) {
-              game.flowMainSequence(game.player1, game.player2);
-              game.flowChangePlayer(game.player1, game.player2);
-              game.flowMainSequence(game.player2, game.player1);
-              game.flowChangePlayer(game.player2, game.player1);
-          }
-
-          //ToDo: Stats ausgeben
-          continueGame = game.flowGameOver(); // wenn GameOver erreicht , dann Routine für GameOver ausführen
-
-      } //Continue the loop while GameExit is not true
-      while (continueGame);
+        } //Continue the loop while GameExit is not true
+        while (currentGameState != gameState.gameQuit);
     }
 }
