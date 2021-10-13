@@ -133,6 +133,7 @@
 - [DoD-53.070] TBC - Dem User wird eine Fehlermeldung ausgegeben, wenn die Eingabe falsch war
 - [DoD-53.080] TBC - Der User kann zwischen 3 Sprachen auswählen
 - [DoD-53.090] TBC - Der User wird abgefragt, ob er für seinen Zug bereit ist
+- [DoD-53.100] TBC - Der User wird abgefragt, ob er nach Spielende aufhören möchte
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch 
