@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien;
+/*package at.ac.fhcampuswien;
 
 import at.ac.fhcampuswien.gui.GameLogic;
 
@@ -22,4 +22,4 @@ public class MCP {
         //ToDo: flowGameOver erstellen, Consolenausgabe ausformulieren und Möglichkeiten zum Beenden / Neustart implementieren
         System.out.println("GAME OVER");
     }
-}
+}*/
