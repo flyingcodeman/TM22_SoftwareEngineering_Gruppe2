@@ -54,6 +54,12 @@ public class Player {
         opponentField.field[cord.positionY][cord.positionX] = character;
     }
 
+    public char getCharAtPositionOpponentInfoField(Coordinate cord){
+        char character;
+        character = opponentField.field[cord.positionY][cord.positionX];
+        return character;
+    }
+
     //Erstellt eine Standardflotte laut DoD
     //Erstellt schiffe nacheinander, platziert diese am Feld (siehe setFleet(Fleet))
     public void setStandardFleet(){
