@@ -134,7 +134,13 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 | TC-51.040   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 - [TC-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
+| TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID
+
+## [TC-56] Der User hat die Möglichkeit sich die Spielregeln in der ausgewählten Sprache vor dem Spielbeginnn anzeigen zu lassen
+- [TC-56.010] Beim Spielstart besteht die Möglichkeit sich die Spielregeln ausgeben zu lassen |
+  | PC: Die Funktion printGameRules() ist implementiert und funktionsfähig |
+  | Task: Die Funktion printGameRules() aufrufen |
+  | Ergebnis: Es werden die Spielregeln angezeigt |
 
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
