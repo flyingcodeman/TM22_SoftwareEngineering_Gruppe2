@@ -142,6 +142,12 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
   | Task: Die Funktion printGameRules() aufrufen |
   | Ergebnis: Es werden die Spielregeln angezeigt |
 
+## [TC-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen
+- [TC-57.0.10] Während des Spielverlaufs besteht die Möglichkeit sich die Spielregeln anzeigen zu lassen
+  | PC: Die Funktion printingGamerules() ist implementiert und funktionsfähig |
+  | Task: die Funktion printingGamerules() aufrufen |
+  | Ergebnis: Es werden die Spielregeln anzeigt |
+
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
 - | TC-60.010 | PC: Funktion checkIfHit() ist implementiert und funktionsfähig | Task: Funktion checkIfHit() aufrufen und auf TRUE setzen | Eingabedaten : TRUE | Ergebnis : Die Funktion checkIfHit() wurde ausgeführt und die Meldung "X ==> Schiff getroffen" wird ausgegeben | State : - | Note : - | BugID: - |
