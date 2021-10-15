@@ -77,11 +77,12 @@ class ShipFactoryTest {
         assertEquals(3, ships.get(0).ship.length);
     }
 
-    /*@Test
+    @Test
     void generateShip_createOneShipSizeEleven() {
-        Field field = new Field(10);
-        List<Ship> ships = ShipFactory.generateShip(11, field, 1);
-        assertEquals(1, ships.size());
-        assertEquals(11, ships.get(0).ship.length);
-    }*/
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Field field = new Field(10);
+            List<Ship> ships = ShipFactory.generateShip(11, field, 1);
+        });
+    }
 }
