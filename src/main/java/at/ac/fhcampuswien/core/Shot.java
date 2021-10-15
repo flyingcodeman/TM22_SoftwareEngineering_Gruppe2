@@ -19,39 +19,43 @@ public class Shot {
 
     //Gibt den Zustand des Schuss-Ergebnisses zurück
     public State shootsAt (Coordinate coordinate, Player currentPlayer, Player currentOpponent) {
-        State resultState;
-        char character = currentOpponent.getCharAtPosition(coordinate);
+        State resultState = State.error;
+        char charOpponentOwnField = currentOpponent.getCharAtPosition(coordinate);
+        char charOpponentInfoField = currentPlayer.getCharAtPositionOpponentInfoField(coordinate);
 
-        // Schuss trifft bereits beschossenes Feld, Treffer oder versenktes Schiff
-        if (checkFieldAlreadyHit(character)) {
-            resultState = State.reload; // Nochmaliges Schießen erlaubt
-            // ToDo: Nochmaliges Schießen begrenzen
-        } else if(checkFieldWater(character)){
-            // Schuss ins Wasser = Vergebener Schuss
-            currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_FAILED, coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
-            resultState = State.miss;
-        } else if(checkFieldShip(character)) {
-            // Abgebener Schuss trifft ein Schiff der Flotte
-            // Setz das Zeichen beim currentPlayer.opponentInfoField und currentOpponent.ownField von ~ auf X
-            currentOpponent.setCharAtPositionOwnField(SYMBOL_HIT, coordinate);
-            currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_HIT, coordinate);
 
-            //Checken, ob durch diesen Treffer das gesamte Schiff versenkt wurde
-            if(currentOpponent.fleet.checkIfShipSunk(coordinate)){
-                System.out.println("Hit and ship sunk!"); //TODO move to GUI
-                //ToDo: Im Falle des Versenkens: Zeichen des gesamten Schiffs beim currentPlayer.opponentInfoField und currentOpponent.OwnField auf # setzen
+        if (checkFieldWater(charOpponentInfoField)){
+            // Noch nicht beschossenes Feld
+            if(checkFieldShip(charOpponentOwnField)) {
+                // Abgebener Schuss trifft ein Schiff der Flotte
+                // Setz das Zeichen beim currentPlayer.opponentInfoField und currentOpponent.ownField von ~ auf X
+                currentOpponent.setCharAtPositionOwnField(SYMBOL_HIT, coordinate);
+                currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_HIT, coordinate);
+
+                //Checken, ob durch diesen Treffer das gesamte Schiff versenkt wurde
+                if(currentOpponent.fleet.checkIfShipSunk(coordinate)){
+                    System.out.println("Hit and ship sunk!"); //TODO move to GUI
+                    //ToDo: Im Falle des Versenkens: Zeichen des gesamten Schiffs beim currentPlayer.opponentInfoField und currentOpponent.OwnField auf # setzen
+                }
+                // Checken, ob durch diesen Treffer die gesamte Flotte versenkt wurde und das Spiel damit endet!
+                if(currentOpponent.fleet.checkIfFleetSunk()){
+                    currentOpponent.gameOver = true;
+                }
+                resultState = State.hit; // Setzen des Trefferstatus
             }
-            // Checken, ob durch diesen Treffer die gesamte Flotte versenkt wurde und das Spiel damit endet!
-            if(currentOpponent.fleet.checkIfFleetSunk()){
-                currentOpponent.gameOver = true;
+            else if(checkFieldWater(charOpponentOwnField)) {
+                // Schuss ins Wasser = Vergebener Schuss
+                currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_FAILED, coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
+                resultState = State.miss;
             }
-            resultState = State.hit; // Setzen des Trefferstatus
-        } else {
-            // invalider schuss
+        }else if(checkFieldAlreadyHit(charOpponentInfoField)){
+            //Bereits beschossenes Feld - Bitte noch mal!
+            resultState = State.reload;
+        }else{
+            // Kein valider Char
             // ToDo: Catch Error!
             resultState = State.error;
         }
-
         return resultState; // Rückgabe des Trefferstatus
     }
 
