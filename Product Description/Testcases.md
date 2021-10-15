@@ -155,6 +155,13 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID
 
+## [TC-53] Der User erhält aussagekräftige Eingabeaufforderungen
+- [TC-53.010] 
+PC:
+Task:
+Ergebnis:
+
+
 ## [TC-56] Der User hat die Möglichkeit sich die Spielregeln in der ausgewählten Sprache vor dem Spielbeginnn anzeigen zu lassen
 - [TC-56.010] Beim Spielstart besteht die Möglichkeit sich die Spielregeln ausgeben zu lassen |
   | PC: Die Funktion printGameRules() ist implementiert und funktionsfähig |
