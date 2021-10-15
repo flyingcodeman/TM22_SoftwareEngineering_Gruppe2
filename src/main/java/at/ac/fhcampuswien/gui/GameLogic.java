@@ -5,6 +5,8 @@ import at.ac.fhcampuswien.core.Shot;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
 
 
 public class GameLogic {
@@ -108,7 +110,10 @@ public class GameLogic {
                         readyState = scanner.nextLine();
 
                         switch (readyState) {
-                            case "y", "yes", "n", "no" -> validSwitch = true; currentGameState = gameState.gameContinue;
+                            case "y", "yes", "n", "no" -> {
+                                validSwitch = true;
+                                currentGameState = gameState.gameContinue;
+                            }
 
                             // ToDo: Save input and choose playmode
                             case "r", "rules" -> {
@@ -138,11 +143,15 @@ public class GameLogic {
                 } //Continue the loop while input is not valid
                 while (!validSwitch);
                 break;
+            }
         }
         return currentGameState;
     }
 
-    private void printingGameRules() {
+    public void printingGameRules(){
+        System.out.println("----------------------------------\n");
+        System.out.println("Schiffe versenken - Spielregeln: ");
+        System.out.println("\n----------------------------------");
         System.out.println("Each player has 2 playing fields.");
         System.out.println("The own field indicates the state of the current fleet. ");
         System.out.println("The opponent's field shows the shots the player has taken and whether they were a hit 'X' or a shot into empty space '/'. ");
@@ -152,6 +161,7 @@ public class GameLogic {
         System.out.println("The player must enter coordinates for shooting");
         System.out.println("Horizontal (x) in capital letters and vertical (y) in numbers.");
         System.out.println("The first player to hit and sink all enemy ships wins the game.");
+        System.out.println("----------------------------------\n");
     }
 
 
@@ -161,6 +171,12 @@ public class GameLogic {
         flowDialog("language");
         //Input einlesen und Sprachwahl durchführen
         System.out.println("The game is loading...");
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        printingGameRules();
     }
 
     //Initialisierung aller Spieler und Grundeinstellungen
