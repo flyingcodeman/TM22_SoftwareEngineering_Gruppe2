@@ -27,7 +27,7 @@ public class GameLogic {
         gameState currentGameState = gameState.gameContinue;
 
         switch(sequence){
-            case "language":
+            case "language" -> {
                 boolean validLanguage = false;
                 //Sprache festlegen
                 //Ausgabe der Begruessung gemäß den Spielregeln
@@ -48,16 +48,15 @@ public class GameLogic {
                             System.out.println("Error: The input (" + language + ") is not in the expected range - Please retry!");
                             language = "";
                         }
-                    }
-                    catch (Exception e) {
+                    } catch (Exception e) {
                         System.out.println("Error: The input (" + language + ") is not a valid input - Please retry!");
                         language = "";
                     }
                 } //Continue the loop while input is not valid
                 while (!validLanguage);
                 break;
-
-            case "player":
+            }
+            case "player" -> {
                 scanner = new Scanner(System.in);
                 //Player 1
                 System.out.println("Player 1: Insert your name:");
@@ -72,8 +71,8 @@ public class GameLogic {
                 //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
                 player2 = new Player(name2);
                 break;
-
-            case "playermode":
+            }
+            case "playermode" -> {
                 boolean validPlayer = false;
                 System.out.println("Please select your opponent:");
                 System.out.println("(C)omputer or (P)layer");
@@ -91,48 +90,48 @@ public class GameLogic {
                             System.out.println("Error: The input (" + playerMode + ") is not in the expected range - Please retry!");
                             playerMode = "";
                         }
-                    }
-                    catch (Exception e) {
+                    } catch (Exception e) {
                         System.out.println("Error: The input (" + playerMode + ") is not a valid input - Please retry!");
                         playerMode = "";
                     }
                 } //Continue the loop while input is not valid
                 while (!validPlayer);
                 break;
-
-            case "changePlayer":
+            }
+            case "changePlayer" -> {
                 boolean validSwitch = false;
                 String readyState = "";
-
                 do {
                     try {
                         //Ask user to input 'y', "yes", 'n' or "no", 'q' or "quit", 'r' or "rules"
                         scanner = new Scanner(System.in);
                         readyState = scanner.nextLine();
 
-                        if ((readyState.equals("y")) || (readyState.equals("yes")) || (readyState.equals("n")) || (readyState.equals("no"))) {
-                            validSwitch = true;
-                            currentGameState = gameState.gameContinue;
+                        switch (readyState) {
+                            case "y", "yes", "n", "no" -> validSwitch = true; currentGameState = gameState.gameContinue;
+
                             // ToDo: Save input and choose playmode
-                        } else if((readyState.equals("r")) || (readyState.equals("rules"))){
-                            //ToDo: Show rules of the game / call init function
-                            System.out.println("Placeholder for game rules // ToDo!");
+                            case "r", "rules" -> {
+                                //ToDo: Show rules of the game / call init function
+                                printingGameRules();
 
-                            //Ongoing game after presentation of the rules
-                            System.out.println("Are you ready? (y)es/(n)o/(q)uit game/(r)ules of the game");
-                            readyState = "";
-                        }else if((readyState.equals("q")) || (readyState.equals("quit"))){
-                            System.out.println("Quit game successfully - Missing implementation of GameOver-/GameQuit-Handling!");
-                            validSwitch = true;
-                            currentGameState = gameState.gameQuit;
+                                //Ongoing game after presentation of the rules
+                                System.out.println("Are you ready? (y)es/(n)o/(q)uit game/(r)ules of the game");
+                                readyState = "";
+                            }
+                            case "q", "quit" -> {
+                                System.out.println("Quit game successfully - Missing implementation of GameOver-/GameQuit-Handling!");
+                                validSwitch = true;
+                                currentGameState = gameState.gameQuit;
+                            }
+                            //Todo: BREAK!
+                            default -> {
+                                System.out.println("Error: The input (" + readyState + ") is not in the expected range - Please retry!");
+                                readyState = "";
+                            }
+                        }
 
-                        }
-                        else {
-                            System.out.println("Error: The input (" + readyState + ") is not in the expected range - Please retry!");
-                            readyState = "";
-                        }
-                    }
-                    catch (Exception e) {
+                    } catch (Exception e) {
                         System.out.println("Error: The input (" + readyState + ") is not a valid input - Please retry!");
                         readyState = "";
                     }
@@ -141,6 +140,18 @@ public class GameLogic {
                 break;
         }
         return currentGameState;
+    }
+
+    private void printingGameRules() {
+        System.out.println("Each player has 2 playing fields.");
+        System.out.println("The own field indicates the state of the current fleet. ");
+        System.out.println("The opponent's field shows the shots the player has taken and whether they were a hit 'X' or a shot into empty space '/'. ");
+        System.out.println("Each player must start by placing all the ships at his disposal, or have them placed automatically by the program.");
+        System.out.println("After each shot, independently of the result (hit/no hit), the player is changed.");
+        System.out.println("Since the game is only played on a PC, the player swap must fit before the swap is confirmed, otherwise the opponent will have visibility of the playing field.");
+        System.out.println("The player must enter coordinates for shooting");
+        System.out.println("Horizontal (x) in capital letters and vertical (y) in numbers.");
+        System.out.println("The first player to hit and sink all enemy ships wins the game.");
     }
 
 
@@ -244,19 +255,11 @@ public class GameLogic {
             //System.out.println(currentOpponent.getCharAtPosition(givenShootCoordinate));
 
             // Consolenausgabe gemäß des Schussergebnisses
-            switch (result){
-                case reload:
-                    System.out.println("You already shot there. Please try again!");
-                    break;
-                case hit:
-                    System.out.println("Nice shot - HIT on coordinate " + tmpshootX + "/" + (shootY+1));
-                    break;
-                case miss:
-                    System.out.println("Nice try - Only water! Missed shot on coordinate " + tmpshootX + "/" + (shootY+1));
-                    break;
-                case error:
-                    System.out.println("Invalid shot!");
-                    break;
+            switch (result) {
+                case reload -> System.out.println("You already shot there. Please try again!");
+                case hit -> System.out.println("Nice shot - HIT on coordinate " + tmpshootX + "/" + (shootY + 1));
+                case miss -> System.out.println("Nice try - Only water! Missed shot on coordinate " + tmpshootX + "/" + (shootY + 1));
+                case error -> System.out.println("Invalid shot!");
             }
         }
 
