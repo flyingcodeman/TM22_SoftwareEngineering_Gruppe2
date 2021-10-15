@@ -18,11 +18,9 @@ public class GameLogic {
     public Player player2;
     private String language = "";
     private String playerMode = "";
-    boolean continueGame = true;
     public enum gameState { //Zustände des Spiels
         gameOver, gameQuit, gameContinue, gamePlayAgain
     }
-    public boolean gameOver = false;
 
     //Consolen-Ein- und Ausgaben + Input-Checks
     private gameState flowDialog(String sequence){
@@ -125,7 +123,7 @@ public class GameLogic {
                                 readyState = "";
                             }
                             case "q", "quit" -> {
-                                System.out.println("Quit game successfully - Missing implementation of GameOver-/GameQuit-Handling!");
+                                System.out.println("Quit game successfully!");
                                 validSwitch = true;
                                 currentGameState = gameState.gameQuit;
                             }
@@ -319,7 +317,7 @@ public class GameLogic {
                     System.out.println("Your choice " + tmpgameover);
                     return gameState.gamePlayAgain;
                 } else if ((tmpgameover == 'q')){
-                    System.out.println("Thanks for playing ... Please come back soon ?! ");
+                    System.out.println("Thanks for playing ... Please come back soon!");
                     return gameState.gameQuit;
                 } else {
                     System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
