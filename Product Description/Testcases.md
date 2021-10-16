@@ -91,8 +91,10 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 ## [TC-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
 - [TC-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen"
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-47.010   | PC:  Funktion für [weiterspielen] oder [beenden] oder [highscore] ist implementiert und funktionsfähig | Task : Funktion aufrufen | Eingabedaten : ?! | Ergebnis : je nach Eingabe die Möglichkeit erhalten | State  | Notes |  Bug-ID |  
-- [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet. 
+| TC-47.010   | PC:  Funktion für [weiterspielen]/[play again] ist implementiert und funktionsfähig | Task : Funktion [play again] aufrufen | Eingabedaten : [play again] wurde ausgewählt | Ergebnis : Möglichkeit "das Spiel erneut zu spielen" erhalten | State  | Notes |  Bug-ID |  
+- [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet.
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-47.020   | PC:  Funktion für [weiterspielen]/[play again] ist implementiert und funktionsfähig | Task : Funktion [play again] aufrufen | Eingabedaten : [play again] wurde ausgewählt | Ergebnis : der User zum Startscreen weitergeleitet | State  | Notes |  Bug-ID |
 
 
 ## [TC-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
