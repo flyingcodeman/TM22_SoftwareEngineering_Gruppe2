@@ -24,7 +24,7 @@ public class GameLogic {
     }
 
     //Consolen-Ein- und Ausgaben + Input-Checks
-    private gameState flowDialog(String sequence){
+    public gameState flowDialog(String sequence){
         gameState currentGameState = gameState.gameContinue;
 
         switch(sequence){
