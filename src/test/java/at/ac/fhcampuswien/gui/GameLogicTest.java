@@ -120,4 +120,25 @@ class GameLogicTest {
         assertEquals(state, GameLogic.gameState.gameQuit);
     }
 
+    @Test
+    void flowGamePlayAgainTest() { // TC-47
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream("p".getBytes());
+        System.setIn(in);
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        GameLogic gameLogic = new GameLogic();
+        GameLogic.gameState state;
+        state = gameLogic.flowGameOver();
+
+        String expectedOut = "Game Over...\n" +
+                "(p)lay again , or (q)uit Game ?\n" +
+                "Your choice p\n";
+
+        assertEquals(expectedOut, outContent.toString());
+        assertEquals(state, GameLogic.gameState.gamePlayAgain);
+    }
+
 }
