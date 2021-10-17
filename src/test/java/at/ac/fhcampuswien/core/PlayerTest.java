@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien.core;
 
+import at.ac.fhcampuswien.gui.GameLogic;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -31,6 +32,7 @@ class PlayerTest {
         assertTrue(outContent.toString().contains(expectedOutWater));
     }
 
+    @Test
     void printFieldSetTest0509() { //TC-40.05 // TC-40.09
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -46,6 +48,7 @@ class PlayerTest {
 
     }
 
+    @Test
     void printFieldSetTest0208() { //TC-40.02 // TC-40.08
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -66,6 +69,32 @@ class PlayerTest {
         String expectedOutNotHitYet = "~";
 
         assertTrue(outContent.toString().contains(expectedOutNotHitYet));
+
+    }
+
+    @Test
+    void setShipsofFleetRandomTest() { //TC-32
+
+        Player player1 = new Player("Test1");
+        Player player2 = new Player("Test2");
+        player1.setStandardFleet();
+        player2.setStandardFleet();
+
+        String player1OwnField = "";
+        for(int x = 0; x<player1.getOwnField().length; x++){
+            for(int y = 0; y<player1.getOwnField().length; y++){
+                player1OwnField += player1.getOwnField()[x][y];
+            }
+        }
+
+        String player2OwnField = "";
+        for(int x = 0; x<player2.getOwnField().length; x++){
+            for(int y = 0; y<player2.getOwnField().length; y++){
+                player2OwnField += player2.getOwnField()[x][y];
+            }
+        }
+
+        assertNotEquals(player1OwnField, player2OwnField);
 
     }
 }
