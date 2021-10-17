@@ -18,6 +18,7 @@ public class GameLogic {
     public Player player2;
     private String language = "";
     private String playerMode = "";
+    public char tmpgameover = 'p';
     public enum gameState { //Zustände des Spiels
         gameOver, gameQuit, gameContinue, gamePlayAgain
     }
@@ -301,7 +302,6 @@ public class GameLogic {
 
     //Flow Zum GameOver-Handling des Spiels
     public gameState flowGameOver(){
-        char tmpgameover = '0';
 
         do {
             try {
@@ -320,13 +320,13 @@ public class GameLogic {
                     System.out.println("Thanks for playing ... Please come back soon!");
                     return gameState.gameQuit;
                 } else {
-                    System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
+                    System.out.println("Input Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
                 }
             } catch (NumberFormatException ne) {
-                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
+                System.out.println("Format Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
             }
             catch (Exception e) {
-                System.out.println("Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
+                System.out.println("Exception Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
             }
         } //Continue the loop while input is not valid
         while (true);
