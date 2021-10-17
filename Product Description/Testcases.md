@@ -51,6 +51,12 @@ X- [TC-39.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginn
 X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht.
 | TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 
+  Task 1: mit der Funktion Player(name) 1 Player-Objekt mit Standard-Spielfeld erstellen
+  Task 2: mit der Funktion Player.setStandardFleet das Spielfeld mit Schiffen (zufällige Platzierung) füllen
+  Task 2: mit der Funktion Player.printFieldSet die Spielfelder ownField und opponentInfoField mit Achsenbeschriftung ausgeben
+  Ergebnis 1: Ausgabe beinhaltet die Achenbeschriftung xAchse: "A B C D E F G H I J"
+  Ergebnis 2: Ausgabe beinhaltet die Achenbeschriftung yAchse: "1 2 3 4 5 6 7 8 9 10"
+
 ## [TC-40] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
 - [TC-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole untereinander ausgegeben.
 | TC-40.010   | PC: Funktion printFieldSet() muss vorhanden und funktionsfähig sein | 
