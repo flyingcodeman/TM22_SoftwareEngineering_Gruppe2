@@ -310,6 +310,7 @@ public class GameLogic {
                 //Game Over , ask user for input , play again = p , or quit game = q
                 System.out.println("Game Over...");
                 System.out.println("(p)lay again , or (q)uit Game ?");
+                scanner = new Scanner(System.in);
                 tmpgameover = scanner.next().charAt(0);
 
                 if ((tmpgameover == 'p')) {
