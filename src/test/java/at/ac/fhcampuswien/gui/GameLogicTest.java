@@ -55,8 +55,6 @@ class GameLogicTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-
-
         GameLogic gameLogic = new GameLogic();
         gameLogic.flowWelcome();
 
@@ -80,4 +78,24 @@ class GameLogicTest {
                 "\n";
         assertEquals(expectedOut, outContent.toString());
     }
+
+    @Test
+    void flowGameQuitTest() { // TC-59
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream("q".getBytes());
+        System.setIn(in);
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        GameLogic gameLogic = new GameLogic();
+        GameLogic.gameState state;
+        state = gameLogic.flowDialog("changePlayer");
+
+        String expectedOut = "Quit game successfully!\n";
+
+        assertEquals(expectedOut, outContent.toString());
+        assertEquals(state, GameLogic.gameState.gameQuit);
+    }
+
 }
