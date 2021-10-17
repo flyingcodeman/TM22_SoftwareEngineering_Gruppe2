@@ -26,7 +26,6 @@ public class GameLogic {
     //Consolen-Ein- und Ausgaben + Input-Checks
     private gameState flowDialog(String sequence){
         gameState currentGameState = gameState.gameContinue;
-        printingGameRules();
         switch(sequence){
             case "language" -> {
                 boolean validLanguage = false;
@@ -172,6 +171,7 @@ public class GameLogic {
         flowDialog("language");
         //Input einlesen und Sprachwahl durchführen
         System.out.println("The game is loading...");
+        printingGameRules();
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
