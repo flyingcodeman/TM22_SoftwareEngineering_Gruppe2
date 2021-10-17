@@ -26,7 +26,7 @@ public class GameLogic {
     //Consolen-Ein- und Ausgaben + Input-Checks
     private gameState flowDialog(String sequence){
         gameState currentGameState = gameState.gameContinue;
-
+        printingGameRules();
         switch(sequence){
             case "language" -> {
                 boolean validLanguage = false;
@@ -54,8 +54,10 @@ public class GameLogic {
                         language = "";
                     }
                 } //Continue the loop while input is not valid
+
                 while (!validLanguage);
                 break;
+
             }
             case "player" -> {
                 scanner = new Scanner(System.in);
@@ -149,7 +151,7 @@ public class GameLogic {
 
     public void printingGameRules(){
         System.out.println("----------------------------------\n");
-        System.out.println("Schiffe versenken - Spielregeln: ");
+        System.out.println("Battle ship --- GAME Rules: ");
         System.out.println("\n----------------------------------");
         System.out.println("Each player has 2 playing fields.");
         System.out.println("The own field indicates the state of the current fleet. ");
