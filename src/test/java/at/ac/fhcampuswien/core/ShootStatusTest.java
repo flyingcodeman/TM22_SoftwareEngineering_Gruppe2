@@ -2,7 +2,6 @@ package at.ac.fhcampuswien.core;
 
 import org.junit.jupiter.api.Test;
 
-@Test
 class ShootStatusTest {
 
     @Test
