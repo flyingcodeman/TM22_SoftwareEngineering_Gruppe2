@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien.core;
 
+import at.ac.fhcampuswien.gui.GameLogic;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -31,6 +32,7 @@ class PlayerTest {
         assertTrue(outContent.toString().contains(expectedOutWater));
     }
 
+    @Test
     void printFieldSetTest0509() { //TC-40.05 // TC-40.09
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -46,6 +48,7 @@ class PlayerTest {
 
     }
 
+    @Test
     void printFieldSetTest0208() { //TC-40.02 // TC-40.08
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -67,5 +70,18 @@ class PlayerTest {
 
         assertTrue(outContent.toString().contains(expectedOutNotHitYet));
 
+    }
+
+    @Test
+    void setShipsofFleetRandom() { //TC-32
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Player player1 = new Player("Test1");
+        Player player2 = new Player("Test2");
+        player1.setStandardFleet();
+        player2.setStandardFleet();
+
+        assertNotEquals(player1.getOwnField().toString(), player2.getOwnField().toString());
     }
 }
