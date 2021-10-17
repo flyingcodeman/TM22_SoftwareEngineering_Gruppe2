@@ -20,6 +20,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GameLogicTest {
 
+    public enum gameState { //Zustände des Spiels
+        gameOver, gameQuit, gameContinue, gamePlayAgain
+    }
+
+    @Test
+    void flowGameOver_PlayAgainTest() { //TC-47
+        ByteArrayInputStream inputStream = new ByteArrayInputStream("q".getBytes());
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(byteArrayOutputStream);
+
+        GameLogic gameLogic = new GameLogic();
+        gameLogic.tmpgameover = 'p';
+        GameLogic.gameState currentGameState = gameLogic.flowGameOver();
+        //assertEquals(gameState.gamePlayAgain, currentGameState);
+        assertEquals(gameState.gamePlayAgain, currentGameState);
+        //ToDO!
+    }
+
     @Test
     void printingGameRulesTest() { // TC-57
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -45,4 +63,9 @@ class GameLogicTest {
                 "\n";
         assertEquals(expectedOut, outContent.toString());
     }
+
+
+
+
+
 }

@@ -18,7 +18,7 @@ public class GameLogic {
     public Player player2;
     private String language = "";
     private String playerMode = "";
-    public char tmpgameover = 'p';
+    public char tmpgameover = 'o'; // ändern der initial werte
     public enum gameState { //Zustände des Spiels
         gameOver, gameQuit, gameContinue, gamePlayAgain
     }
