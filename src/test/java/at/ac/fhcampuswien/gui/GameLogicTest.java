@@ -2,10 +2,6 @@ package at.ac.fhcampuswien.gui;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import at.ac.fhcampuswien.core.Field;
-import at.ac.fhcampuswien.core.Ship;
-import at.ac.fhcampuswien.core.ShipFactory;
-import org.apache.commons.io.input.CharSequenceInputStream;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
