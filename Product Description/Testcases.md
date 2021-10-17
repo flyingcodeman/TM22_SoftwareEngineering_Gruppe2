@@ -19,6 +19,11 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 | [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
 | [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
+  Task 1: mit der Funktion Player(name) 2 Player-Objekte mit Standard-Spielfeld erstellen
+  Task 2: mit der Funktion Player.setStandardFleet die Spielfelder mit Schiffen (zufällige Platzierung) füllen
+  Ergebnis 1: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind
+
+
 ## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [TC-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [TC-40]
 - [TC-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
