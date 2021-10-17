@@ -55,7 +55,6 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
   Ergebnis 1: die Funktion Player.setStandardFleet legt ein Standard-Spielfeld mit zufällig platzierten Schiffen an
   Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus
 
-
 - [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem X angezeigt. 
 
 - [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem # angezeigt.
