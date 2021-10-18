@@ -244,6 +244,9 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
+PC: 
+Task:
+Ergebnis:
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen
 - [DoD-54.030] Der User kann die Sprache D² wählen
 
