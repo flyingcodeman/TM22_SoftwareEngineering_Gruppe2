@@ -111,13 +111,6 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 
 - [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit 0 gekennzeichnet.
 
-## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
-- [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
-  PC: Die Funktionen Player.createField() und Player.getField.length() sind implementiert und es sind die Default-Werte ausgewählt
-  Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen
-  Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen
-  Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus
-  Ergebnis 2: die Funktion Player.getField.length() gibt die Grösse 10x10 aus | State : - | Note : - | BugID: - |
 
 ## [DoD-41] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der GUI ausgegeben
 - [DoD-41.010] Das Spielfeld wird an grafisch Wiedergegeben
@@ -126,6 +119,14 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 - [DoD-41.040] Die Kommandoeingabe wird durch die Pop-up-Fenster eingelesen
 - [DoD-41.050] Die Visualisierung der Schiffe ist so aufgebaut, dass ein klarer Unterschied zwischen intakt, getroffen und versenkt angezeigt wird
 - [DoD-41.060] Die Eingabe via Maus (Koordinaten für einen Schussversuch, Schiffe platzieren, ...) ist möglich
+
+## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
+- [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
+  PC: Die Funktionen Player.createField() und Player.getField.length() sind implementiert und es sind die Default-Werte ausgewählt
+  Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen
+  Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen
+  Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus
+  Ergebnis 2: die Funktion Player.getField.length() gibt die Grösse 10x10 aus | State : - | Note : - | BugID: - |
 
 
 ## [DoD-43] Der User kann die Schwierigkeit durch die Anzahl der Schiffe und die Spielfeldgröße variieren
