@@ -19,10 +19,26 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 | [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
 | [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
 
+  Task 1: mit der Funktion Player(name) 2 Player-Objekte mit Standard-Spielfeld erstellen
+  Task 2: mit der Funktion Player.setStandardFleet die Spielfelder mit Schiffen (zufällige Platzierung) füllen
+  Ergebnis 1: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind
+
+## [DoD-33] Der User bekommt eine Fehlermeldung angezeigt, wenn er die Schiffe falsch platziert
+- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das sChiff muss sich inerhalb des Spielfelds befinden!"
+- [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
+
 ## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [TC-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [TC-40]
 - [TC-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [TC-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
+
+## [DoD-35] Dem User wird angezeigt, wieviele eigene Schiffe gertoffen/versenkt wurden
+- [DoD-35.010] Es wird überprüft, wieviele eigene Schiffe getroffen wurden
+- [DoD-35.020] Es wird überprüft, wieviele eigene Schiffe versenkt wurden
+- [DoD-35.030] Es wird überprüft, wieviele eigene Schiffe noch intakt sind
+- [DoD-35.040] Es wird die Meldung " %d Schiffe versenkt" angezeigt
+- [DoD-35.050] Es wird die Meldung " %d Schiffe getroffen" angezeigt
+- [DoD-35.060] Es wird die Meldung " %d Schiffe intakt" angezeigt
 
 ## [TC-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 | TC-36       | PC: Funktion printTestFleetComplete() wird benötigt | 1Task Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
@@ -38,17 +54,45 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 - [TC-36.070] Das Schiff hat zwei Zustände (floating, sunken)
 | TC-36.070   | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - |
 
+## [DoD-37] Der User kann Schiffe manuell platzieren
+- [DoD-37.010] Es wird überprüft, ob der User die manuelle Schiffsplatzierung gewählt hat
+- [DoD-37.020] Dem User wird angezeigt, wieviele Schiffe er platzieren kann
+- [DoD-37.030] Die Anzeige passt sich an, wenn der User ein Schiff platziert hat
+- [DoD-37.040] Der User gibt die Koordinate für das Startfeld des Schiffs an (Zuerst hotizontal, dann vertikal)
+- [DoD-37.050] Der User wählt zwischen H = Horizontale ausrichtung und V = vertikale Ausrichtung
+- [DoD-37.060] Es wird überprüft, ob das Schiff an der angegebenen Position platziert werden darf
+- [DoD-37.070] Wenn alle Schiffe platziert worden sind, erfolgt die Meldung "Alle Schiffe platziert, die Schlacht kann beginnen"
+
+## [DoD-38] Der User kann die Größe des quadratischen Spielfeldes einstellen
+- [DoD-38.010] Es wird überprüft, ob eine variable Spielfeldgröße gewählt worden ist
+- [DoD-38.020] Der User gibt die Größe des Spielfeldes an
+- [DoD-38.030] Die Größe muss zwischen 10 und 50 Einheiten sein
+
+
+
 ## [TC-39] Der User sieht bei der Ausgabe des Spielfeldes die Achsenbeschriftung
 X- [TC-39.010] Es muss über eine Variable die Größe des Spielfeldes bekannt sein
 | TC-39.010   | PC: Field.size muss gesetzt sein | Task: mit Funktion printSizeOfField(Field) die Field.size ausgeben lassen | Eingabedaten : Field | Ergebnis : die Funktion printSizeOfField(Field) gibt die Feldgröße von Field aus | State : - | Note : - | BugID: - |
 X- [TC-39.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
-| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - | 
+| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht.
 | TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 
+  Task 1: mit der Funktion Player(name) 1 Player-Objekt mit Standard-Spielfeld erstellen
+  Task 2: mit der Funktion Player.setStandardFleet das Spielfeld mit Schiffen (zufällige Platzierung) füllen
+  Task 2: mit der Funktion Player.printFieldSet die Spielfelder ownField und opponentInfoField mit Achsenbeschriftung ausgeben
+  Ergebnis 1: Ausgabe beinhaltet die Achenbeschriftung xAchse: "A B C D E F G H I J"
+  Ergebnis 2: Ausgabe beinhaltet die Achenbeschriftung yAchse: "1 2 3 4 5 6 7 8 9 10"
+
 ## [TC-40] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
 - [TC-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole untereinander ausgegeben.
-| TC-40.010   | PC: Funktion printOwnField() und printOpponentField() müssen vorhanden und funktionsfähig sein | Task: Funktion printOwnField() und printOpponentField() aufrufen | Eingabedaten : - | Ergebnis :  Funktion printOwnField() und printOpponentField() geben die Felder aus | State : - | Note : - | BugID: - |
+| TC-40.010   | PC: Funktion printFieldSet() muss vorhanden und funktionsfähig sein | 
+  Task 1: mit der Funktion Player(name) ein Player-Objekt mit Standard-Spielfeld angeben
+  Task 2: mit der Funktion Player.setStandardFleet das Spielfeld mit Schiffen (zufällige Platzierung) füllen
+  Task 3: mit der Funktion Player.printFieldSet das OwnField und OpponentInfoField ausgeben
+  Ergebnis 1: die Funktion Player.setStandardFleet legt ein Standard-Spielfeld mit zufällig platzierten Schiffen an
+  Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus
+
 - [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem X angezeigt. 
 
 - [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem # angezeigt.
@@ -67,11 +111,31 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 
 - [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit 0 gekennzeichnet.
 
+
+## [DoD-41] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der GUI ausgegeben
+- [DoD-41.010] Das Spielfeld wird an grafisch Wiedergegeben
+- [DoD-41.020] Die Schiffe sind der Größe entsprechend modelliert und werden am Spielfeld wiedergegeben
+- [DoD-41.030] Die Textmeldungen werden an der GUI mit einem Pop-up-Fenster angezeigt
+- [DoD-41.040] Die Kommandoeingabe wird durch die Pop-up-Fenster eingelesen
+- [DoD-41.050] Die Visualisierung der Schiffe ist so aufgebaut, dass ein klarer Unterschied zwischen intakt, getroffen und versenkt angezeigt wird
+- [DoD-41.060] Die Eingabe via Maus (Koordinaten für einen Schussversuch, Schiffe platzieren, ...) ist möglich
+
 ## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
 - [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
-- |Task: mit Funktion printSizeOfField(Field) die Field.size ausgeben lassen | Eingabedaten : 
-- Field | Ergebnis : die Funktion printSizeOfField(Field) gibt die Feldgröße von Field (als Größe 
-- des Spielfeldes =10x10 definiert ) aus | State : - | Note : - | BugID: - |
+  PC: Die Funktionen Player.createField() und Player.getField.length() sind implementiert und es sind die Default-Werte ausgewählt
+  Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen
+  Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen
+  Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus
+  Ergebnis 2: die Funktion Player.getField.length() gibt die Grösse 10x10 aus | State : - | Note : - | BugID: - |
+
+
+## [DoD-43] Der User kann die Schwierigkeit durch die Anzahl der Schiffe und die Spielfeldgröße variieren
+- [DoD-43.010] Die Eingabe der Spielfeldgröße ist möglich
+- [DoD-43.020] Die Eingabe der Anzahl der Flugzeugträger ist möglich (1-3)
+- [DoD-43.030] Die Eingabe der Anzahl der Schlachtschiffe ist möglich (2-6)
+- [DoD-43.040] Die Eingabe der Anzahl der Zerstörer ist möglich (3-9)
+- [DoD-43.050] Die Eingabe der Anzahl der U-Boote ist möglich (4-12)
+
 
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
@@ -86,11 +150,21 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 - [TC-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
 | TC-45.010   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt FALSE zurück --> Es wird die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." in der Konsole ausgegeben | State : - | Note : - | BugID: - |
 
+## [DoD-46] Der User erhält nach beendigung des Spiels die Möglichkeit detaillierte Informationen über das Spielergebnis angezeigt zu bekommen
+- [DoD-46.010] Es wird die meiste Treffequote (Treffer die nacheinander erzielt worden sind) angezeigt
+- [DoD-46.020] Es wird die Anzahl der Spielzüge angezeigt
+- [DoD-46.030] Es wird die Dauer des Spiels angezeigt
+- [DoD-46.040] Es wird die Fehltrefferquote angezeigt
+- [DoD-46.050] Es wird das Verhältnis zwischen den zwei Gegnern angezeigt (Treffer, Fehltreffer, Versenkte Schiffe)
+
+
 ## [TC-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
 - [TC-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen"
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-47.010   | PC:  Funktion für [weiterspielen] oder [beenden] oder [highscore] ist implementiert und funktionsfähig | Task : Funktion aufrufen | Eingabedaten : ?! | Ergebnis : je nach Eingabe die Möglichkeit erhalten | State  | Notes |  Bug-ID |  
-- [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet. 
+| TC-47.010   | PC:  Funktion für [weiterspielen]/[play again] ist implementiert und funktionsfähig | Task : Funktion [play again] aufrufen | Eingabedaten : [play again] wurde ausgewählt | Ergebnis : Möglichkeit "das Spiel erneut zu spielen" erhalten | State  | Notes |  Bug-ID |  
+- [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet.
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-47.020   | PC:  Funktion für [weiterspielen]/[play again] ist implementiert und funktionsfähig | Task : Funktion [play again] aufrufen | Eingabedaten : [play again] wurde ausgewählt | Ergebnis : der User zum Startscreen weitergeleitet | State  | Notes |  Bug-ID |
 
 
 ## [TC-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
@@ -132,7 +206,81 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 | TC-51.040   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
 - [TC-51.050] Bei einer richtigen Eingabe erfolgt die Meldung "Schuss erfolgreich abgegeben."
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID |
+| TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID
+
+
+
+## [TC-53] Der User erhält aussagekräftige Eingabeaufforderungen
+- [TC-53.010] 
+PC:
+Task:
+Ergebnis:
+
+## [DoD-54] Der User kann die Sprache des Spiels auswählen
+- [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
+- [DoD-54.020] Der User kann die Sprache Deutsch wählen
+- [DoD-54.030] Der User kann die Sprache D² wählen
+
+## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
+- [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
+- [DoD-55.020] Wenn Wasser geroffen wird, erfolgt eine akustische Ausgabe, die Wasserplatschen imitiert
+
+
+## [TC-56] Der User hat die Möglichkeit sich die Spielregeln in der ausgewählten Sprache vor dem Spielbeginnn anzeigen zu lassen
+- [TC-56.010] Beim Spielstart besteht die Möglichkeit sich die Spielregeln ausgeben zu lassen |
+  | PC: Die Funktion printGameRules() ist implementiert und funktionsfähig |
+  | Task: Die Funktion printGameRules() aufrufen |
+  | Ergebnis: Es werden die Spielregeln angezeigt |
+
+## [TC-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen
+- [TC-57.0.10] Während des Spielverlaufs besteht die Möglichkeit sich die Spielregeln anzeigen zu lassen
+  | PC: Die Funktion printingGamerules() ist implementiert und funktionsfähig |
+  | Task: die Funktion printingGamerules() aufrufen |
+  | Ergebnis: Es werden die Spielregeln anzeigt |
+
+## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
+- [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten
+
+## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
+- [DoD-59.010] TBC
+
+## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
+- [DoD-53.010] TBC - Dem User wird angezeigt, dass er seinen Namen eingeben soll
+- [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
+- [DoD-53.030] TBC - Dem User wird angezeigt, dass er Schusskoordinaten eingeben soll
+- [DoD-53.040] TBC - Dem User wird angezeigt, ob er das Spiel nach einer Unterbrechung fortsetzen möchte
+- [DoD-53.050] TBC - Dem User wird angezeigt, ob er die Spielstatistik angezeigt haben will
+- [DoD-53.060] TBC - Dem User wird angezeigt, ob er noch ein Mal spielen möchte
+- [DoD-53.070] TBC - Dem User wird eine Fehlermeldung ausgegeben, wenn die Eingabe falsch war
+- [DoD-53.080] TBC - Der User kann zwischen 3 Sprachen auswählen
+- [DoD-53.090] TBC - Der User wird abgefragt, ob er für seinen Zug bereit ist
+- [DoD-53.100] TBC - Der User wird abgefragt, ob er nach Spielende aufhören möchte
+
+## [DoD-54] Der User kann die Sprache des Spiels auswählen
+- [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
+- [DoD-54.020] Der User kann die Sprache Deutsch wählen
+- [DoD-54.030] Der User kann die Sprache D² wählen
+
+## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
+- [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
+- [DoD-55.020] Wenn Wasser geroffen wird, erfolgt eine akustische Ausgabe, die Wasserplatschen imitiert
+
+## [DoD-56] Der User hat die Möglichkeit sich die Spielregeln vor dem Spiel anzeigen zu lassen
+- [DoD-56.010] Es wird abgefragt, ob der User die Spielregeln sehen will
+- [DoD-56.020] Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld auszugeben
+
+##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen
+- [DoD-57.010] TBC - Es wird angezeigt, dass der User sich die Spielregeln ansehen kann
+- [DoD-57.020] TBC - Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld angezeigt
+- [DoD-57.030] TBC - Der User kann die Spielregeln wieder ausblenden
+
+## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
+- [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten
+
+## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
+- [DoD-59.010] TBC - Es wird angezeigt, dass der User das Spiel abbrechen kann
+- [DoD-50.020] TBC - Der User kann über die Eingabe von "(q)uit" das Spiel abbrechen
+
 
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
@@ -152,3 +300,8 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 - 
 - [TC-60.060] Dem User wird der Text "~ ==> Feld noch unbekannt (gegnerisches Spielfeld)" angezeigt
 - | TC-60.060 | PC:  | Task:  | Eingabedaten : - | Ergebnis :  | State : - | Note : - | BugID: - |
+
+## [DoD-61] Der User hat die Möglichkeit, die Audioeffekte an- bzw. abzuschalten
+- [DoD-61.010] Es wird abgefragt, ob Audioeffekte erwünscht sind
+- [DoD-61.020] Falls erwünscht wird die Methode für Audioeffekte angeschaltet
+- [DoD-61.030] Falls nicht erwünscht wird die Methode für Audioeffekte abgeschaltet
