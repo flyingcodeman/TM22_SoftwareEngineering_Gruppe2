@@ -39,10 +39,50 @@ class ShipFactoryTest {
     }
 
     @Test
+    void generateShip_createFiveShipSizeOne() {
+        Field field = new Field(10);
+        List<Ship> ships = ShipFactory.generateShip(1, field, 5);
+        assertEquals(5, ships.size());
+    }
+
+    @Test
     void generateShip_createOneShipSizeTwo() {
         Field field = new Field(10);
         List<Ship> ships = ShipFactory.generateShip(2, field, 1);
         assertEquals(1, ships.size());
         assertEquals(2, ships.get(0).ship.length);
+    }
+
+    @Test
+    void generateShip_createOneShipSizeFour() {
+        Field field = new Field(10);
+        List<Ship> ships = ShipFactory.generateShip(4, field, 1);
+        assertEquals(1, ships.size());
+        assertEquals(4, ships.get(0).ship.length);
+    }
+
+    @Test
+    void generateShip_createOneShipSizeFive() {
+        Field field = new Field(10);
+        List<Ship> ships = ShipFactory.generateShip(5, field, 1);
+        assertEquals(1, ships.size());
+        assertEquals(5, ships.get(0).ship.length);
+    }
+
+    @Test
+    void generateShip_createFiveShipSizeThree() {
+        Field field = new Field(10);
+        List<Ship> ships = ShipFactory.generateShip(3, field, 3);
+        assertEquals(3, ships.size());
+        assertEquals(3, ships.get(0).ship.length);
+    }
+
+    @Test
+    void generateShip_createOneShipSizeEleven() {
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Field field = new Field(10);
+            List<Ship> ships = ShipFactory.generateShip(11, field, 1);
+        });
     }
 }
