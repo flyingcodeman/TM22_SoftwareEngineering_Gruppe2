@@ -1,7 +1,11 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Fleet {
     Ship[] fleet = new Ship[10]; //Flottenarray fleet besteht aus 10 Schiffsobjekten
+    List<Ship> fleetNew = new ArrayList<>();
     boolean fleetSunk = false;
 
     public void createStandardFleet(int size, char[][] ownField) {

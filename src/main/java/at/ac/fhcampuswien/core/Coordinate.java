@@ -1,6 +1,5 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
 
-import java.util.Random;
 
 public class Coordinate {
     public int positionX = 0;
@@ -52,7 +51,7 @@ public class Coordinate {
             xCoordinate = 9;
         }
         else{
-            System.out.println("Translation error: Invalid character!");
+            throw new IllegalArgumentException("Translation error: Invalid character!");
         }
         return xCoordinate;
     }

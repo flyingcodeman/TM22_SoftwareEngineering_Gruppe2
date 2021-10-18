@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
 
 public interface GameStructure {
     public boolean gameOver = false;
