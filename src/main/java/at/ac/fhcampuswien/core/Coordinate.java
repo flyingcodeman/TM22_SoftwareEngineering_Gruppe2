@@ -51,8 +51,6 @@ public class Coordinate {
             xCoordinate = 9;
         }
         else{
-            //ToDo: Sollte das System.out nicht gelöscht werden?
-            System.out.println("Translation error: Invalid character!");
             throw new IllegalArgumentException("Translation error: Invalid character!");
         }
         return xCoordinate;
