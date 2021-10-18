@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
 
 import java.util.Random;
 
@@ -14,7 +14,15 @@ public class Ship {
     private int posCleanCounter = 0;
     private int fieldSize = 0; // Speichert die zuvor festgelegte Größe des Spielfelds
 
-
+    public Ship(int shipSize, char shipLabel, Field ownField){
+        fieldSize = ownField.getField().length;
+        if(shipSize <= fieldSize){
+            ship = new ShipPart[shipSize];
+            setShip(ship, shipSize, 1, shipLabel, ownField.getField(), 0);
+        }else{
+            throw new IllegalArgumentException("Ship too big for Playfield!");
+        }
+    }
     public Ship(int shipSize, char shipLabel, char[][] ownField){
         fieldSize = ownField.length;
         ship = new ShipPart[shipSize];
