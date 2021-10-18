@@ -230,13 +230,17 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID
 
-
-
-## [TC-53] Der User erhält aussagekräftige Eingabeaufforderungen
-- [TC-53.010] 
-PC:
-Task:
-Ergebnis:
+## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
+- [DoD-53.010] TBC - Dem User wird angezeigt, dass er seinen Namen eingeben soll
+- [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
+- [DoD-53.030] TBC - Dem User wird angezeigt, dass er Schusskoordinaten eingeben soll
+- [DoD-53.040] TBC - Dem User wird angezeigt, ob er das Spiel nach einer Unterbrechung fortsetzen möchte
+- [DoD-53.050] TBC - Dem User wird angezeigt, ob er die Spielstatistik angezeigt haben will
+- [DoD-53.060] TBC - Dem User wird angezeigt, ob er noch ein Mal spielen möchte
+- [DoD-53.070] TBC - Dem User wird eine Fehlermeldung ausgegeben, wenn die Eingabe falsch war
+- [DoD-53.080] TBC - Der User kann zwischen 3 Sprachen auswählen
+- [DoD-53.090] TBC - Der User wird abgefragt, ob er für seinen Zug bereit ist
+- [DoD-53.100] TBC - Der User wird abgefragt, ob er nach Spielende aufhören möchte
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
@@ -264,45 +268,8 @@ Ergebnis:
 - [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten
 
 ## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
-- [DoD-59.010] TBC
-
-## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
-- [DoD-53.010] TBC - Dem User wird angezeigt, dass er seinen Namen eingeben soll
-- [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
-- [DoD-53.030] TBC - Dem User wird angezeigt, dass er Schusskoordinaten eingeben soll
-- [DoD-53.040] TBC - Dem User wird angezeigt, ob er das Spiel nach einer Unterbrechung fortsetzen möchte
-- [DoD-53.050] TBC - Dem User wird angezeigt, ob er die Spielstatistik angezeigt haben will
-- [DoD-53.060] TBC - Dem User wird angezeigt, ob er noch ein Mal spielen möchte
-- [DoD-53.070] TBC - Dem User wird eine Fehlermeldung ausgegeben, wenn die Eingabe falsch war
-- [DoD-53.080] TBC - Der User kann zwischen 3 Sprachen auswählen
-- [DoD-53.090] TBC - Der User wird abgefragt, ob er für seinen Zug bereit ist
-- [DoD-53.100] TBC - Der User wird abgefragt, ob er nach Spielende aufhören möchte
-
-## [DoD-54] Der User kann die Sprache des Spiels auswählen
-- [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
-- [DoD-54.020] Der User kann die Sprache Deutsch wählen
-- [DoD-54.030] Der User kann die Sprache D² wählen
-
-## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
-- [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
-- [DoD-55.020] Wenn Wasser geroffen wird, erfolgt eine akustische Ausgabe, die Wasserplatschen imitiert
-
-## [DoD-56] Der User hat die Möglichkeit sich die Spielregeln vor dem Spiel anzeigen zu lassen
-- [DoD-56.010] Es wird abgefragt, ob der User die Spielregeln sehen will
-- [DoD-56.020] Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld auszugeben
-
-##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen
-- [DoD-57.010] TBC - Es wird angezeigt, dass der User sich die Spielregeln ansehen kann
-- [DoD-57.020] TBC - Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld angezeigt
-- [DoD-57.030] TBC - Der User kann die Spielregeln wieder ausblenden
-
-## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
-- [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten
-
-## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
 - [DoD-59.010] TBC - Es wird angezeigt, dass der User das Spiel abbrechen kann
 - [DoD-50.020] TBC - Der User kann über die Eingabe von "(q)uit" das Spiel abbrechen
-
 
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
