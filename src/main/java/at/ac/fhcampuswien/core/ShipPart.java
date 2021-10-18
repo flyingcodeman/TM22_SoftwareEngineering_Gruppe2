@@ -1,4 +1,6 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
+
+import at.ac.fhcampuswien.core.Coordinate;
 
 public class ShipPart {
 

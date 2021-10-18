@@ -1,4 +1,5 @@
-package at.ac.fhcampuswien;
+package at.ac.fhcampuswien.core;
+
 
 public class Player {
     private String playerName;
@@ -51,6 +52,12 @@ public class Player {
     // Setzen des übergebenen Characters character an der Position cord im opponentInfoField
     public void setCharAtPositionOpponentInfoField(char character, Coordinate cord){
         opponentField.field[cord.positionY][cord.positionX] = character;
+    }
+
+    public char getCharAtPositionOpponentInfoField(Coordinate cord){
+        char character;
+        character = opponentField.field[cord.positionY][cord.positionX];
+        return character;
     }
 
     //Erstellt eine Standardflotte laut DoD
