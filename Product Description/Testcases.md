@@ -1,7 +1,7 @@
 # Testcases
 
 | Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-
+hallo
 ## [TC-32] Der User kann Schiffe zufällig vom Programm platzieren lassen
 | Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 x| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
@@ -24,7 +24,7 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
   Ergebnis 1: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind
 
 
-## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
+## [TC-34] Dem User wird angezei gt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [TC-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [TC-40]
 - [TC-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [TC-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
