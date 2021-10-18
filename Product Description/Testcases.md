@@ -27,7 +27,7 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 - [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das sChiff muss sich inerhalb des Spielfelds befinden!"
 - [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
 
-## [TC-34] Dem User wird angezei gt wieviele gegnerische Schiffe er getroffen/versenkt hat
+## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
 - [TC-34.010] Bei der Ausgabe des gegnerischen Feldes ist erkennbar, welche Schiffe der User getroffen & versenkt hat (siehe [TC-40]
 - [TC-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [TC-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
@@ -36,9 +36,9 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 - [DoD-35.010] Es wird überprüft, wieviele eigene Schiffe getroffen wurden
 - [DoD-35.020] Es wird überprüft, wieviele eigene Schiffe versenkt wurden
 - [DoD-35.030] Es wird überprüft, wieviele eigene Schiffe noch intakt sind
-- [DoD-35.040] Es wir die Meldung " %d Schiffe versenkt"
-- [DoD-35.050] Es wir die Meldung " %d Schiffe getroffen"
-- [DoD-35.060] Es wir die Meldung " %d Schiffe intakt"
+- [DoD-35.040] Es wird die Meldung " %d Schiffe versenkt" angezeigt
+- [DoD-35.050] Es wird die Meldung " %d Schiffe getroffen" angezeigt
+- [DoD-35.060] Es wird die Meldung " %d Schiffe intakt" angezeigt
 
 ## [TC-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
 | TC-36       | PC: Funktion printTestFleetComplete() wird benötigt | 1Task Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
@@ -74,7 +74,7 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 X- [TC-39.010] Es muss über eine Variable die Größe des Spielfeldes bekannt sein
 | TC-39.010   | PC: Field.size muss gesetzt sein | Task: mit Funktion printSizeOfField(Field) die Field.size ausgeben lassen | Eingabedaten : Field | Ergebnis : die Funktion printSizeOfField(Field) gibt die Feldgröße von Field aus | State : - | Note : - | BugID: - |
 X- [TC-39.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
-| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - | 
+| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht.
 | TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 
@@ -243,6 +243,44 @@ Ergebnis:
 
 ## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
 - [DoD-59.010] TBC
+
+## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
+- [DoD-53.010] TBC - Dem User wird angezeigt, dass er seinen Namen eingeben soll
+- [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
+- [DoD-53.030] TBC - Dem User wird angezeigt, dass er Schusskoordinaten eingeben soll
+- [DoD-53.040] TBC - Dem User wird angezeigt, ob er das Spiel nach einer Unterbrechung fortsetzen möchte
+- [DoD-53.050] TBC - Dem User wird angezeigt, ob er die Spielstatistik angezeigt haben will
+- [DoD-53.060] TBC - Dem User wird angezeigt, ob er noch ein Mal spielen möchte
+- [DoD-53.070] TBC - Dem User wird eine Fehlermeldung ausgegeben, wenn die Eingabe falsch war
+- [DoD-53.080] TBC - Der User kann zwischen 3 Sprachen auswählen
+- [DoD-53.090] TBC - Der User wird abgefragt, ob er für seinen Zug bereit ist
+- [DoD-53.100] TBC - Der User wird abgefragt, ob er nach Spielende aufhören möchte
+
+## [DoD-54] Der User kann die Sprache des Spiels auswählen
+- [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
+- [DoD-54.020] Der User kann die Sprache Deutsch wählen
+- [DoD-54.030] Der User kann die Sprache D² wählen
+
+## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
+- [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
+- [DoD-55.020] Wenn Wasser geroffen wird, erfolgt eine akustische Ausgabe, die Wasserplatschen imitiert
+
+## [DoD-56] Der User hat die Möglichkeit sich die Spielregeln vor dem Spiel anzeigen zu lassen
+- [DoD-56.010] Es wird abgefragt, ob der User die Spielregeln sehen will
+- [DoD-56.020] Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld auszugeben
+
+##[DoD-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen
+- [DoD-57.010] TBC - Es wird angezeigt, dass der User sich die Spielregeln ansehen kann
+- [DoD-57.020] TBC - Die Spielregeln sind gemäß der gewählten Sprache in einem separaten Feld angezeigt
+- [DoD-57.030] TBC - Der User kann die Spielregeln wieder ausblenden
+
+## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
+- [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten
+
+## [DoD-59] Der User hat die Möglichkeit das Spiel abzubrechen
+- [DoD-59.010] TBC - Es wird angezeigt, dass der User das Spiel abbrechen kann
+- [DoD-50.020] TBC - Der User kann über die Eingabe von "(q)uit" das Spiel abbrechen
+
 
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
