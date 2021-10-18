@@ -127,8 +127,6 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 - [DoD-41.050] Die Visualisierung der Schiffe ist so aufgebaut, dass ein klarer Unterschied zwischen intakt, getroffen und versenkt angezeigt wird
 - [DoD-41.060] Die Eingabe via Maus (Koordinaten für einen Schussversuch, Schiffe platzieren, ...) ist möglich
 
-## [DoD-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
-- [DoD-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
 
 ## [DoD-43] Der User kann die Schwierigkeit durch die Anzahl der Schiffe und die Spielfeldgröße variieren
 - [DoD-43.010] Die Eingabe der Spielfeldgröße ist möglich
