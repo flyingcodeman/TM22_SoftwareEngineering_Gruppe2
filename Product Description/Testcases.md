@@ -32,7 +32,7 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 - [TC-34.020] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Getroffen: ", angezeigt welcher die Anzahl der getroffenen Schiffe als Zahl anzeigt 
 - [TC-34.030] Zusätzlich zur Ausgabe des gegnerischen Feldes wird ein Counter mit Beschriftung "Versenkt: ", angezeigt welcher die Anzahl der versenkten Schiffe als Zahl anzeigt
 
-## [DoD-35] Dem User wird angezeigt, wieviele eigene Schiffe gertoffen/versenkt wurden
+## [DoD-35] Dem User wird angezeigt, wieviele eigene Schiffe getroffen/versenkt wurden
 - [DoD-35.010] Es wird überprüft, wieviele eigene Schiffe getroffen wurden
 - [DoD-35.020] Es wird überprüft, wieviele eigene Schiffe versenkt wurden
 - [DoD-35.030] Es wird überprüft, wieviele eigene Schiffe noch intakt sind
@@ -40,8 +40,11 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
 - [DoD-35.050] Es wird die Meldung " %d Schiffe getroffen" angezeigt
 - [DoD-35.060] Es wird die Meldung " %d Schiffe intakt" angezeigt
 
-## [TC-36] Dem User stehen verschieden Schiffe zum Spielen zu Verfügung
+## [TC-36] Dem User stehen verschiedene Schiffe zum Spielen zu Verfügung
 | TC-36       | PC: Funktion printTestFleetComplete() wird benötigt | 1Task Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
+| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+| TC-36       | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis :  | State  | Notes |  Bug-ID |
+
 - [TC-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
 - [TC-36.020] Der User verfügt über 2 Schlachtschiffe, welche 4 Einheiten lang sind
 - [TC-36.030] Der User verfügt über 3 Zerstörer, welche 3 Einheiten lang sind
@@ -92,24 +95,41 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
   Task 3: mit der Funktion Player.printFieldSet das OwnField und OpponentInfoField ausgeben
   Ergebnis 1: die Funktion Player.setStandardFleet legt ein Standard-Spielfeld mit zufällig platzierten Schiffen an
   Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus
+ 
+- [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem "X" angezeigt.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.020   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem X angezeigt. 
+- [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem "#" angezeigt.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.030   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die versenkten Schiffe auf dem gegnerischen Feld mit "#" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem # angezeigt.
+- [TC-40.040] Auf dem gegnerischen Feld werden nicht getroffene Schüsse (Felder auf die bereits geschossen wurde, aber kein Schiff steht) mit "/" gekennzeichnet.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.040   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die bereits beschossenen aber nicht besetzten Felder auf dem gegnerischen Feld mit "/" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.040] Auf dem gegnerischen Feld werden nicht getroffene Schüsse (Felder auf die bereits geschossen wurde, aber kein Schiff steht) mit - gekennzeichnet.
+- [TC-40.050] Auf dem gegnerischen Feld werden noch nicht beschossene Felder mit "~" gekennzeichnet.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.050   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die nicht beschossenen und nicht besetzten Felder auf dem gegnerischen Feld mit "~" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.050] Auf dem gegnerischen Feld werden noch nicht beschossene Felder mit ~ gekennzeichnet. 
+- [TC-40.060] Auf dem eigenen Feld werden getroffene Schiffe mit einem "X" angezeigt.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.060   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem eigenen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.060] Auf dem eigenen Feld werden getroffene Schiffe mit einem X angezeigt. 
+- [TC-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem "#" angezeigt.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.070   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die versenkten Schiffe auf dem eigenen Feld mit "#" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem # angezeigt.
+- [TC-40.080] Auf dem eigenen Feld werden Schüsse des Gegners, die nicht getroffen haben mit "/" gekennzeichnet.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.080   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die bereits beschossenen aber nicht besetzten Felder auf dem eigenen Feld mit "/" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.080] Auf dem eigenen Feld werden Schüsse des Gegners, die nicht getroffenen mit - gekennzeichnet.
+- [TC-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit "~" gekennzeichnet.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-40.090   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die nicht beschossenen und nicht besetzten Felder auf dem eigenen Feld mit "~" anzeigen | State  | Notes |  Bug-ID |
 
-- [TC-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit ~ gekennzeichnet.
-
-- [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit 0 gekennzeichnet.
+- [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit "0" gekennzeichnet.
+  |TC-40.100| derzeit nicht relevant - es war gemeint, dass die Schiffe mit den jeweiligen Zahlen (zB 2er Schiff mit "2" und 3er Schiff mit "3" usw. ) angezeigt werden
 
 
 ## [DoD-41] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der GUI ausgegeben
@@ -170,8 +190,10 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 ## [TC-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
 - [TC-48.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Programm beenden"
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-48.010   | PC:  Funktion für [weiterspielen] oder [beenden] oder [highscore] ist implementiert und funktionsfähig | Task : Funktion aufrufen | Eingabedaten : ?! | Ergebnis : je nach Eingabe die Möglichkeit erhalten | State  | Notes |  Bug-ID |
-- [TC-48.010] Bei Wahl dieser Möglichkeit wird das Programm beendet & geschlossen.
+  | TC-48.010   | PC:  Funktion für [play again] oder [quit]  ist implementiert und funktionsfähig | Task : | Eingabedaten : ?! | Ergebnis : nach Spielbeendigungsmeldung wird eine Auswahl [play again] oder [quit] angezeigt | State  | Notes |  Bug-ID |
+- [TC-48.020] Bei Wahl dieser Möglichkeit wird das Programm beendet & geschlossen.
+  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
+  | TC-48.020   | PC:  Funktion für [play again] oder [quit]  ist implementiert und funktionsfähig | Task : Funktion [Quit] aufrufen | Eingabedaten : ?! | Ergebnis : das Spiel wird ordnungsgemäß beendet und das Programm geschlossen | State  | Notes |  Bug-ID |
 
 ## [TC-49] Der User erhält Rückmeldung über das Ergebnis seines Schusses
 - [TC-49.010] Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat
