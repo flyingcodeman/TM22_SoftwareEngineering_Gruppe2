@@ -149,17 +149,34 @@ public class GameLogic {
 
     public void printingGameRules(){
         System.out.println("----------------------------------\n");
-        System.out.println("Schiffe versenken - Spielregeln: ");
+        System.out.println("Schiffe versenken - Game rules: ");
         System.out.println("\n----------------------------------");
-        System.out.println("Each player has 2 playing fields.");
-        System.out.println("The own field indicates the state of the current fleet. ");
-        System.out.println("The opponent's field shows the shots the player has taken and whether they were a hit 'X' or a shot into empty space '/'. ");
-        System.out.println("Each player must start by placing all the ships at his disposal, or have them placed automatically by the program.");
-        System.out.println("After each shot, independently of the result (hit/no hit), the player is changed.");
-        System.out.println("Since the game is only played on a PC, the player swap must fit before the swap is confirmed, otherwise the opponent will have visibility of the playing field.");
-        System.out.println("The player must enter coordinates for shooting");
-        System.out.println("Horizontal (x) in capital letters and vertical (y) in numbers.");
-        System.out.println("The first player to hit and sink all enemy ships wins the game.");
+        System.out.println("- Each player has 2 playing fields.");
+
+        System.out.println("- The own field shows the location of your own ships and their status (not hit, hit, sunk)");
+        System.out.println("  - '0' means 'Own, unhit ship'");
+        System.out.println("  - 'X' means 'Ship hit'");
+        System.out.println("  - '#' means 'Ship sunk'");
+        System.out.println("  - '~' means 'Empty Field (own Field)'");
+        System.out.println("");
+
+        System.out.println("- The opponent's field shows the shots the player has taken and whether they were a hit or a shot into empty space. ");
+        System.out.println("  - 'X' means 'Ship hit'");
+        System.out.println("  - '#' means 'Ship sunk'");
+        System.out.println("  - '/' means 'Shot hit water'");
+        System.out.println("  - '~' means 'Field content still unknown'");
+        System.out.println("");
+
+        System.out.println("- Each player must start by placing all the ships at their disposal, or have them placed automatically by the game. ");
+
+        System.out.println("- After each shot, independently of the result (hit/no hit), the player is changed. ");
+
+        System.out.println("- Since the game is only played on a PC, the player must swap it with the other player before confirming the swap. Otherwise the opponent will see the opponents fields.");
+
+        System.out.println("- The player must enter coordinates for shooting");
+        System.out.println("  - Horizontal (x-axis) in capital letters and vertical (y-axis) in numbers.");
+
+        System.out.println("- The first player to hit and sink all enemy ships wins the game.");
         System.out.println("----------------------------------\n");
     }
 
