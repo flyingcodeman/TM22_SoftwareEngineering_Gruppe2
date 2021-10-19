@@ -167,9 +167,9 @@ public class GameLogic {
         System.out.println("  - '~' means 'Field content still unknown'");
         System.out.println("");
 
-        System.out.println("- Each player must start by placing all the ships at their disposal, or have them placed automatically by the game.");
+        System.out.println("- Each player must start by placing all the ships at their disposal, or have them placed automatically by the game. ");
 
-        System.out.println("- After each shot, independently of the result (hit/no hit), the player is changed.");
+        System.out.println("- After each shot, independently of the result (hit/no hit), the player is changed. ");
 
         System.out.println("- Since the game is only played on a PC, the player must swap it with the other player before confirming the swap. Otherwise the opponent will see the opponents fields.");
 
