@@ -116,7 +116,7 @@
   | Task: mit Funktion printTestField() das Field ausgeben lassen | 
   | Eingabedaten: - | 
   | Ergebnis: die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus |
-  | State : - | Note : - | BugID: - |
+  | State: - | Note: - | BugID: - |
 X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht.
 | TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 
