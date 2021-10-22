@@ -357,24 +357,24 @@
 - [DoD-53.090] TBC - Der User wird abgefragt, ob er für seinen Zug bereit ist
 - [DoD-53.100] TBC - Der User wird abgefragt, ob er nach Spielende aufhören möchte
 
-## [DoD-54] Der User kann die Sprache des Spiels auswählen
-- [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
+## [TC-54] Der User kann die Sprache des Spiels auswählen
+- [TC-54.010] Die Standardsprache für das Spiel ist Englisch
   | PC: Die Funktion flowDialog("language") ist implementiert und funktionsfähig |
-  | Task:  |
+  | Task: Die Funktion flowDialog aufrufen |
   | Eingabedaten: E oder English |
   | Ergebnis: Die Funktion gibt je nach Eingabedaten als Ausgabe English aus |
   | State: - | Notes: - | Bug-ID: - |
-- [DoD-54.020] Der User kann die Sprache Deutsch wählen
+- [TC-54.020] Der User kann die Sprache Deutsch wählen
   | PC: Die Funktion flowDialog("language") ist implementiert und funktionsfähig |
-  | Task: |
-  | Eingabedaten: keine |
-  | Ergebnis: D oder Deutsch |
+  | Task: Die Funktion flowDialog aufrufen |
+  | Eingabedaten: D oder Deutsch |
+  | Ergebnis: Die Funktion gibt je nach Eingabedaten als Ausgabe Deutsch aus |
   | State: - | Notes: - | Bug-ID: - |
-- [DoD-54.030] Der User kann die Sprache D² wählen
-  | PC: |
-  | Task: |
-  | Eingabedaten: keine |
-  | Ergebnis: |
+- [TC-54.030] Der User kann die Sprache D² wählen
+  | PC: Die Funktion flowDialog("language") ist implementiert und funktionsfähig |
+  | Task: Die Funktion flowDialog aufrufen |
+  | Eingabedaten: D² |
+  | Ergebnis: Die Funktion gibt je nach Eingabedaten als Ausgabe D² aus |
   | State: - | Notes: - | Bug-ID: - |
 
 ## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
