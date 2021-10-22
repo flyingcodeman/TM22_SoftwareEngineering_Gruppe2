@@ -25,21 +25,32 @@
 - | [TC-32.040] | Kein Schiff kreuzt ein anderes
   | PC: Funktion printFleet ist implementiert und funktionsfähig |
   | Task 1: Funktion printfleet aufrufen 2Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind |
+  | Eingabedaten: keine |
   | Ergebnis 1: Funktion printFleet liefert Daten; Ergebnis 2: keine Doppelten Werte vorhanden |
   | State: - | Note : - | BugID: - |
 - [TC-32.050] | Kein Schiff ist diagonal platziert 
   | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig |
   | Task 1: Funktion testNotDiagonalShip aufrufen; Task 2: Ergebnis aus Funktion testNotDiagonalShip ablesen |
+  | Eingabedaten: keine |
   | Ergebnis 1: Funktion testNotDiagonalShip wurde ausgeführt; Ergebnis 2: Die Funktion testNotDiagonalShip gibt TRUE aus |
   | State: - | Note : - | BugID: - |
-| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
-| TC-32.060 | 1  [welches Schiffe in der Flotte , Field AUsgabe , Prüfen ob Schiffe auch am SPielfeld vorhanden ]
-| [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
-| [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
-
-  Task 1: mit der Funktion Player(name) 2 Player-Objekte mit Standard-Spielfeld erstellen
-  Task 2: mit der Funktion Player.setStandardFleet die Spielfelder mit Schiffen (zufällige Platzierung) füllen
-  Ergebnis 1: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind
+- [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
+  | PC: [welches Schiffe in der Flotte , Field AUsgabe , Prüfen ob Schiffe auch am SPielfeld vorhanden ]
+  | Task:
+  | Eingabedaten: keine |
+  | Ergebnis:
+- [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
+  | PC: |
+  | Task: |
+  | Eingabedaten: keine |
+  | Ergebnis: |
+- [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln)
+  | PC: |
+- 
+- 
+  | Task 1: mit der Funktion Player(name) 2 Player-Objekte mit Standard-Spielfeld erstellen; Task 2: mit der Funktion Player.setStandardFleet die Spielfelder mit Schiffen (zufällige Platzierung) füllen |
+  | Eingabedaten: keine |
+  | Ergebnis: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind |
 
 ## [DoD-33] Der User bekommt eine Fehlermeldung angezeigt, wenn er die Schiffe falsch platziert
 - [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das Schiff muss sich innerhalb des Spielfelds befinden!"
