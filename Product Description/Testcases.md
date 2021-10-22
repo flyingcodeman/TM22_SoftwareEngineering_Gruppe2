@@ -333,14 +333,17 @@
   | PC: |
   | Task: |
   | Ergebnis: |
+  | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen
   | PC: |
   | Task: |
   | Ergebnis: |
+  | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.030] Der User kann die Sprache D² wählen
   | PC: |
   | Task: |
   | Ergebnis: |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
 - [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
