@@ -271,7 +271,7 @@
   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig |
   | Task: Funktion checkIfShotHit() aufrufen |
   | Eingabedaten: ?! | 
-  | Ergebnis: wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben |
+  | Ergebnis: Wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben |
   | State: - | Notes: - | Bug-ID: - |
 - [TC-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig |
