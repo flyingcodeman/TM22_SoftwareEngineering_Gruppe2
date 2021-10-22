@@ -46,8 +46,6 @@
   | Ergebnis: |
 - [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln)
   | PC: |
-- 
-- 
   | Task 1: mit der Funktion Player(name) 2 Player-Objekte mit Standard-Spielfeld erstellen; Task 2: mit der Funktion Player.setStandardFleet die Spielfelder mit Schiffen (zufällige Platzierung) füllen |
   | Eingabedaten: keine |
   | Ergebnis: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind |
