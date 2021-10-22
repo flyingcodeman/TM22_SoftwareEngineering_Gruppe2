@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien.gui;
 import at.ac.fhcampuswien.core.Coordinate;
+import at.ac.fhcampuswien.core.Field;
 import at.ac.fhcampuswien.core.Player;
 import at.ac.fhcampuswien.core.Shot;
 
@@ -58,19 +59,22 @@ public class GameLogic {
                 break;
             }
             case "player" -> {
+                // Read in Field Size
+                int fieldSize = fieldSizeInit();
+
                 scanner = new Scanner(System.in);
                 //Player 1
                 System.out.println("Player 1: Insert your name:");
                 String name1 = scanner.next();
                 //Initialisierung des Players 1, seiner Spielfelder und Zuweisung des Namens
-                player1 = new Player(name1);
+                player1 = new Player(name1, fieldSize);
 
                 //Player 2
                 scanner = new Scanner(System.in);
                 System.out.println("Player 2: Insert your name");
                 String name2 = scanner.next();
                 //Initialisierung des Players, seiner Spielfelder und Zuweisung des Namens
-                player2 = new Player(name2);
+                player2 = new Player(name2, fieldSize);
                 break;
             }
             case "playermode" -> {
@@ -197,15 +201,49 @@ public class GameLogic {
 
     //Initialisierung aller Spieler und Grundeinstellungen
     public void flowInit(){
+
         //Read in player names
         flowDialog("player");
         //Player-Mode
         flowDialog("playermode");
 
+
+
         //Platzierung der Schiffe
         player1.setStandardFleet();
         player2.setStandardFleet();
         System.out.println("Ships were placed");
+
+    }
+
+    //Initialisierung bzw Abfrage der Spielfeldgröße
+    public int fieldSizeInit(){
+        int tmpfieldsize = 0;
+        boolean validfieldsize = false;
+
+        // Check input from fieldsize
+        do {
+            try {
+                //Ask user to input a fieldsize between 10 and 50
+
+                System.out.println("Fieldsize (10<=X<=50");
+                tmpfieldsize = scanner.nextInt();
+
+                if ((tmpfieldsize >= 10) && (tmpfieldsize <= 50)) {
+
+                    validfieldsize = true;
+
+                } else {
+                    System.out.println("Error: The (" + tmpfieldsize + ") is not between 10 and 50, try again");
+                }
+            } catch (NumberFormatException ne) {
+                System.out.println("Error: The (" + tmpfieldsize + ") is not between 10 and 50, try again");
+            } catch (InputMismatchException ne) {
+                System.out.println("Error: The (" + tmpfieldsize + ") is not a valid input - Only numbers between 10 and 50");
+            }
+        } //Continue the loop while Number is not equal 10 - 50
+        while (!validfieldsize);
+        return tmpfieldsize;
     }
 
     //Hauptsequenz des Spiels
@@ -360,8 +398,10 @@ public class GameLogic {
         gameState currentGameState = gameState.gameContinue;
 
         do { // Schleife für flowGameOver ... solange GameExit = False
+
             game.flowWelcome();
             game.flowInit();
+
             // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
             while (currentGameState == gameState.gameContinue) {
                 currentGameState = game.flowMainSequence(game.player1, game.player2);

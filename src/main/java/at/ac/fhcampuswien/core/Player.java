@@ -3,16 +3,22 @@ package at.ac.fhcampuswien.core;
 
 public class Player {
     private String playerName;
-    private Field ownField = new Field(); // EIgenes Spielfeld mit gesetzten Schiffen
-    private Field opponentField = new Field(); // Eigenes opponent Info Feld zur Markierung der Schüsse auf den Gegner
+    private Field ownField; // EIgenes Spielfeld mit gesetzten Schiffen
+    private Field opponentField; // Eigenes opponent Info Feld zur Markierung der Schüsse auf den Gegner
     public Fleet fleet = new Fleet(); // Eigene Flotte mit Schiffen
     public boolean gameOver = false;
 
     //Constructor zum Setzen initalier Dinge
     public Player(String name){
         setPlayerName(name);
-        setOwnField();
-        setOpponentField();
+        setOwnField(10);
+        setOpponentField(10);
+    }
+
+    public Player(String name,int fieldSize){
+        setPlayerName(name);
+        setOwnField(fieldSize);
+        setOpponentField(fieldSize);
     }
 
     //Rückgabe des Spielernamens
@@ -26,13 +32,17 @@ public class Player {
     }
 
     //Erstellung des eigenen, mit Schiffen gefüllten, Spielfelds
-    public void setOwnField(){ownField.createField();}
+    public void setOwnField(int fieldSize){
+        ownField = new Field(fieldSize);
+    }
 
     //Rückgabe des eigenen, mit Schiffen gefüllten, Spielfelds
     public char[][] getOwnField(){return ownField.getField();}
 
     //Erstellung des eigenen, mit Information über Treffer beim Gegner gefüllten, Spielfelds
-    public void setOpponentField(){opponentField.createField();}
+    public void setOpponentField(int fieldSize){
+        opponentField = new Field(fieldSize);
+    }
 
     //Rückgabe des eigenen opponentInfoFIelds
     public char[][] getOpponentField(){return opponentField.getField();}
