@@ -143,11 +143,12 @@
   | Eingabedaten: keine | 
   | Ergebnis: Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen 
   | State: - | Notes: - | Bug-ID: - |
-
 - [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem "#" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.030   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die versenkten Schiffe auf dem gegnerischen Feld mit "#" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig |
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die versenkten Schiffe auf dem gegnerischen Feld mit "#" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.040] Auf dem gegnerischen Feld werden nicht getroffene Schüsse (Felder auf die bereits geschossen wurde, aber kein Schiff steht) mit "/" gekennzeichnet.
   | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
   | TC-40.040   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die bereits beschossenen aber nicht besetzten Felder auf dem gegnerischen Feld mit "/" anzeigen | State  | Notes |  Bug-ID |
