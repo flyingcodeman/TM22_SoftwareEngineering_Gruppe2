@@ -244,7 +244,6 @@
 - [DoD-46.040] Es wird die Fehltrefferquote angezeigt
 - [DoD-46.050] Es wird das Verhältnis zwischen den zwei Gegnern angezeigt (Treffer, Fehltreffer, Versenkte Schiffe)
 
-
 ## [TC-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
 - [TC-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen"
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
@@ -252,7 +251,6 @@
 - [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet.
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-47.020   | PC:  Funktion für [weiterspielen]/[play again] ist implementiert und funktionsfähig | Task : Funktion [play again] aufrufen | Eingabedaten : [play again] wurde ausgewählt | Ergebnis : der User zum Startscreen weitergeleitet | State  | Notes |  Bug-ID |
-
 
 ## [TC-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
 - [TC-48.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Programm beenden"
@@ -264,8 +262,10 @@
 
 ## [TC-49] Der User erhält Rückmeldung über das Ergebnis seines Schusses
 - [TC-49.010] Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat
-| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-49.010   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : gibt zurück ob das Schiff durch den Schuss gehitet wurde | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | 
+  | Task: Funktion checkIfShotHit() aufrufen | 
+  | Eingabedaten: ?! | Ergebnis: gibt zurück ob das Schiff durch den Schuss gehitet wurde |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-49.020] Wenn der User kein Schiff getroffen hat erfolgt die Meldung "Kein Treffer"
 | TC-49.020   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben | State  | Notes |  Bug-ID |
 - [TC-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
