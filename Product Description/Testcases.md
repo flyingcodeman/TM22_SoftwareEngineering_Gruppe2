@@ -12,14 +12,21 @@
   | State: - | Note : - | BugID: - |
 - [TC-32.020] | Es werden alle Schiffe plaziert
   | PC: Funktion setFleet() ist implementiert und funktionsfähig |
-  | Task 1: Funktion setFleet aufrufen; Task 2: Koordinaten der gesetzten Schiffe auslesen | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
-
- 
- 
-
+  | Task 1: Funktion setFleet aufrufen; Task 2: Koordinaten der gesetzten Schiffe auslesen |
+  | Eingabedaten: 1K 2K | 
+  | Ergebnis 1: Funktion setFleet konnte aufgerufen werden; Ergebnis 2: Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
+  | State: - | Note : - | BugID: - |
 - | [TC-32.030] | Kein Schiff ragt über das Spielfeld
-| TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen 3 Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | Funktion setFleet(), createField(size) sind implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen 3 Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds | | | |
-| [TC-32.040] | Kein Schiff kreuzt ein anderes
+  | PC: Funktion setFleet(), createField(size) sind implementiert und funktionsfähig |
+  | Task 1: Funktion setFleet aufrufen; Task 2: Koordinaten der gesetzten Schiffe auslesen Task 3: Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | 
+  | Eingabedaten: 1K 2K |
+  | Ergebnis 1: Funktion setFleet konnte aufgerufen werden; Ergebnis 2: Die Koordinaten der gesetzten Schiffe wurden ausgelesen; Ergebnis 3: Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds |
+  | State: - | Note : - | BugID: - |
+
+
+
+
+- | [TC-32.040] | Kein Schiff kreuzt ein anderes
 | TC-32.040 | 1 Funktion printfleet aufrufen 2Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind | 1P Funktion printFleet ist implementiert und funktionsfähig | 1E Funktion printFleet liefert Daten 2E keine Doppelten Werte vorhanden | | | |
 | [TC-32.050] | Kein Schiff ist diagonal platziert 
 | TC-32.050 | 1 Funktion testNotDiagonalShip aufrufen 2 Ergebnis aus Funktion testNotDiagonalShip ablesen | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig | 1E Funktion testNotDiagonalShip  wurde ausgeführt 2E Die Funktion testNotDiagonalShip gibt TRUE aus | | | |     
