@@ -138,8 +138,11 @@
   | Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus |
   | State: - | Note: - | BugID: - |
 - [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem "X" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.020   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen 
+  | State: - | Notes: - | Bug-ID: - |
 
 - [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem "#" angezeigt.
   | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
