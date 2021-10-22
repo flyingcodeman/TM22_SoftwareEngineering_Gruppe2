@@ -359,16 +359,16 @@
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
-  | PC: Die Funktion [xxxx] ist implementiert und funktionsfähig |
+  | PC: Die Funktion flowDialog("language") ist implementiert und funktionsfähig |
   | Task:  |
-  | Eingabedaten: keine |
-  | Ergebnis: |
+  | Eingabedaten: E oder English |
+  | Ergebnis: Die Funktion gibt je nach Eingabedaten als Ausgabe English aus |
   | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen
-  | PC: |
+  | PC: Die Funktion flowDialog("language") ist implementiert und funktionsfähig |
   | Task: |
   | Eingabedaten: keine |
-  | Ergebnis: |
+  | Ergebnis: D oder Deutsch |
   | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.030] Der User kann die Sprache D² wählen
   | PC: |
