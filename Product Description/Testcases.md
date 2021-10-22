@@ -24,7 +24,7 @@
   Ergebnis 1: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind
 
 ## [DoD-33] Der User bekommt eine Fehlermeldung angezeigt, wenn er die Schiffe falsch platziert
-- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das Schiff muss sich inerhalb des Spielfelds befinden!"
+- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das Schiff muss sich innerhalb des Spielfelds befinden!"
 - [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
 
 ## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
