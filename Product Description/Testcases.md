@@ -304,18 +304,18 @@
 ## [TC-50] Der User erhält Rückmeldung ob er mit dem Schuss ein Schiff versenkt hat
 - [TC-50.010] Es wird nach einem erfolgreichen Schuss (Schuss hat ein Schiff getroffen) überprüft, ob ein Schiff noch intakte Felder besitzt
   | PC: Funktion checkIfShotHit()=TRUE | 
-  | Task: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)  |
-  | Eingabedaten: ?! |
-  | Ergebnis: Ship als Ergebnis ,   |
+  | Task: Funktion checkFieldShip() aufrufen |
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion gibt TRUE als Ergebnis aus |
   | State: - | Notes: - | Bug-ID: - |
-  | PC 2: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)=<SHIP> | 
-  | Task 2: checkIfSunk(Ship) aufrufen |
+  | PC 2: Funktion checkFieldShip()> | 
+  | Task 2: checkFieldShip() aufrufen |
   | Eingabedaten: <Ship> |
   | Ergebnis: TRUE oder FALSE | 
 - [TC-50.020] Wenn ein Schiff keine intakten Felder besitzt erfolgt die Meldung "Versenkt!!"
   | PC: Funktion checkIfSunk()=TRUE | 
   | Task: checkIfSunk(Ship) aufrufen | 
-  | Eingabedaten: ?! | 
+  | Eingabedaten: keine | 
   | Ergebnis: Wenn <TRUE>, die Meldung "Versenkt!!" ausgeben |
   | State: - | Notes: - | Bug-ID: - |
 
