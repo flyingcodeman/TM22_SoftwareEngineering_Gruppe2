@@ -393,14 +393,26 @@
 
 ## [TC-60] Dem User wird angezeigt welches Zeichen am Feld was bedeutet
 - [TC-60.010] Dem User wird der Text "X ==> Schiff getroffen" angezeigt
-- | TC-60.010 | PC: Funktion checkIfHit() ist implementiert und funktionsfähig | Task: Funktion checkIfHit() aufrufen und auf TRUE setzen | Eingabedaten : TRUE | Ergebnis : Die Funktion checkIfHit() wurde ausgeführt und die Meldung "X ==> Schiff getroffen" wird ausgegeben | State : - | Note : - | BugID: - |
-- 
+  | PC: Funktion checkIfHit() ist implementiert und funktionsfähig | 
+  | Task: Funktion checkIfHit() aufrufen und auf TRUE setzen | 
+  | Eingabedaten: TRUE | 
+  | Ergebnis: Die Funktion checkIfHit() wurde ausgeführt und die Meldung "X ==> Schiff getroffen" wird ausgegeben |
+  | State: - | Notes: - | Bug-ID: - |
+
 - [TC-60.020] Dem User wird der Text "# ==> Schiff versenkt" angezeigt
-- | TC-60.020 | PC: Funktion checkIfSunk() ist implementiert und funktionsfähig | Task: Funktion checkIfSunk() aufrufen und auf TRUE setzen | Eingabedaten : TRUE | Ergebnis : Die Funktion checkIfHit() wurde ausgeführt und die Meldung "# ==> Schiff versenkt" wird ausgegeben | State : - | Note : - | BugID: - |
-- 
+  | PC: Funktion checkIfSunk() ist implementiert und funktionsfähig | 
+  | Task: Funktion checkIfSunk() aufrufen und auf TRUE setzen | 
+  | Eingabedaten: TRUE | 
+  | Ergebnis: Die Funktion checkIfHit() wurde ausgeführt und die Meldung "# ==> Schiff versenkt" wird ausgegeben |
+  | State: - | Notes: - | Bug-ID: - |
+
 - [TC-60.030] Dem User wird der Text "- ==> Schuss ins Wasser" angezeigt
-- | TC-60.030 | PC: Funktion checkIfHit() ist implementiert und funktionsfähig | Task: Funktion checkIfHit() aufrufen und auf FALSE setzen | Eingabedaten : FALSE | Ergebnis : Die Funktion checkIfHit() wurde ausgeführt und die Meldung "- ==> Schuss ins Wasser" wird ausgegeben | State : - | Note : - | BugID: - |
-- 
+  | PC: Funktion checkIfHit() ist implementiert und funktionsfähig | 
+  | Task: Funktion checkIfHit() aufrufen und auf FALSE setzen | 
+  | Eingabedaten: FALSE | 
+  | Ergebnis: Die Funktion checkIfHit() wurde ausgeführt und die Meldung "- ==> Schuss ins Wasser" wird ausgegeben |
+  | State: - | Notes: - | Bug-ID: - |
+
 - [TC-60.040] Dem User wird der Text "0 ==> Eigenes, ungetroffenes Schiff" angezeigt
 - | TC-60.040 | PC:  | Task:  | Eingabedaten : - | Ergebnis :  | State : - | Note : - | BugID: - |
 - 
