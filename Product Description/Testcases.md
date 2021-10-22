@@ -245,7 +245,8 @@
   | Task: Funktion existActiveShips() aufrufen | 
   | Eingabedaten: keine |
   | Ergebnis: Funktion existActiveShips() gibt True zurück |
-  | State: - | Note: - | BugID: - |    
+  | State: - | Note: - | BugID: - |
+  | Comment: Testcase TC-44.030 ist nicht relevant, da TC-44.020 diesen Fall abdeckt |
 - [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010])
   | Comment: ist mit TC-45.010 abgedeckt |
 
@@ -350,8 +351,8 @@
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
-  | PC: |
-  | Task: |
+  | PC: Die Funktion [xxxx] ist implementiert und funktionsfähig |
+  | Task:  |
   | Eingabedaten: keine |
   | Ergebnis: |
   | State: - | Notes: - | Bug-ID: - |
