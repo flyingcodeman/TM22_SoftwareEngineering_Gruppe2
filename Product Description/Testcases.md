@@ -3,7 +3,6 @@
 | Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 
 ## [TC-32] Der User kann Schiffe zufällig vom Programm platzieren lassen
-| Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 - [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
   | PC: Funktion bool manShipPlacement ist implementiert |
   | Task 1: Suche die Funktion bool manShipPlacement; Task 2: Funktion bool manShipPlacment aufrufen | 
