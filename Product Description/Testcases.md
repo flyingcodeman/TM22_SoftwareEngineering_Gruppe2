@@ -50,14 +50,18 @@
 - [TC-36.030] Der User verfügt über 3 Zerstörer, welche 3 Einheiten lang sind
 - [TC-36.040] Der User verfügt über 4 U-Boote, welche 2 Einheiten lang sind
 - [TC-36.050] Die Felder der Schiffe haben zwei Zustände (Getroffen, nicht getroffen)
-- [TC-36.060] Das Schiff wird darauf überprüft , ob es gesunken ist (alle Felder getroffen).
+- [TC-36.060] Das Schiff wird darauf überprüft, ob es gesunken ist (alle Felder getroffen).
   | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | 
   | Task: Funktion printCheckIfSunk() aufrufen | 
   | Eingabedaten: keine - | 
-  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück |
-  | State : - | Note : - | BugID: - | 
+  | Ergebnis: printCheckIfSunk() gibt Ergebnisse zurück |
+  | State: - | Note : - | BugID: - | 
 - [TC-36.070] Das Schiff hat zwei Zustände (floating, sunken)
-| TC-36.070  | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - |
+  | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | 
+  | Task: Funktion printCheckIfSunk() aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: printCheckIfSunk() gibt Ergebnisse zurück |
+  | State: - | Note: - | BugID: - |
 
 ## [DoD-37] Der User kann Schiffe manuell platzieren
 - [DoD-37.010] Es wird überprüft, ob der User die manuelle Schiffsplatzierung gewählt hat
