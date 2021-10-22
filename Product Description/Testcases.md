@@ -230,6 +230,11 @@
 
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
+  | PC: Funktion [xxxx] ist vorhanden und funktionsfähig |
+  | Task: Funktion [xxxx] aufrufen |
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion [xxxx] gibt True zurück |
+  | State: - | Note: - | BugID: - |
 - [TC-44.020] Wenn es noch aktive Schiffe gibt, wird das Spiel fortgesetzt
   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | 
   | Task: Funktion existActiveShips() aufrufen | 
@@ -242,7 +247,8 @@
   | Eingabedaten: keine |
   | Ergebnis: Funktion existActiveShips() gibt True zurück |
   | State: - | Note: - | BugID: - |
-- [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010]
+- [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010])
+  | Comment: ist mit TC-45.010 abgedeckt | 
 
 ## [TC-45] Der User erhält die Information, dass das Spiel beendet ist
 - [TC-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
