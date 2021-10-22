@@ -7,7 +7,7 @@ public class Field {
     public char[][] field;
 
     public Field() {
-
+        createField(10);
     }
     public Field(int size) {
         createField(size);
