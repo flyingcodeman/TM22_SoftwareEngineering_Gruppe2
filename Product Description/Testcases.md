@@ -12,7 +12,7 @@
   | State: - | Note : - | BugID: - |
 - [TC-32.020] | Es werden alle Schiffe plaziert
   | PC: Funktion setFleet() ist implementiert und funktionsfähig |
-  | Task 1: Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
+  | Task 1: Funktion setFleet aufrufen; Task 2: Koordinaten der gesetzten Schiffe auslesen | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
 
  
  
