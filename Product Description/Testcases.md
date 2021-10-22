@@ -161,10 +161,12 @@
   | Eingabedaten: keine | 
   | Ergebnis: Die nicht beschossenen und nicht besetzten Felder auf dem gegnerischen Feld mit "~" anzeigen | 
   | State: - | Notes: - | Bug-ID: - |
-
 - [TC-40.060] Auf dem eigenen Feld werden getroffene Schiffe mit einem "X" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.060   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem eigenen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die getroffenen Schiffe auf dem eigenen Feld mit "X" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 
 - [TC-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem "#" angezeigt.
   | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
