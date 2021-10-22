@@ -197,12 +197,12 @@
 - [DoD-41.060] Die Eingabe via Maus (Koordinaten für einen Schussversuch, Schiffe platzieren, ...) ist möglich
 
 ## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
-- [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
+- [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert |
   | PC: Die Funktionen Player.createField() und Player.getField.length() sind implementiert und es sind die Default-Werte ausgewählt |
-  | Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen
-  | Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen
+  | Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen |
+  | Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen |
   | Eingabedaten: keine |
-  | Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus
+  | Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus |
   | Ergebnis 2: die Funktion Player.getField.length() gibt die Grösse 10x10 aus |
   | State: - | Notes: - | Bug-ID: - |
 
