@@ -41,7 +41,7 @@
 - [DoD-35.060] Es wird die Meldung " %d Schiffe intakt" angezeigt
 
 ## [TC-36] Dem User stehen verschiedene Schiffe zum Spielen zu Verfügung
-| TC-36       | PC: Funktion printTestFleetComplete() wird benötigt | 1Task Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
+| TC-36.010| PC: Funktion printTestFleetComplete() wird benötigt | 1 Task: Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis: Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-36       | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis :  | State  | Notes |  Bug-ID |
 
