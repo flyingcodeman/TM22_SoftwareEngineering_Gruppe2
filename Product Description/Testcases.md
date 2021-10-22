@@ -268,9 +268,17 @@
   | Ergebnis: Gibt zurück, ob das Schiff durch den Schuss getroffen wurde |
   | State: - | Notes: - | Bug-ID: - |
 - [TC-49.020] Wenn der User kein Schiff getroffen hat erfolgt die Meldung "Kein Treffer"
-| TC-49.020   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig |
+  | Task: Funktion checkIfShotHit() aufrufen |
+  | Eingabedaten: ?! | 
+  | Ergebnis: wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
-| TC-49.030   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion TRUE ergibt, die Meldung "Treffer!!" ausgeben | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig |
+  | Task: Funktion checkIfShotHit() aufrufen | 
+  | Eingabedaten: ?! | 
+  | Ergebnis: Wenn die Funktion TRUE ergibt, die Meldung "Treffer!!" ausgeben |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [TC-50] Der User erhält Rückmeldung ob er mit dem Schuss ein Schiff versenkt hat
 - [TC-50.010] Es wird nach einem erfolgreichen Schuss (Schuss hat ein Schiff getroffen) überprüft, ob ein Schiff noch intakte Felder besitzt
