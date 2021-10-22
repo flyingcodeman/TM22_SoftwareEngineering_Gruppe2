@@ -246,9 +246,9 @@
   | Task: Funktion existActiveShips() aufrufen | 
   | Eingabedaten: keine |
   | Ergebnis: Funktion existActiveShips() gibt True zurück |
-  | State: - | Note: - | BugID: - |
+  | State: - | Note: - | BugID: - |    
 - [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010])
-  | Comment: ist mit TC-45.010 abgedeckt | 
+  | Comment: ist mit TC-45.010 abgedeckt |
 
 ## [TC-45] Der User erhält die Information, dass das Spiel beendet ist
 - [TC-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
