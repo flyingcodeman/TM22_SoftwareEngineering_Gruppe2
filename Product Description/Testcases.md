@@ -332,16 +332,19 @@
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
   | PC: |
   | Task: |
+  | Eingabedaten: keine |
   | Ergebnis: |
   | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen
   | PC: |
   | Task: |
+  | Eingabedaten: keine |
   | Ergebnis: |
   | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.030] Der User kann die Sprache D² wählen
   | PC: |
   | Task: |
+  | Eingabedaten: keine |
   | Ergebnis: |
   | State: - | Notes: - | Bug-ID: - |
 
