@@ -43,7 +43,7 @@
 ## [TC-36] Dem User stehen verschiedene Schiffe zum Spielen zu Verfügung
 | TC-36.010| PC: Funktion printTestFleetComplete() wird benötigt | 1 Task: Funktion printTestFleetComplete() aufrufen | keine Eingabedaten | Ergebnis: Flotte wird zurückgegeben | State : - | Note : - | BugID: - |
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-36       | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis :  | State  | Notes |  Bug-ID |
+| TC-36.020| PC: Funktion für [???] ist implementiert und funktionsfähig | Task: Funktion [???] aufrufen | Eingabedaten: - | Ergebnis:  | State: - | Notes: - | Bug-ID: - |
 
 - [TC-36.010] Der User verfügt über 1 Flugzeugträger, welcher 5 Einheiten lang ist
 - [TC-36.020] Der User verfügt über 2 Schlachtschiffe, welche 4 Einheiten lang sind
