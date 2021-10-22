@@ -111,8 +111,12 @@
   | Eingabedaten: Field | 
   | Ergebnis: die Funktion printSizeOfField(Field) gibt die Feldgröße von Field aus |
   | State: - | Note: - | BugID: - |
-X- [TC-39.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
-| TC-39.020   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
+- [TC-39.020] Die horizontale Beschriftung ist alphabetisch fortlaufend, beginnt bei der ersten Spalte mit A und wird pro Spalte um einen Buchstaben im Alphabet hochgezählt.
+  | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | 
+  | Task: mit Funktion printTestField() das Field ausgeben lassen | 
+  | Eingabedaten: - | 
+  | Ergebnis: die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus |
+  | State : - | Note : - | BugID: - |
 X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in der ersten Zeile mit 1 und wird pro Zeile um 1 erhöht.
 | TC-39.030   | PC: Funktion printTestField() muss vorhanden und funktionsfähig sein | Task: mit Funktion printTestField() das Field ausgeben lassen | Eingabedaten : - | Ergebnis : die Funktion printTestField() gibt das Feld mit den Achsenbeschriftungen aus | State : - | Note : - | BugID: - |
 
