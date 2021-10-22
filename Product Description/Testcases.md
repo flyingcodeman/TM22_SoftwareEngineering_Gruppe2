@@ -264,7 +264,8 @@
 - [TC-49.010] Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat
   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | 
   | Task: Funktion checkIfShotHit() aufrufen | 
-  | Eingabedaten: ?! | Ergebnis: gibt zurück ob das Schiff durch den Schuss gehitet wurde |
+  | Eingabedaten: ?! | 
+  | Ergebnis: Gibt zurück, ob das Schiff durch den Schuss getroffen wurde |
   | State: - | Notes: - | Bug-ID: - |
 - [TC-49.020] Wenn der User kein Schiff getroffen hat erfolgt die Meldung "Kein Treffer"
 | TC-49.020   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben | State  | Notes |  Bug-ID |
