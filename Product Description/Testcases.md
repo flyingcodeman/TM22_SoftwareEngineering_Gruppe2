@@ -4,17 +4,17 @@
 
 ## [TC-32] Der User kann Schiffe zufällig vom Programm platzieren lassen
 | Number	  | Task | Precondition  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-x| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
+| [TC-32.010] | Es muss Boolean welche den Platzierungsmodus (bool manShipPlacement) angibt auf TRUE sein
 | TC-32.010   | 1 Suche die Funktion bool manShipPlacement 2 Funktion bool manShipPlacment aufrufen | Funktion bool manShipPlacement ist implementiert | Keine | 1 Funktion manShipPlacement im Programm-Code gefunden 2 Funktion manShipPlacement konnte aufgerufen werden und gibt den Wet TRUE aus | |  |  |
-x| [TC-32.020] | Es werden alle Schiffe plaziert 
+| [TC-32.020] | Es werden alle Schiffe plaziert 
 | TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen | Funktion setFleet() ist implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen |
-x| [TC-32.030] | Kein Schiff ragt über das Spielfeld
+| [TC-32.030] | Kein Schiff ragt über das Spielfeld
 | TC-32.0.20  | 1 Funktion setFleet aufrufen  2 Koordinaten der gesetzten Schiffe auslesen 3 Koordinaten der gesetzten Schiffe mit den max. Koordinaten des Spielfelds vergleichen | Funktion setFleet(), createField(size) sind implementiert und funktionsfähig | 1K 2K  | 1E Funktion setFleet konnte aufgerufen werden 2E Die Koordinaten der gesetzten Schiffe wurden ausgelesen 3 Die Koordinaten der gesetzten Schiffe liegen nicht ausserhalb des vorgegebenen Spielfelds | | | |
-X| [TC-32.040] | Kein Schiff kreuzt ein anderes
+| [TC-32.040] | Kein Schiff kreuzt ein anderes
 | TC-32.040 | 1 Funktion printfleet aufrufen 2Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind | 1P Funktion printFleet ist implementiert und funktionsfähig | 1E Funktion printFleet liefert Daten 2E keine Doppelten Werte vorhanden | | | |
-X| [TC-32.050] | Kein Schiff ist diagonal platziert 
+| [TC-32.050] | Kein Schiff ist diagonal platziert 
 | TC-32.050 | 1 Funktion testNotDiagonalShip aufrufen 2 Ergebnis aus Funktion testNotDiagonalShip ablesen | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig | 1E Funktion testNotDiagonalShip  wurde ausgeführt 2E Die Funktion testNotDiagonalShip gibt TRUE aus | | | |     
-X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
+| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
 | TC-32.060 | 1  [welches Schiffe in der Flotte , Field AUsgabe , Prüfen ob Schiffe auch am SPielfeld vorhanden ]
 | [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
 | [TC-32.080] | Die Verteilung erfolgt gemäß den Vorgaben (Regeln) 
@@ -24,7 +24,7 @@ X| [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt.
   Ergebnis 1: zufällige Verteilung, wenn beide Spielfelder inhaltlich unterschiedlich sind
 
 ## [DoD-33] Der User bekommt eine Fehlermeldung angezeigt, wenn er die Schiffe falsch platziert
-- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das sChiff muss sich inerhalb des Spielfelds befinden!"
+- [DoD-33.010] Wenn ein Schiff aus dem Spielfeld ragt, erscheint die Meldung "Das Schiff muss sich inerhalb des Spielfelds befinden!"
 - [DoD-33.020] Wenn ein Schiff ein anderes Schiff kreuzt bzw. überlappt, erscheint die Meldung "Das Schiff darf mit keinem anderen Schiff kollidieren!"
 
 ## [TC-34] Dem User wird angezeigt wieviele gegnerische Schiffe er getroffen/versenkt hat
