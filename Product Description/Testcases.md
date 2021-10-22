@@ -180,9 +180,11 @@
   | Ergebnis: Die bereits beschossenen aber nicht besetzten Felder auf dem eigenen Feld mit "/" anzeigen |
   | State: - | Notes: - | Bug-ID: - |
 - [TC-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit "~" gekennzeichnet.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.090   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die nicht beschossenen und nicht besetzten Felder auf dem eigenen Feld mit "~" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die nicht beschossenen und nicht besetzten Felder auf dem eigenen Feld mit "~" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit "0" gekennzeichnet.
   |TC-40.100| derzeit nicht relevant - es war gemeint, dass die Schiffe mit den jeweiligen Zahlen (zB 2er Schiff mit "2" und 3er Schiff mit "3" usw. ) angezeigt werden
 
