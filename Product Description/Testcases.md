@@ -167,10 +167,12 @@
   | Eingabedaten: keine | 
   | Ergebnis: Die getroffenen Schiffe auf dem eigenen Feld mit "X" anzeigen |
   | State: - | Notes: - | Bug-ID: - |
-
 - [TC-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem "#" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.070   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die versenkten Schiffe auf dem eigenen Feld mit "#" anzeigen | State  | Notes |  Bug-ID |
+  | PC: Funktion für [???] ist implementiert und funktionsfähig |
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Die versenkten Schiffe auf dem eigenen Feld mit "#" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 
 - [TC-40.080] Auf dem eigenen Feld werden Schüsse des Gegners, die nicht getroffen haben mit "/" gekennzeichnet.
   | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
