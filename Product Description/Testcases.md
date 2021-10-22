@@ -153,40 +153,55 @@
   | Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus |
   | State: - | Note: - | BugID: - |
 - [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem "X" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.020   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen 
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.030] Auf dem gegnerischen Feld werden versenkte Schiffe mit einem "#" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.030   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die versenkten Schiffe auf dem gegnerischen Feld mit "#" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig |
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die versenkten Schiffe auf dem gegnerischen Feld mit "#" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.040] Auf dem gegnerischen Feld werden nicht getroffene Schüsse (Felder auf die bereits geschossen wurde, aber kein Schiff steht) mit "/" gekennzeichnet.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.040   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die bereits beschossenen aber nicht besetzten Felder auf dem gegnerischen Feld mit "/" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die bereits beschossenen aber nicht besetzten Felder auf dem gegnerischen Feld mit "/" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.050] Auf dem gegnerischen Feld werden noch nicht beschossene Felder mit "~" gekennzeichnet.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.050   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die nicht beschossenen und nicht besetzten Felder auf dem gegnerischen Feld mit "~" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die nicht beschossenen und nicht besetzten Felder auf dem gegnerischen Feld mit "~" anzeigen | 
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.060] Auf dem eigenen Feld werden getroffene Schiffe mit einem "X" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.060   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem eigenen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die getroffenen Schiffe auf dem eigenen Feld mit "X" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.070] Auf dem eigenen Feld werden versenkte Schiffe mit einem "#" angezeigt.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.070   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die versenkten Schiffe auf dem eigenen Feld mit "#" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig |
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Die versenkten Schiffe auf dem eigenen Feld mit "#" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.080] Auf dem eigenen Feld werden Schüsse des Gegners, die nicht getroffen haben mit "/" gekennzeichnet.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.080   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die bereits beschossenen aber nicht besetzten Felder auf dem eigenen Feld mit "/" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die bereits beschossenen aber nicht besetzten Felder auf dem eigenen Feld mit "/" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.090] Auf dem eigenen Feld werden leere Felder (ohne Schuss und ohne Schiff) mit "~" gekennzeichnet.
-  | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-  | TC-40.090   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die nicht beschossenen und nicht besetzten Felder auf dem eigenen Feld mit "~" anzeigen | State  | Notes |  Bug-ID |
-
+  | PC: Funktion für [???] ist implementiert und funktionsfähig | 
+  | Task: Funktion [???] aufrufen | 
+  | Eingabedaten: keine | 
+  | Ergebnis: Die nicht beschossenen und nicht besetzten Felder auf dem eigenen Feld mit "~" anzeigen |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit "0" gekennzeichnet.
-  |TC-40.100| derzeit nicht relevant - es war gemeint, dass die Schiffe mit den jeweiligen Zahlen (zB 2er Schiff mit "2" und 3er Schiff mit "3" usw. ) angezeigt werden
-
+  | Comment: derzeit nicht relevant - es war gemeint, dass die Schiffe mit den jeweiligen Zahlen (zB 2er Schiff mit "2" und 3er Schiff mit "3" usw. ) angezeigt werden |
 
 ## [DoD-41] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der GUI ausgegeben
 - [DoD-41.010] Das Spielfeld wird an grafisch Wiedergegeben
@@ -197,13 +212,14 @@
 - [DoD-41.060] Die Eingabe via Maus (Koordinaten für einen Schussversuch, Schiffe platzieren, ...) ist möglich
 
 ## [TC-42] Der User bekommt ein Standard-Spielfeld mit 10x10 im Default-Spielmodus
-- [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert.
-  PC: Die Funktionen Player.createField() und Player.getField.length() sind implementiert und es sind die Default-Werte ausgewählt
-  Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen
-  Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen
-  Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus
-  Ergebnis 2: die Funktion Player.getField.length() gibt die Grösse 10x10 aus | State : - | Note : - | BugID: - |
-
+- [TC-42.010] Beim Starten des Default-Spielmodus wird als Größe des Spielfeldes 10 definiert |
+  | PC: Die Funktionen Player.createField() und Player.getField.length() sind implementiert und es sind die Default-Werte ausgewählt |
+  | Task 1: mit der Funktion Player.createField() ein Standard-Spielfeld anlegen |
+  | Task 2: mit der Funktion Player.getField.length() die Größe ausgeben lassen |
+  | Eingabedaten: keine |
+  | Ergebnis 1: die Funktion Player.createField() gibt ein Standard-Spielfeld aus |
+  | Ergebnis 2: die Funktion Player.getField.length() gibt die Grösse 10x10 aus |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [DoD-43] Der User kann die Schwierigkeit durch die Anzahl der Schiffe und die Spielfeldgröße variieren
 - [DoD-43.010] Die Eingabe der Spielfeldgröße ist möglich
@@ -212,19 +228,29 @@
 - [DoD-43.040] Die Eingabe der Anzahl der Zerstörer ist möglich (3-9)
 - [DoD-43.050] Die Eingabe der Anzahl der U-Boote ist möglich (4-12)
 
-
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
 - [TC-44.020] Wenn es noch aktive Schiffe gibt, wird das Spiel fortgesetzt
-| TC-44.020   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt True zurück | State : - | Note : - | BugID: - |
+  | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | 
+  | Task: Funktion existActiveShips() aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion existActiveShips() gibt True zurück |
+  | State: - | Note: - | BugID: - |
 - [TC-44.030] Gibt es keine aktive Schiffe mehr, erfolgt kein weiterer Spielzug.
-| TC-44.030   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt True zurück | State : - | Note : - | BugID: - |
+  | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | 
+  | Task: Funktion existActiveShips() aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion existActiveShips() gibt True zurück |
+  | State: - | Note: - | BugID: - |
 - [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010]
-
 
 ## [TC-45] Der User erhält die Information, dass das Spiel beendet ist
 - [TC-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
-| TC-45.010   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt FALSE zurück --> Es wird die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." in der Konsole ausgegeben | State : - | Note : - | BugID: - |
+  | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig |
+  | Task: Funktion existActiveShips() aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion existActiveShips() gibt FALSE zurück --> Es wird die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." in der Konsole ausgegeben |
+  | State : - | Note : - | BugID: - |
 
 ## [DoD-46] Der User erhält nach beendigung des Spiels die Möglichkeit detaillierte Informationen über das Spielergebnis angezeigt zu bekommen
 - [DoD-46.010] Es wird die meiste Treffequote (Treffer die nacheinander erzielt worden sind) angezeigt
@@ -233,7 +259,6 @@
 - [DoD-46.040] Es wird die Fehltrefferquote angezeigt
 - [DoD-46.050] Es wird das Verhältnis zwischen den zwei Gegnern angezeigt (Treffer, Fehltreffer, Versenkte Schiffe)
 
-
 ## [TC-47] Der User erhält nach Beendigung des Spiels die Möglichkeit erneut zu Spielen
 - [TC-47.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Erneut spielen"
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
@@ -241,7 +266,6 @@
 - [TC-47.020] Bei Wahl dieser Möglichkeit wird der User zum Startscreen weitergeleitet.
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-47.020   | PC:  Funktion für [weiterspielen]/[play again] ist implementiert und funktionsfähig | Task : Funktion [play again] aufrufen | Eingabedaten : [play again] wurde ausgewählt | Ergebnis : der User zum Startscreen weitergeleitet | State  | Notes |  Bug-ID |
-
 
 ## [TC-48] Der User erhält nach Beendigung des Spiels die Möglichkeit das Programm zu beenden 
 - [TC-48.010] Nach Spielbeendigungsmeldung (siehe US-45 // TC-45.010) erhält der User eine Taste/Eingabemöglichkeit "Programm beenden"
@@ -253,20 +277,41 @@
 
 ## [TC-49] Der User erhält Rückmeldung über das Ergebnis seines Schusses
 - [TC-49.010] Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat
-| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-49.010   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : gibt zurück ob das Schiff durch den Schuss gehitet wurde | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | 
+  | Task: Funktion checkIfShotHit() aufrufen | 
+  | Eingabedaten: ?! | 
+  | Ergebnis: Gibt zurück, ob das Schiff durch den Schuss getroffen wurde |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-49.020] Wenn der User kein Schiff getroffen hat erfolgt die Meldung "Kein Treffer"
-| TC-49.020   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig |
+  | Task: Funktion checkIfShotHit() aufrufen |
+  | Eingabedaten: ?! | 
+  | Ergebnis: Wenn die Funktion FALSE ergibt, die Meldung "Kein Treffer" ausgeben |
+  | State: - | Notes: - | Bug-ID: - |
 - [TC-49.030] Wenn ein Schiff getroffen wurde erfolgt die Meldung "Treffer!!"
-| TC-49.030   | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig | Task : Funktion checkIfShotHit() aufrufen | Eingabedaten : ?! | Ergebnis : wenn die Funktion TRUE ergibt, die Meldung "Treffer!!" ausgeben | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfShotHit() ist implementiert und funktionsfähig |
+  | Task: Funktion checkIfShotHit() aufrufen | 
+  | Eingabedaten: ?! | 
+  | Ergebnis: Wenn die Funktion TRUE ergibt, die Meldung "Treffer!!" ausgeben |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [TC-50] Der User erhält Rückmeldung ob er mit dem Schuss ein Schiff versenkt hat
 - [TC-50.010] Es wird nach einem erfolgreichen Schuss (Schuss hat ein Schiff getroffen) überprüft, ob ein Schiff noch intakte Felder besitzt
-| Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
-| TC-50.010   | PC: Funktion checkIfShotHit()=TRUE | Task : Funktion checkWhichShipWasShot(Shot<der getroffen hat>)  | Eingabedaten : ?! | Ergebnis : Ship als Ergebnis ,   | State  | Notes |  Bug-ID |
-| TC-50.011   | PC: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)=<SHIP> | Task: checkIfSunk(Ship) aufrufen | Eingabedaten : <Ship> | Ergebnis : TRUE oder FALSE 
+  | PC: Funktion checkIfShotHit()=TRUE | 
+  | Task: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)  |
+  | Eingabedaten: ?! |
+  | Ergebnis: Ship als Ergebnis ,   |
+  | State: - | Notes: - | Bug-ID: - |
+  | PC 2: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)=<SHIP> | 
+  | Task 2: checkIfSunk(Ship) aufrufen |
+  | Eingabedaten: <Ship> |
+  | Ergebnis: TRUE oder FALSE | 
 - [TC-50.020] Wenn ein Schiff keine intakten Felder besitzt erfolgt die Meldung "Versenkt!!"
-| TC-50.020   | PC: Funktion checkIfSunk()=TRUE | Task: checkIfSunk(Ship) aufrufen | Eingabedaten : ?! | Ergebnis : wenn <TRUE> , die Meldung "Versenkt!!" ausgeben | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfSunk()=TRUE | 
+  | Task: checkIfSunk(Ship) aufrufen | 
+  | Eingabedaten: ?! | 
+  | Ergebnis: Wenn <TRUE>, die Meldung "Versenkt!!" ausgeben |
+  | State: - | Notes: - | Bug-ID: - |
 
 
 ## [TC-51] Der User erhält Rückmeldung ob seine Eingaben über den Schuss valide sind
@@ -302,15 +347,21 @@
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
   | PC: |
   | Task: |
+  | Eingabedaten: keine |
   | Ergebnis: |
+  | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen
   | PC: |
   | Task: |
+  | Eingabedaten: keine |
   | Ergebnis: |
+  | State: - | Notes: - | Bug-ID: - |
 - [DoD-54.030] Der User kann die Sprache D² wählen
   | PC: |
   | Task: |
+  | Eingabedaten: keine |
   | Ergebnis: |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
 - [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
