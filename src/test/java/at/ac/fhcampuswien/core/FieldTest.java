@@ -13,7 +13,6 @@ class FieldTest {
     @Test
     void generateField_Standard10() {
         Field field = new Field(10);
-        field.createField();
         assertEquals(10, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 10));
     }
@@ -62,7 +61,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize15() {  // TSV-38 , testdriven , Mario
         Field field = new Field(15);
-        field.createField(15);
         assertEquals(15, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 15));
     }
@@ -70,7 +68,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize18() {  // TSV-38 , testdriven , Mario
         Field field = new Field(18);
-        field.createField(18);
         assertEquals(18, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 18));
     }
@@ -78,7 +75,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize20() {  // TSV-38 , testdriven , Mario
         Field field = new Field(20);
-        field.createField(20);
         assertEquals(20, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 20));
     }
@@ -86,7 +82,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize30() {  // TSV-38 , testdriven , Mario
         Field field = new Field(30);
-        field.createField(30);
         assertEquals(30, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 30));
     }
@@ -94,7 +89,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize35() {  // TSV-38 , testdriven , Mario
         Field field = new Field(35);
-        field.createField(35);
         assertEquals(35, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 35));
     }
@@ -102,7 +96,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize40() {  // TSV-38 , testdriven , Mario
         Field field = new Field(40);
-        field.createField(40);
         assertEquals(40, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 40));
     }
@@ -110,7 +103,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize45() {  // TSV-38 , testdriven , Mario
         Field field = new Field(45);
-        field.createField(45);
         assertEquals(45, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 45));
     }
@@ -118,7 +110,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize48() {  // TSV-38 , testdriven , Mario
         Field field = new Field(48);
-        field.createField(48);
         assertEquals(48, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 48));
     }
@@ -126,7 +117,6 @@ class FieldTest {
     @Test
     void generateField_flexibleSize50() {  // TSV-38 , testdriven , Mario
         Field field = new Field(50);
-        field.createField(50);
         assertEquals(50, field.getField().length);
         assertTrue(checkArrayFields(field.getField(), 50));
     }
