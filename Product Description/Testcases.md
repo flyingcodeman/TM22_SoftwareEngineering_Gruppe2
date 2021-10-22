@@ -229,10 +229,10 @@
 
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
-  | PC: Funktion [xxxx] ist vorhanden und funktionsfähig |
-  | Task: Funktion [xxxx] aufrufen |
+  | PC: Funktion checkIfFleetSunk() ist vorhanden und funktionsfähig |
+  | Task: Funktion [checkIfFleetSunk() aufrufen |
   | Eingabedaten: keine |
-  | Ergebnis: Funktion [xxxx] gibt True zurück |
+  | Ergebnis: Funktion checkIfFleetSunk() gibt True zurück |
   | State: - | Note: - | BugID: - |
 - [TC-44.020] Wenn es noch aktive Schiffe gibt, wird das Spiel fortgesetzt
   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | 
