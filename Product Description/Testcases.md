@@ -289,7 +289,11 @@
   | State: - | Notes: - | Bug-ID: - |
 | TC-50.011   | PC: Funktion checkWhichShipWasShot(Shot<der getroffen hat>)=<SHIP> | Task: checkIfSunk(Ship) aufrufen | Eingabedaten : <Ship> | Ergebnis : TRUE oder FALSE 
 - [TC-50.020] Wenn ein Schiff keine intakten Felder besitzt erfolgt die Meldung "Versenkt!!"
-| TC-50.020   | PC: Funktion checkIfSunk()=TRUE | Task: checkIfSunk(Ship) aufrufen | Eingabedaten : ?! | Ergebnis : wenn <TRUE> , die Meldung "Versenkt!!" ausgeben | State  | Notes |  Bug-ID |
+  | PC: Funktion checkIfSunk()=TRUE | 
+  | Task: checkIfSunk(Ship) aufrufen | 
+  | Eingabedaten: ?! | 
+  | Ergebnis: Wenn <TRUE>, die Meldung "Versenkt!!" ausgeben |
+  | State: - | Notes: - | Bug-ID: - |
 
 
 ## [TC-51] Der User erhält Rückmeldung ob seine Eingaben über den Schuss valide sind
