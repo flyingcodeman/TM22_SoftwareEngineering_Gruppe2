@@ -213,15 +213,21 @@
 - [DoD-43.040] Die Eingabe der Anzahl der Zerstörer ist möglich (3-9)
 - [DoD-43.050] Die Eingabe der Anzahl der U-Boote ist möglich (4-12)
 
-
 ## [TC-44] Der User versenkt das letzte gegnerische Schiff und beendet damit das Spiel
 - [TC-44.010] Bei jedem Versenken eines gegnerischen Schiffes wird überprüft, ob es noch aktive ("schwimmende") Schiffe des Gegners gibt.
 - [TC-44.020] Wenn es noch aktive Schiffe gibt, wird das Spiel fortgesetzt
-| TC-44.020   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt True zurück | State : - | Note : - | BugID: - |
+  | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | 
+  | Task: Funktion existActiveShips() aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion existActiveShips() gibt True zurück |
+  | State: - | Note: - | BugID: - |
 - [TC-44.030] Gibt es keine aktive Schiffe mehr, erfolgt kein weiterer Spielzug.
-| TC-44.030   | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | Task: Funktion existActiveShips() aufrufen | Eingabedaten: keine | Ergebnis : Funktion existActiveShips() gibt True zurück | State : - | Note : - | BugID: - |
+  | PC: Funktion existActiveShips() ist vorhanden und funktionsfähig | 
+  | Task: Funktion existActiveShips() aufrufen | 
+  | Eingabedaten: keine |
+  | Ergebnis: Funktion existActiveShips() gibt True zurück |
+  | State: - | Note: - | BugID: - |
 - [TC-44.040] Der User wird über den Ausgang des Spieles textuell informiert (siehe [TC-45.010]
-
 
 ## [TC-45] Der User erhält die Information, dass das Spiel beendet ist
 - [TC-45.010] Es wird der gewählten Sprache sinngemäß die Meldung "Das Spiel ist nun beendet. XYZ hat gewonnen." ausgegeben.
