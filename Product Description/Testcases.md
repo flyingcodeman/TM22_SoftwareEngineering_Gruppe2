@@ -337,6 +337,14 @@
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID
 
+## [TC-52] Der User ist abwechselnd mit dem Gegner an der Reihe
+- [TC-52.010] Die Spieler sind abwechselnd an der Reihe
+  | PC: Die Funktion flowChangePlayer() ist implementiert und funktionsfähig |
+  | Task: Die Funktion flowChangePlayer() aufrufen |
+  | Eingabedaten: keine |
+  | Ergebnis: Die Funktion gibt "gameState.gameContinue" oder "gameState.gameQuit" zurück |
+  | State: - | Notes: - | Bug-ID: - |
+
 ## [DoD-53] Der User erhält aussagekräftige Eingabeaufforderungen
 - [DoD-53.010] TBC - Dem User wird angezeigt, dass er seinen Namen eingeben soll
 - [DoD-53.020] TBC - Dem User wird angezeigt, dass er seinen Gegner auswählen soll
