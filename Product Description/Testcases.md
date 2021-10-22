@@ -51,7 +51,11 @@
 - [TC-36.040] Der User verfügt über 4 U-Boote, welche 2 Einheiten lang sind
 - [TC-36.050] Die Felder der Schiffe haben zwei Zustände (Getroffen, nicht getroffen)
 - [TC-36.060] Das Schiff wird darauf überprüft , ob es gesunken ist (alle Felder getroffen).
-| TC-36.060  | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - | 
+  | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | 
+  | Task: Funktion printCheckIfSunk() aufrufen | 
+  | Eingabedaten: keine - | 
+  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück |
+  | State : - | Note : - | BugID: - | 
 - [TC-36.070] Das Schiff hat zwei Zustände (floating, sunken)
 | TC-36.070  | PC: Funktion printCheckIfSunk() ist implementiert und funktionsfähig | Funktion printCheckIfSunk() aufrufen | Eingabedaten: keine  | Ergebnis : printCheckIfSunk() gibt Ergebnisse zurück | State : - | Note : - | BugID: - |
 
@@ -242,11 +246,17 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 
 ## [DoD-54] Der User kann die Sprache des Spiels auswählen
 - [DoD-54.010] Die Standardsprache für das Spiel ist Englisch
-PC: 
-Task:
-Ergebnis:
+  | PC: |
+  | Task: |
+  | Ergebnis: |
 - [DoD-54.020] Der User kann die Sprache Deutsch wählen
+  | PC: |
+  | Task: |
+  | Ergebnis: |
 - [DoD-54.030] Der User kann die Sprache D² wählen
+  | PC: |
+  | Task: |
+  | Ergebnis: |
 
 ## [DoD-55] Der User bekommt eine akustische Rückmeldung über das Ergebnis seines Treffers
 - [DoD-55.010] Wenn ein Schiff getroffen wird, erfolgt eine akustisch Ausgabe, die einer Explosion gleicht
