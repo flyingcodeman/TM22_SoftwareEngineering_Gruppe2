@@ -357,13 +357,17 @@
 - [TC-56.010] Beim Spielstart besteht die Möglichkeit sich die Spielregeln ausgeben zu lassen |
   | PC: Die Funktion printGameRules() ist implementiert und funktionsfähig |
   | Task: Die Funktion printGameRules() aufrufen |
+  | Eingabedaten: keine |
   | Ergebnis: Es werden die Spielregeln angezeigt |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [TC-57] Der User hat die Möglichkeit sich die Spielregeln während des Spiels anzeigen zu lassen
 - [TC-57.010] Während des Spielverlaufs besteht die Möglichkeit sich die Spielregeln anzeigen zu lassen
   | PC: Die Funktion printingGamerules() ist implementiert und funktionsfähig |
   | Task: die Funktion printingGamerules() aufrufen |
+  | Eingabedaten: keine |
   | Ergebnis: Es werden die Spielregeln anzeigt |
+  | State: - | Notes: - | Bug-ID: - |
 
 ## [DoD-58] Der User hat die Möglichkeit das Spiel zu pausieren
 - [DoD-58.010] Ist der Pause-modus gewählt wird der Timer für die Spielzeit angehalten
