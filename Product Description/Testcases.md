@@ -186,8 +186,7 @@
   | Ergebnis: Die nicht beschossenen und nicht besetzten Felder auf dem eigenen Feld mit "~" anzeigen |
   | State: - | Notes: - | Bug-ID: - |
 - [TC-40.100] Auf dem eigenen Feld werden vom Gegner nicht getroffene Schiffe mit "0" gekennzeichnet.
-  |TC-40.100| derzeit nicht relevant - es war gemeint, dass die Schiffe mit den jeweiligen Zahlen (zB 2er Schiff mit "2" und 3er Schiff mit "3" usw. ) angezeigt werden
-
+  | Comment: derzeit nicht relevant - es war gemeint, dass die Schiffe mit den jeweiligen Zahlen (zB 2er Schiff mit "2" und 3er Schiff mit "3" usw. ) angezeigt werden |
 
 ## [DoD-41] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der GUI ausgegeben
 - [DoD-41.010] Das Spielfeld wird an grafisch Wiedergegeben
