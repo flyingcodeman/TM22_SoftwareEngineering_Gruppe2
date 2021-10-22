@@ -27,8 +27,11 @@
   | Task 1: Funktion printfleet aufrufen 2Arrays aus printfleet vergleichen, ob Werte doppelt vorhanden sind |
   | Ergebnis 1: Funktion printFleet liefert Daten; Ergebnis 2: keine Doppelten Werte vorhanden |
   | State: - | Note : - | BugID: - |
-| [TC-32.050] | Kein Schiff ist diagonal platziert 
-| TC-32.050 | 1 Funktion testNotDiagonalShip aufrufen 2 Ergebnis aus Funktion testNotDiagonalShip ablesen | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig | 1E Funktion testNotDiagonalShip  wurde ausgeführt 2E Die Funktion testNotDiagonalShip gibt TRUE aus | | | |     
+- [TC-32.050] | Kein Schiff ist diagonal platziert 
+  | PC: Funktion testNotDiagonalShip ist implementiert und funktionsfähig |
+  | Task 1: Funktion testNotDiagonalShip aufrufen; Task 2: Ergebnis aus Funktion testNotDiagonalShip ablesen |
+  | Ergebnis 1: Funktion testNotDiagonalShip wurde ausgeführt; Ergebnis 2: Die Funktion testNotDiagonalShip gibt TRUE aus |
+  | State: - | Note : - | BugID: - |
 | [TC-32.060] | Alle Schiffe (siehe TC-36) sind am Spielfeld verteilt. 
 | TC-32.060 | 1  [welches Schiffe in der Flotte , Field AUsgabe , Prüfen ob Schiffe auch am SPielfeld vorhanden ]
 | [TC-32.070] | Die Verteilung ändert sich bei mehrmaligen automatischen Verteilen (min. 1 Schiff muss auf anderen Koordinaten positioniert sein)  
