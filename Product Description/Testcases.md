@@ -129,13 +129,14 @@
 
 ## [TC-40] Dem User wird das Spielfeld und dessen aktueller Inhalt auf der Konsole ausgegeben
 - [TC-40.010] Der User erhält sein Spielfeld und das gegnerische Feld in der gewählten Größe in der Konsole untereinander ausgegeben.
-| TC-40.010   | PC: Funktion printFieldSet() muss vorhanden und funktionsfähig sein | 
-  Task 1: mit der Funktion Player(name) ein Player-Objekt mit Standard-Spielfeld angeben
-  Task 2: mit der Funktion Player.setStandardFleet das Spielfeld mit Schiffen (zufällige Platzierung) füllen
-  Task 3: mit der Funktion Player.printFieldSet das OwnField und OpponentInfoField ausgeben
-  Ergebnis 1: die Funktion Player.setStandardFleet legt ein Standard-Spielfeld mit zufällig platzierten Schiffen an
-  Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus
- 
+  | PC: Funktion printFieldSet() muss vorhanden und funktionsfähig sein | 
+  | Task 1: mit der Funktion Player(name) ein Player-Objekt mit Standard-Spielfeld angeben |
+  | Task 2: mit der Funktion Player.setStandardFleet das Spielfeld mit Schiffen (zufällige Platzierung) füllen |
+  | Task 3: mit der Funktion Player.printFieldSet das OwnField und OpponentInfoField ausgeben |
+  | Eingabedaten: - |
+  | Ergebnis 1: die Funktion Player.setStandardFleet legt ein Standard-Spielfeld mit zufällig platzierten Schiffen an |
+  | Ergebnis 2: die Funktion Player.printFieldSet gibt das OwnFIeld und OpponentInfoField auf der Console aus |
+  | State: - | Note: - | BugID: - |
 - [TC-40.020] Auf dem gegnerischen Feld werden getroffene Schiffe mit einem "X" angezeigt.
   | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
   | TC-40.020   | PC:  Funktion für [???] ist implementiert und funktionsfähig | Task : Funktion [???] aufrufen | Eingabedaten :  | Ergebnis : Die getroffenen Schiffe auf dem gegnerischen Feld mit "X" anzeigen | State  | Notes |  Bug-ID |
