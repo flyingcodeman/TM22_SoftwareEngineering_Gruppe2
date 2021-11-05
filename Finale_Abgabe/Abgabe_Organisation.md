@@ -70,6 +70,9 @@ Nextcloud
       - Ander könnten ähnliche Fragen haben
   - Mentoring // Status Quo herstellen
   - Rollenverteilung besser überlegen
+    - Das "leben" der Rolle
+    - Strukturierte Aufgabenstellungen für die Rollen
+    - Klare kommunikation von "wann, wer, was"
   - Programme:
     - IntelliJ
       - Funktionale Anwendung und unterstützung von IDE's 
@@ -81,11 +84,16 @@ Nextcloud
     - JUnit
       - Automatisierte SW-Test im allgemeinen 
   - Anwendung der agilen Methoden im Projekt 
+    - Stand-Ups (in aller Kürze die wesentlichen Punkte Vermitteln)
+    - Retro (Sich mit dem vergangenen Sprint beschäftigen und Verbesserung zum neuen Sprint)
   - Refactoring 
     - Worauf man achten muss
     - Magic numbers 
     - Grundsätzlicher Aufbau des Codes (Core, GUI, ...) 
     - Funktionen in IntelliJ (Unterstützung durch die IDE)
-  - 
+
+
+  - DINO WILL EIN ANDERS TEAM, MIT MEHR SYMPATHISCHEN AUSLÄNDERN 
+  - PO's SIND IMMER SCHEISSE UND WOLLEN ALLES HABEN 
 		
 
