@@ -185,8 +185,8 @@ public class GameLogic {
     }
 
     public void flowInit(){
-        flowDialog("player");
         flowDialog("playermode");
+        flowDialog("player");
 
         player1.setStandardFleet();
         player2.setStandardFleet();
@@ -285,7 +285,7 @@ public class GameLogic {
         return flowDialog("changePlayer");
     }
 
-    public gameState flowGameOver(){
+    public gameState flowGameOver() {
         do {
             try {
                 // ToDo: Routine aus Change Player oder Readystate abfrage heraus implementieren (hakt hier)
@@ -298,7 +298,7 @@ public class GameLogic {
                 if ((tmpgameover == 'p')) {
                     System.out.println("Your choice " + tmpgameover);
                     return gameState.gamePlayAgain;
-                } else if ((tmpgameover == 'q')){
+                } else if ((tmpgameover == 'q')) {
                     System.out.println("Thanks for playing ... Please come back soon!");
                     return gameState.gameQuit;
                 } else {
@@ -306,38 +306,10 @@ public class GameLogic {
                 }
             } catch (NumberFormatException ne) {
                 System.out.println("Format Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println("Exception Error: The (" + tmpgameover + ") is not a valid choice (p or q), try again");
             }
         }
         while (true);
-    }
-
-
-    public static void main(String []args) {
-        GameLogic game = new GameLogic();
-        gameState currentGameState = gameState.gameContinue;
-
-        do {
-            game.flowWelcome();
-            game.flowInit();
-            // Wechseln der Spieler und SPielzüge bis Flotte versenkt/game.gameOver == true
-            while (currentGameState == gameState.gameContinue) {
-                currentGameState = game.flowMainSequence(game.player1, game.player2);
-                if(currentGameState == gameState.gameContinue){
-                    currentGameState = game.flowMainSequence(game.player2, game.player1);
-                }
-            }
-            var state = game.flowGameOver();
-            if (state == gameState.gameQuit){
-                currentGameState = gameState.gameQuit;
-            }
-            else if (state == gameState.gamePlayAgain){
-                game = new GameLogic();
-                currentGameState = gameState.gameContinue;
-            }
-        }
-        while (currentGameState != gameState.gameQuit);
     }
 }
