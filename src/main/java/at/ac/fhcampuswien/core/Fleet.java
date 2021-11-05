@@ -5,35 +5,34 @@ import java.util.List;
 
 public class Fleet {
     Ship[] fleet = new Ship[10]; //Flottenarray fleet besteht aus 10 Schiffsobjekten
-    List<Ship> fleetNew = new ArrayList<>();
     boolean fleetSunk = false;
 
-    public void createStandardFleet(int size, char[][] ownField) {
+    public void createStandardFleet(Field ownField) {
         // Erstellung und zufälliges Setzen der Standardflotte fleet (1x5, 2x4, 3x3, 2x4)
         fleet[0] = new Ship(5, '5', ownField);
         fleet[1] = new Ship(4, '4', ownField);
         fleet[2] = new Ship(4, '4', ownField);
-        for(int i = 3; i<(size-4); i++){
-            fleet[i] = new Ship(3, '3', ownField);
-        }
-        for(int i = 6; i<size; i++){
-            fleet[i] = new Ship(2, '2', ownField);
-        }
+        fleet[3] = new Ship(3, '3', ownField);
+        fleet[4] = new Ship(3, '3', ownField);
+        fleet[5] = new Ship(3, '3', ownField);
+        fleet[6] = new Ship(2, '2', ownField);
+        fleet[7] = new Ship(2, '2', ownField);
+        fleet[8] = new Ship(2, '2', ownField);
+        fleet[9] = new Ship(2, '2', ownField);
     }
+
+    //ToDo: public void setFleetRandomly(Field field) {}
 
     public Ship[] getFleet(){return fleet;}
 
-    //public void setFleetRandomly(Field field) {}
-
     public boolean checkIfShipSunk(Coordinate shotCoordinate) {
-        //Überprüft alle Schiffe der Flotte, ob alle Schiffsteile eines Schiffs den Paramter hit = true
         int shipSunkCounter = 0;
-        boolean shipSunk = false; //Rückgabewert, ob einzelnes Schiff gesunken (true) oder nicht (false)
+
         for (int i = 0; i < 10; i++) { // Iteration über alle Schiffe der Flotte
             for (int j = 0; j < this.fleet[i].ship.length; j++) { // Iteration über alle shipParts des aktuell ausgewählten Schiffs
-                int x = this.fleet[i].ship[j].position[0].positionX;
-                int y = this.fleet[i].ship[j].position[0].positionY;
-                if ((x == shotCoordinate.positionX) && (y == shotCoordinate.positionY)) { // Welches Schiffpart wurde mit der shotCoordinate getroffen?
+                int posX = this.fleet[i].ship[j].position.getPositionX();
+                int posY = this.fleet[i].ship[j].position.getPositionY();
+                if ((posX == shotCoordinate.getPositionX()) && (posY == shotCoordinate.getPositionY())) { // Welches Schiffpart wurde mit der shotCoordinate getroffen?
                     this.fleet[i].ship[j].setHit(); // Getroffenes Schiffpart j im i-ten Schiff der Flotte
                     shipSunkCounter = 0;
                     for (int k = 0; k < this.fleet[i].ship.length; k++) { // Wurde alle Schiffsteile des Schiffs bereits getroffen?
@@ -41,14 +40,14 @@ public class Fleet {
                             shipSunkCounter++;
                         }
                         if (shipSunkCounter == this.fleet[i].ship.length) { // Alle Teile getroffen, Schiff gesunken
-                            return true;
+                            return true; //Ship sunk
                         }
                     }
                     shipSunkCounter = 0;
                 }
             }
         }
-        return false;
+        return false; //Ship not sunk
     }
 
     public boolean checkIfFleetSunk() {
@@ -59,16 +58,9 @@ public class Fleet {
                     fleetSunkCounter++;
             };
         }
-        if (fleetSunkCounter == this.fleet.length) { // Anzahl der versenkten Schiffe = Anzahl der Schiffe der FLotte
+        if (fleetSunkCounter == this.fleet.length) {
             return this.fleetSunk = true; // Flotte versenkt
         }
         return this.fleetSunk = false;
     }
-
-    public void addShipToFleet(Ship ship) {}
-
-    public void printFleet() {
-
-    }
-
 }
