@@ -24,7 +24,7 @@ Nextcloud
 ## Design Dokument
 	- DoD siehe \Product Description\Definition_of_Done.md
 	- MVP siehe \Product Description\MVP.md
-	- Klassendiagram
+	- Klassendiagram --> Simon??? 
 
 ## (von uns aus) Testcases
 	- Testcases.md
@@ -37,25 +37,26 @@ Nextcloud
 		- https://tm22-schiffe-versenken.atlassian.net/jira/software/projects/TSV/boards/1/reports/velocity
 		
 # Präsentation
-- Gruppenvorstellung
-- Angabe bzw. Aufgabenstellung kurz
-- Setup Infrastruktur (dh Jira, gitHub, IntelliJ, .md files, Signal)
+- Gruppenvorstellung (Chris)
+- Angabe bzw. Aufgabenstellung kurz (Chris)
+- Setup Infrastruktur (dh Jira, gitHub, IntelliJ, .md files, Signal) (Chris)
   - Screenshots
   - Burn Up Charts
-- Implementierung der App
+- Implementierung der App (Chris DoD + Simon)
         - Herzeigen DoDs + ein Beispiel rausnehmen
         - Visuelle Darstellung Code (z.B. Klassendiagram u Navigation Bar of Code) (NICHT genau drauf eingehen!!)
         - Screenshots vom Spiel
-- Kennzahlen
+- Kennzahlen (Simon)
   - Line of Codes
   - Cyclomatic Complexity
   - Coupling Between Objects
   - Number of Methods
   - Lack of Cohesion on Methods
 
-- Story Points geplant vs geschafft
-		
-- Lessons Learned
+- Story Points geplant vs geschafft (Simon od. Chris)
+
+
+- Lessons Learned (Chris od. Daniel)
   - Bessere Verteilung der Aufwände während des Sprints
     - Zeitmanagement 
   - Testing auch früher machen
@@ -92,8 +93,9 @@ Nextcloud
     - Grundsätzlicher Aufbau des Codes (Core, GUI, ...) 
     - Funktionen in IntelliJ (Unterstützung durch die IDE)
 
-
+# Wichtig
   - DINO WILL EIN ANDERS TEAM, MIT MEHR SYMPATHISCHEN AUSLÄNDERN 
   - PO's SIND IMMER SCHEISSE UND WOLLEN ALLES HABEN 
 		
 
+# It's not a bug, it's a feature 
