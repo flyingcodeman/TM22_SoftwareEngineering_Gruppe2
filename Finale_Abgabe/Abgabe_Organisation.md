@@ -37,30 +37,55 @@ Nextcloud
 		- https://tm22-schiffe-versenken.atlassian.net/jira/software/projects/TSV/boards/1/reports/velocity
 		
 # Präsentation
-	- Gruppenvorstellung
-	- Angabe bzw. Aufgabenstellung kurz
-	- Setup Infrastruktur (dh Jira, gitHub, IntelliJ, .md files, Signal)
-		- Screenshots
-		- Burn Up Charts
-	- Implementierung der App
-		- Herzeigen DoDs + ein Beispiel rausnehmen
-		- Visuelle Darstellung Code (z.B. Klassendiagram u Navigation Bar of Code) (NICHT genau drauf eingehen!!)
-		- Screenshots vom Spiel
-	- Kennzahlen
-		- Line of Codes
-		- Cyclomatic Complexity
-		- Coupling Between Objects
-		- Number of Methods
-		- Lack of Cohesion on Methods
+- Gruppenvorstellung
+- Angabe bzw. Aufgabenstellung kurz
+- Setup Infrastruktur (dh Jira, gitHub, IntelliJ, .md files, Signal)
+  - Screenshots
+  - Burn Up Charts
+- Implementierung der App
+        - Herzeigen DoDs + ein Beispiel rausnehmen
+        - Visuelle Darstellung Code (z.B. Klassendiagram u Navigation Bar of Code) (NICHT genau drauf eingehen!!)
+        - Screenshots vom Spiel
+- Kennzahlen
+  - Line of Codes
+  - Cyclomatic Complexity
+  - Coupling Between Objects
+  - Number of Methods
+  - Lack of Cohesion on Methods
+
+- Story Points geplant vs geschafft
 		
-		- Story Points geplant vs geschafft
-		
-	- Lessons Learned
-		- Bessere Verteilung der Aufwände während des Sprints
-		- Testing auch früher machen
-		- Kommunikationswege einhalten
-		- Mentoring // Status Quo herstellen
-		- Rollenverteilung besser überlegen
-		- 
+- Lessons Learned
+  - Bessere Verteilung der Aufwände während des Sprints
+    - Zeitmanagement 
+  - Testing auch früher machen
+    - Ablaufmanagement
+    - Klarere kommunikation bezüglich der Reihenfolge der Tasks
+    - Test driven development
+  - Kommunikationswege einhalten
+    - Disziplin zu fokussierter Kommunikation 
+    - Nicht als bequemlichkeit direkt mit jemanden Kommunizieren
+      - Lastverteilung 
+      - Ander könnten auch die Antwort wissen
+      - Ander könnten ähnliche Fragen haben
+  - Mentoring // Status Quo herstellen
+  - Rollenverteilung besser überlegen
+  - Programme:
+    - IntelliJ
+      - Funktionale Anwendung und unterstützung von IDE's 
+    - GIT 
+      - Generell die Arbeitsweise mit Branches und einem CMT 
+    - Jira
+      - Schnüren von User-Stories
+      - Simultanes mitverfolgen der Aufgaben 
+    - JUnit
+      - Automatisierte SW-Test im allgemeinen 
+  - Anwendung der agilen Methoden im Projekt 
+  - Refactoring 
+    - Worauf man achten muss
+    - Magic numbers 
+    - Grundsätzlicher Aufbau des Codes (Core, GUI, ...) 
+    - Funktionen in IntelliJ (Unterstützung durch die IDE)
+  - 
 		
 
