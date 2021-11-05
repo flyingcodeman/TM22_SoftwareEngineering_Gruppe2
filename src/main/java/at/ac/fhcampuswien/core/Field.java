@@ -5,10 +5,7 @@ public class Field {
     public static final int SIZE = 10;
 
     public char[][] field;
-
-    public Field() {
-
-    }
+    public Field(){};
     public Field(int size) {
         createField(size);
     }
@@ -16,7 +13,6 @@ public class Field {
     public void createField() {
         createField(SIZE);
     }
-
     public void createField(int size) {
         field = new char[size][size];
         for(int x = 0; x<(size); x++){
@@ -29,5 +25,4 @@ public class Field {
     public char[][] getField(){
         return field;
     }
-
 }
