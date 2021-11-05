@@ -13,7 +13,7 @@ public class Shot {
     public static final char SHIP_SIZE_FIVE = '5';
 
 
-    public enum State { //Zustände des Schuss-Ergebnis
+    public enum State {
         reload, hit, miss, error
     }
 
@@ -22,7 +22,6 @@ public class Shot {
         State resultState = State.error;
         char charOpponentOwnField = currentOpponent.getCharAtPosition(coordinate);
         char charOpponentInfoField = currentPlayer.getCharAtPositionOpponentInfoField(coordinate);
-
 
         if (checkFieldWater(charOpponentInfoField)){
             // Noch nicht beschossenes Feld
@@ -41,11 +40,11 @@ public class Shot {
                 if(currentOpponent.fleet.checkIfFleetSunk()){
                     currentOpponent.gameOver = true;
                 }
-                resultState = State.hit; // Setzen des Trefferstatus
+                resultState = State.hit;
             }
             else if(checkFieldWater(charOpponentOwnField)) {
                 // Schuss ins Wasser = Vergebener Schuss
-                currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_FAILED, coordinate); // Setzen des vergebenen Schusses im OpponentInfoField
+                currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_FAILED, coordinate);
                 resultState = State.miss;
             }
         }else if(checkFieldAlreadyHit(charOpponentInfoField)){
