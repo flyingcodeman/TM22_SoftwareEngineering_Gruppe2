@@ -3,74 +3,54 @@ package at.ac.fhcampuswien.core;
 
 public class Player {
     private String playerName;
-    private Field ownField = new Field(); // EIgenes Spielfeld mit gesetzten Schiffen
-    private Field opponentField = new Field(); // Eigenes opponent Info Feld zur Markierung der Schüsse auf den Gegner
-    public Fleet fleet = new Fleet(); // Eigene Flotte mit Schiffen
+    private Field ownField = new Field();
+    private Field opponentField = new Field();
+    public Fleet fleet = new Fleet();
     public boolean gameOver = false;
 
-    //Constructor zum Setzen initalier Dinge
     public Player(String name){
         setPlayerName(name);
         setOwnField();
         setOpponentField();
     }
 
-    //Rückgabe des Spielernamens
     public String getPlayerName() {
         return playerName;
     }
-
-    //Setzen des Spielernamens
     public void setPlayerName(String name) {
         playerName = name;
     }
-
-    //Erstellung des eigenen, mit Schiffen gefüllten, Spielfelds
     public void setOwnField(){ownField.createField();}
-
-    //Rückgabe des eigenen, mit Schiffen gefüllten, Spielfelds
     public char[][] getOwnField(){return ownField.getField();}
-
-    //Erstellung des eigenen, mit Information über Treffer beim Gegner gefüllten, Spielfelds
     public void setOpponentField(){opponentField.createField();}
-
-    //Rückgabe des eigenen opponentInfoFIelds
     public char[][] getOpponentField(){return opponentField.getField();}
 
-    // Setzen des übergebenen Characters character an der Position cord im ownField
     public void setCharAtPositionOwnField(char character, Coordinate cord){
-        ownField.field[cord.positionY][cord.positionX] = character;
+        ownField.field[cord.getPositionY()][cord.getPositionX()] = character;
     }
 
-    // Rückgabe des aktuell gesetzten Characters an der Position cord im ownField
     public char getCharAtPosition(Coordinate cord){
         char character;
-        character = ownField.field[cord.positionY][cord.positionX];
+        character = ownField.field[cord.getPositionY()][cord.getPositionX()];
         return character;
     }
 
-    // Setzen des übergebenen Characters character an der Position cord im opponentInfoField
     public void setCharAtPositionOpponentInfoField(char character, Coordinate cord){
-        opponentField.field[cord.positionY][cord.positionX] = character;
+        opponentField.field[cord.getPositionY()][cord.getPositionX()] = character;
     }
 
     public char getCharAtPositionOpponentInfoField(Coordinate cord){
         char character;
-        character = opponentField.field[cord.positionY][cord.positionX];
+        character = opponentField.field[cord.getPositionY()][cord.getPositionX()];
         return character;
     }
 
-    //Erstellt eine Standardflotte laut DoD
-    //Erstellt schiffe nacheinander, platziert diese am Feld (siehe setFleet(Fleet))
     public void setStandardFleet(){
-        fleet.createStandardFleet(10, ownField.getField());
-        //return fleet array filled with ship-objects
+        fleet.createStandardFleet(ownField);
     }
 
-    // Rückgabe der erstellten Standard-Flotte
     public Fleet getStandardFleet(){return this.fleet;}
 
-    //prints both your own and the opponent field
     public void printFieldset(){
         //prints player.field
         //with characters defined in the DoD
