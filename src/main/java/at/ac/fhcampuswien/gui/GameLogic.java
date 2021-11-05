@@ -291,7 +291,7 @@ public class GameLogic {
                 // ToDo: Routine aus Change Player oder Readystate abfrage heraus implementieren (hakt hier)
 
                 System.out.println("Game Over...");
-                System.out.println("(p)lay again , or (q)uit Game ?");
+                System.out.println("(p)lay again , or (q)uit program?");
                 scanner = new Scanner(System.in);
                 tmpgameover = scanner.next().charAt(0);
 
