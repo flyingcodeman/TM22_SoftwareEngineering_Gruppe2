@@ -36,11 +36,6 @@ TM22 Software Engineering Team #2
     10  *                     *
         * * * * * * * * * * * *
 
--Visualisierung
-- über Konsole (Mindestanforderung)
-- GUI erwünscht
-- Jedenfalls muss nach jedem Spielzug das gesamte Feld des Spielers (Eigene Schiffe inkl. Treffer des Gegners) und des Gegners (Versuchte Treffen und wirkliche Treffer) ausgegeben/angezeigt werden.
-
 
 ### Schiffe 
 Bei jedem Spiel hat der Spieler folgende Schiffe zur Verfügung:

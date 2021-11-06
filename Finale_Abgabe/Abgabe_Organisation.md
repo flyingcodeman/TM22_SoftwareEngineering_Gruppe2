@@ -3,38 +3,32 @@
 ## Generelles
 Nextcloud
 
-
-
-## Code -> Simon
-	als .zip?
-	
-	- Kennzahlen (note IntelliJ PlugIn)
-		- Line of Codes
-		- Cyclomatic Complexity
-		- Coupling Between Objects
-		- Number of Methods
-		- Lack of Cohesion on Methods
 	
 ## Configuration Management Handbuch -> ?Adriane?
+	- Spezifikation 
+		- DoD
+		- Regelwerk
+		- MVP
+	- Design
+		- Klassendiagram
+	- Testdaten
+		- Testcases
+	- Code 
+		- Kennzahlen
+		- Git Reports
+
+
 	Export von Git Report über Aktivität, Branches, Commits, etc
 	- https://github.com/flyingcodeman/TM22_SoftwareEngineering_Gruppe2/graphs/code-frequency
 	- git log --graph im main machen und als word speichern!
 	
 	
-## Design Dokument
-	- DoD siehe \Product Description\Definition_of_Done.md
-	- MVP siehe \Product Description\MVP.md
-	- Klassendiagram --> Simon??? 
-
-## (von uns aus) Testcases
-	- Testcases.md
-	
 ## Scrum Dokument
-	Export Jira Board
+	User Stories
+	Burn-Up Charts 
+	Velocity 
 	Retrospektiven
-	TODO
-		- Export Sprint 3 when done
-		- https://tm22-schiffe-versenken.atlassian.net/jira/software/projects/TSV/boards/1/reports/velocity
+
 		
 # Präsentation
 - Gruppenvorstellung (Chris)
@@ -97,7 +91,7 @@ Nextcloud
 - Burnup Chart Sprint 3
 - Screenshot Klassendiagram
 - Screenshot IntelliJ Code Snippet
-- Screenshots Spiel
+X Screenshots Spiel
 - Kennzahlen 
 
 
