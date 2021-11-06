@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class Ship {
 
-    ShipPart[] ship; // Schiffsarray, bestehend aus Schiffsteile-Objekten
+    ShipPart[] ship;
     private boolean sunk = false;
 
-    private int positionX = 0; // Aktuelle x-Koordinate des ausgewählten Schiffs
-    private int positionY = 0; // Aktuelle y-Koordinate des ausgewählten Schiffs
+    private int positionX = 0;
+    private int positionY = 0;
     private int direction = 0; // Setz-Richtung des Schiffs - Vertikal = 0, Horizontal = 1
     private boolean posClean = false; // Variable zum Speichern, ob die gewählte Stelle zum Setzen des Schiffs frei ist
     private int posCleanCounter = 0;
-    private int fieldSize = 0; // Speichert die zuvor festgelegte Größe des Spielfelds
+    private int fieldSize = 0;
 
     public Ship(int shipSize, char shipLabel, Field ownField){
         fieldSize = ownField.getField().length;
@@ -23,11 +23,6 @@ public class Ship {
             throw new IllegalArgumentException("Ship too big for Playfield!");
         }
     }
-    public Ship(int shipSize, char shipLabel, char[][] ownField){
-        fieldSize = ownField.length;
-        ship = new ShipPart[shipSize];
-        setShip(ship, shipSize, 1, shipLabel, ownField, 0);
-    }
 
     // ToDo: Erweiterung und Implementierung dieser Methode
     public void setSunk(){sunk = true;}
@@ -37,7 +32,7 @@ public class Ship {
         //Wenn alle Teile true: Schiff gesunken
         int hitCounter = 0;
         for(int i = 0; i < this.ship.length; i++) {
-            if(this.ship[0].getHit()){
+            if(this.ship[i].getHit()){
                 hitCounter ++;
             }
         }
@@ -61,7 +56,6 @@ public class Ship {
             while((positionX + (shipSize - 1)) > 9){
                 positionX = rand.nextInt(fieldSize);
             }
-
             // Position ok, check if there is another ship
             for (int j = positionX; j < (positionX + shipSize); j++) {
                 if (field[j][positionY] == '~') {
@@ -84,7 +78,6 @@ public class Ship {
             while ((positionY + (shipSize - 1)) > 9){
                 positionY = rand.nextInt(fieldSize);
             }
-
             // Position ok, check if there is another ship
             for (int j = positionY; j < (positionY + shipSize); j++) {
                 if (field[positionX][j] == '~') {
@@ -103,7 +96,6 @@ public class Ship {
         }
     }
 
-    // Plazierung des Schiffs mit entsprechenden Übergabeparamtern im Feld
     private void setShip(ShipPart[] ship, int shipSize, int amount, char shipLabel, char[][] field, int playMode){
 
         // Random mode
@@ -137,8 +129,6 @@ public class Ship {
         //if(playMode == 1) {}
     }
 
-    //Erstellung zufälliger Varibalen wie Position, direction, etc
-    // Wenn zu setztende Position des Schiffs nicht frei ist: Neue zufällige Position und Rücksetzen aller Counter
     private void setRandomPosition(){
         Random rand = new Random(); // Zufallsfunktion
         positionX = rand.nextInt(fieldSize);
@@ -147,5 +137,4 @@ public class Ship {
         posClean = false;
         posCleanCounter = 0;
     }
-
 }

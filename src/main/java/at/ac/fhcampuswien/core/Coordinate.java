@@ -1,10 +1,12 @@
 package at.ac.fhcampuswien.core;
 
+import java.util.HashMap;
+import java.util.Map;
 
 public class Coordinate {
-    public int positionX = 0;
-    public int positionY = 0;
-    public boolean shotAt = false;
+    private int positionX = 0;
+    private int positionY = 0;
+    Map<Character, Integer> inputMap = new HashMap<>();
 
     public Coordinate(int x, int y){
         positionX = x;
@@ -18,42 +20,22 @@ public class Coordinate {
     public int getPositionX(){return positionX;}
     public int getPositionY(){return positionY;}
 
-    public int translateInput(char c){
-        int xCoordinate = 0;
-        if(c == 'A'){
-            xCoordinate = 0;
-        }
-        else if(c == 'B'){
-            xCoordinate = 1;
-        }
-        else if(c == 'C'){
-            xCoordinate = 2;
-        }
-        else if(c == 'D'){
-            xCoordinate = 3;
-        }
-        else if(c == 'E'){
-            xCoordinate = 4;
-        }
-        else if(c == 'F'){
-            xCoordinate = 5;
-        }
-        else if(c == 'G'){
-            xCoordinate = 6;
-        }
-        else if(c == 'H'){
-            xCoordinate = 7;
-        }
-        else if(c == 'I'){
-            xCoordinate = 8;
-        }
-        else if(c == 'J'){
-            xCoordinate = 9;
-        }
-        else{
+    public int translateInput(char c) {
+        int mappedValue = 0;
+        char input = 'A';
+        try {
+            for (int i = 0; i < 10; i++) {
+                inputMap.put(input, i);
+                input++;
+            }
+            if(!(c >= 'A' && c <= 'J')){
+                throw new IllegalArgumentException("Translation error: Invalid character!");
+            }
+            mappedValue = inputMap.get(c);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception Error: Something went wrong during input translation!");
             throw new IllegalArgumentException("Translation error: Invalid character!");
         }
-        return xCoordinate;
+        return mappedValue;
     }
-
 }
