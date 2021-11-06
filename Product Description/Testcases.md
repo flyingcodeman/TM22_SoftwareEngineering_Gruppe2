@@ -230,7 +230,22 @@ X- [TC-39.030] Die vertikale Beschriftung ist numerisch fortlaufend, beginnt in 
 | Number	  | Precondition | Task  | Eingabedaten	  | Ergebnis	   | State  | Notes |  Bug-ID |
 | TC-51.050   | PC: Funktion  | Task:  | Eingabedaten : ?! | Ergebnis :  | State  | Notes |  Bug-ID
 
+##[TC-52]Der User ist abwechslend mit dem Gegner an der Reihe
+- [TC-52.010] Der User ist abwechslend mit dem Gegner an der Reihe
+  | TC-52.010   | PC: Funktion flowChangePlayer() ist implementiert und funktionsfähig  | Task : Funktionen
+- checkIfShotHit() und flowChangePlayer() aufrufen | Eingabedaten :  | Ergebnis : Funktion checkIfShotHit()
+- gibt False zurück, und currentGameState = gameState.gameContinue, die Spielern zum Wechseln  | State  | Notes |  Bug-ID |
+- [TC-52.020] Die Spieler wechseln sich stetig ab, eine weitere Schussabgabe ist nach einem Treffer ist beim aktuellen
+- Spielzug nicht möglich ( Es wird überprüft, ob der Schuss ein gegnerisches Schiff getroffen hat)
+  | TC-52.020   | PC: Funktion flowChangePlayer() ist implementiert und funktionsfähig  |
+- Task : Funktionen checkIfShotHit() und flowChangePlayer() aufrufen | Eingabedaten :  | Ergebnis :
+- gibt zurück ob das Schiff durch den Schuss gehitet wurde und currentGameState = gameState.gameContinue, - die Spielern zum Wechseln  | State  | Notes |  Bug-ID |
 
+- [TC-52.030] Der User versenkt alle gegnerischen Schiffe, das Spiel muss terminieren (siehe[TSV-44])
+  | TC-52.030   | PC: Funktionen existActiveShips() und flowChangePlayer() sind vorhanden und funktionsfähig
+- | Task: Funktionen existActiveShips() und flowChangePlayer() aufrufen | Eingabedaten: keine | Ergebnis :
+- Funktion existActiveShips() gibt False zurück, funktion flowChangePlayer() gibt currentGameState = gameState.gameQuit
+- zurück  | State : - | Note : - | BugID: - |
 
 ## [TC-53] Der User erhält aussagekräftige Eingabeaufforderungen
 - [TC-53.010] 
