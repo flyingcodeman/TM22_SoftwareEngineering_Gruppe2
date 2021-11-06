@@ -45,9 +45,7 @@ public class Player {
         return character;
     }
 
-    public void setStandardFleet(){
-        fleet.createStandardFleet(ownField);
-    }
+    public void setStandardFleet(){fleet.createStandardFleet(ownField);}
 
     public Fleet getStandardFleet(){return this.fleet;}
 
