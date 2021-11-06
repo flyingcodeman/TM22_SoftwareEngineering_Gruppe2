@@ -24,7 +24,6 @@ public class Ship {
         }
     }
 
-    // ToDo: Erweiterung und Implementierung dieser Methode
     public void setSunk(){sunk = true;}
 
     public boolean checkIfSunk() {
