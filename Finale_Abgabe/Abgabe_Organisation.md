@@ -41,11 +41,11 @@ Nextcloud
 - Angabe bzw. Aufgabenstellung kurz (Chris)
 - Setup Infrastruktur (dh Jira, gitHub, IntelliJ, .md files, Signal) (Chris)
   - Screenshots
-  - Burn Up Charts
 - Implementierung der App (Chris DoD + Simon)
-        - Herzeigen DoDs + ein Beispiel rausnehmen
-        - Visuelle Darstellung Code (z.B. Klassendiagram u Navigation Bar of Code) (NICHT genau drauf eingehen!!)
-        - Screenshots vom Spiel
+    - Herzeigen DoDs + ein Beispiel rausnehmen
+	- Burn Up Charts
+    - Visuelle Darstellung Code (z.B. Klassendiagram u Navigation Bar of Code) (NICHT genau drauf eingehen!!)
+    - Screenshots vom Spiel
 - Kennzahlen (Simon)
   - Line of Codes
   - Cyclomatic Complexity
@@ -93,9 +93,14 @@ Nextcloud
     - Grundsätzlicher Aufbau des Codes (Core, GUI, ...) 
     - Funktionen in IntelliJ (Unterstützung durch die IDE)
 
-# Wichtig
-  - DINO WILL EIN ANDERS TEAM, MIT MEHR SYMPATHISCHEN AUSLÄNDERN 
-  - PO's SIND IMMER SCHEISSE UND WOLLEN ALLES HABEN 
+# Fehlt noch
+- Burnup Chart Sprint 3
+- Screenshot Klassendiagram
+- Screenshot IntelliJ Code Snippet
+- Screenshots Spiel
+- Kennzahlen 
+
+
 		
 
 # It's not a bug, it's a feature 
