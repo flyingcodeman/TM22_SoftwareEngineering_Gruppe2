@@ -258,17 +258,29 @@ public class GameLogic {
             givenShootCoordinate.setNewCoordinates(shootX, shootY);
             result = shoot.shootsAt(givenShootCoordinate, currentPlayer, currentOpponent);
             switch (result) {
-                case reload -> System.out.println("You already shot there. Please try again!");
-                case hit -> System.out.println("Nice shot - HIT on coordinate " + tmpshootX + "/" + (shootY + 1));
-                case miss -> System.out.println("Nice try - Only water! Missed shot on coordinate " + tmpshootX + "/" + (shootY + 1));
-                case error -> System.out.println("Invalid shot!");
+                case reload:
+                    System.out.println("You already shot there. Please try again!");
+                    break;
+                case hit:
+                    System.out.println("Nice shot - HIT on coordinate " + tmpshootX + "/" + (shootY + 1));
+                    //Checken, ob durch diesen Treffer das gesamte Schiff versenkt wurde
+                    if(currentOpponent.fleet.checkIfShipSunk(givenShootCoordinate)){
+                        System.out.println("Ship sunk!");
+                        //Setzen aller hit-Zeichen auf '#'
+                        currentOpponent.setShipSunk(currentPlayer, currentOpponent, givenShootCoordinate);
+                    }
+                    // Checken, ob durch diesen Treffer die gesamte Flotte versenkt wurde und das Spiel damit endet!
+                    if(currentOpponent.fleet.checkIfFleetSunk()){
+                        return gameState.gameOver;
+                    }
+                    break;
+                case miss:
+                    System.out.println("Nice try - Only water! Missed shot on coordinate " + tmpshootX + "/" + (shootY + 1));
+                    break;
+                case error:
+                    System.out.println("Invalid shot!");
+                    break;
             }
-        }
-
-        //Checken der player.gameOver-Variable, ob Spiel vorbei & Flotte versenkt
-        //ToDo: Andere Positionierung des Checks und Erweiterung der Methode
-        if(currentOpponent.gameOver){
-            return gameState.gameOver;
         }
 
         //Change Player
