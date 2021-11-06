@@ -2,6 +2,7 @@ package at.ac.fhcampuswien.gui;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import at.ac.fhcampuswien.core.Player;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
@@ -76,8 +77,38 @@ class GameLogicTest {
     }
 
     @Test
+    void flowChangePlayerTest(){ //TC-52
+        ByteArrayInputStream in = new ByteArrayInputStream("y".getBytes());
+        System.setIn(in);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        Player player1 = new Player("Test1");
+        Player player2 = new Player("Test2");
+
+        GameLogic gameLogic = new GameLogic();
+        GameLogic.gameState state;
+        state = gameLogic.flowChangePlayer(player1, player2);
+
+        String expectedOut = ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                ">\n" +
+                "Test1 - Your turn is over. It's Test2s turn.\n" +
+                "Test2 ready? (y)es/(q)uit game/(r)ules of the game\n";
+
+        assertEquals(expectedOut, outContent.toString());
+        assertEquals(state, GameLogic.gameState.gameContinue);
+
+    }
+
+    @Test
     void flowGameOverTest(){ //TC-45
-        InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("q".getBytes());
         System.setIn(in);
 
@@ -89,7 +120,7 @@ class GameLogicTest {
         state = gameLogic.flowGameOver();
 
         String expectedOut = "Game Over...\n" +
-                "(p)lay again , or (q)uit Game ?\n" +
+                "(p)lay again , or (q)uit program?\n" +
                 "Thanks for playing ... Please come back soon!\n";
 
         assertEquals(expectedOut, outContent.toString());
