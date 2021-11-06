@@ -32,4 +32,35 @@ class ShotTest {
 
     }
 
+    @Test
+    void checkIfShipSunkTest() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Player player1 = new Player("Player1");
+        Player player2 = new Player("Player2");
+        Shot shoot = new Shot();
+        Shot.State result = Shot.State.reload;
+        Coordinate givenShootCoordinate = new Coordinate(0,0);
+        int posX = 0, posY = 0;
+
+        player1.setStandardFleet();
+        player2.setStandardFleet();
+        //Setze 4 von 5 Shipparts des ersten Schiffs auf "hit"
+        for (int j = 0; j < 4; j++) { // Iteration über 4 von 5 shipParts
+            posX = player1.getStandardFleet().fleet[0].ship[j].position.getPositionX();
+            posY = player1.getStandardFleet().fleet[0].ship[j].position.getPositionY();
+            givenShootCoordinate.setNewCoordinates(posX, posY);
+            player1.setCharAtPositionOwnField('X', givenShootCoordinate);
+            player2.setCharAtPositionOpponentInfoField('X', givenShootCoordinate);
+        }
+        posX = player1.getStandardFleet().fleet[0].ship[4].position.getPositionX();
+        posY = player1.getStandardFleet().fleet[0].ship[4].position.getPositionY();
+
+        givenShootCoordinate.setNewCoordinates(posX, posY);
+        result = shoot.shootsAt(givenShootCoordinate, player2, player1);
+        assertEquals(Shot.State.hit, result);
+    }
+
+
 }
