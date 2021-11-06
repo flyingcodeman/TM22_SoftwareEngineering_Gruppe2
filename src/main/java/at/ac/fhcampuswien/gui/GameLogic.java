@@ -190,6 +190,7 @@ public class GameLogic {
 
         player1.setStandardFleet();
         player2.setStandardFleet();
+        System.out.println("Standard fleets created!");
     }
 
     public gameState flowMainSequence(Player currentPlayer, Player currentOpponent){
