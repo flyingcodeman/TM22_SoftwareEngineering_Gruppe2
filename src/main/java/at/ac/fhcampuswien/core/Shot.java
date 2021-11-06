@@ -30,16 +30,6 @@ public class Shot {
                 // Setz das Zeichen beim currentPlayer.opponentInfoField und currentOpponent.ownField von ~ auf X
                 currentOpponent.setCharAtPositionOwnField(SYMBOL_HIT, coordinate);
                 currentPlayer.setCharAtPositionOpponentInfoField(SYMBOL_HIT, coordinate);
-
-                //Checken, ob durch diesen Treffer das gesamte Schiff versenkt wurde
-                if(currentOpponent.fleet.checkIfShipSunk(coordinate)){
-                    System.out.println("Hit and ship sunk!"); //TODO move to GUI
-                    //ToDo: Im Falle des Versenkens: Zeichen des gesamten Schiffs beim currentPlayer.opponentInfoField und currentOpponent.OwnField auf # setzen
-                }
-                // Checken, ob durch diesen Treffer die gesamte Flotte versenkt wurde und das Spiel damit endet!
-                if(currentOpponent.fleet.checkIfFleetSunk()){
-                    currentOpponent.gameOver = true;
-                }
                 resultState = State.hit;
             }
             else if(checkFieldWater(charOpponentOwnField)) {
