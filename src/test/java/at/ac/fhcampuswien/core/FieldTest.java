@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FieldTest {
 
     @Test
-    void generateField_Standard10() {
+    void generateField_Standard10() { // TC-42 // TC-42.010
         Field field = new Field(10);
         field.createField();
         assertEquals(10, field.getField().length);
@@ -35,7 +35,7 @@ class FieldTest {
     }
 
     @Test
-    void getOwnFieldAxisTest() { //TC-39
+    void getOwnFieldAxisTest() { //TC-39 // TC-39.020 // TC-39.030
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 

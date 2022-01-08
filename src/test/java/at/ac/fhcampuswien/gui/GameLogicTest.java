@@ -54,7 +54,7 @@ class GameLogicTest {
     }
 
     @Test
-    void printingGameRulesInitTest() { // TC-56
+    void printingGameRulesInitTest() { // TC-56 // TC-56.010
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("E".getBytes());
         System.setIn(in);
@@ -97,7 +97,7 @@ class GameLogicTest {
     }
 
     @Test
-    void flowChangePlayerTest(){ //TC-52
+    void flowChangePlayerTest(){ //TC-52 // ?????
         ByteArrayInputStream in = new ByteArrayInputStream("y".getBytes());
         System.setIn(in);
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -128,7 +128,7 @@ class GameLogicTest {
     }
 
     @Test
-    void flowGameOverTest(){ //TC-45
+    void flowGameOverTest(){ //TC-45 // TC-45.010
         ByteArrayInputStream in = new ByteArrayInputStream("q".getBytes());
         System.setIn(in);
 
@@ -149,7 +149,7 @@ class GameLogicTest {
     }
 
     @Test
-    void flowGameQuitTest() { // TC-59
+    void flowGameQuitTest() { // TC-59 // TC-59.010 // TC-59.020
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("q".getBytes());
         System.setIn(in);
@@ -168,7 +168,7 @@ class GameLogicTest {
     }
 
     @Test
-    void flowGamePlayAgainTest() { // TC-47
+    void flowGamePlayAgainTest() { // TC-47 // TC-47.010 // TC-47.020
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("p".getBytes());
         System.setIn(in);

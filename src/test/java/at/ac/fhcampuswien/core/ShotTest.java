@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShotTest {
 
     @Test
-    void shootsAtValidShotTest() { // TC-49 & 51
+    void shootsAtValidShotTest() { // TC-49 // TC-49.010 // TC-51 // TC-51.010 // TC-51.030
         Player player1 = new Player("Test1");
         Player player2 = new Player("Test2");
         player1.setStandardFleet();
@@ -33,7 +33,7 @@ class ShotTest {
     }
 
     @Test
-    void checkIfShipSunkTest() {
+    void checkIfShipSunkTest() { // TC-50
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
