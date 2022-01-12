@@ -63,4 +63,38 @@ class ShotTest {
     }
 
 
+    @Test
+    void shootsInsideFieldNegative1Test() { //  TC-51.020
+        Player player1 = new Player("Test1");
+        Player player2 = new Player("Test2");
+        player1.setStandardFleet();
+        player2.setStandardFleet();
+        Shot shoot = new Shot();
+        Coordinate shootCoordinate = new Coordinate(25, 2);
+
+        Shot.State state = shoot.shootsAt(shootCoordinate, player1, player2);
+
+        Shot.State expectedStates[] = {Shot.State.hit, Shot.State.miss, Shot.State.error, Shot.State.reload};
+        List<Shot.State> expectedStatesList = Arrays.asList(expectedStates);
+
+        assertTrue(expectedStatesList.contains(state));
+
+    }
+    @Test
+    void shootsInsideFieldNegative2Test() { //  TC-51.020
+        Player player1 = new Player("Test1");
+        Player player2 = new Player("Test2");
+        player1.setStandardFleet();
+        player2.setStandardFleet();
+        Shot shoot = new Shot();
+        Coordinate shootCoordinate = new Coordinate(2, 25);
+
+        Shot.State state = shoot.shootsAt(shootCoordinate, player1, player2);
+
+        Shot.State expectedStates[] = {Shot.State.hit, Shot.State.miss, Shot.State.error, Shot.State.reload};
+        List<Shot.State> expectedStatesList = Arrays.asList(expectedStates);
+
+        assertTrue(expectedStatesList.contains(state));
+
+    }
 }
